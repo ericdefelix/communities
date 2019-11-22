@@ -1,0 +1,19 @@
+// Required
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+
+// Import @LEAPDev/GUI x1 Theme
+@import '../node_modules/@leapdev/gui/dist/scss/theme/leap';
+
+// Import overrides
+$theme-colors: map-remove($theme-colors, 'info', 'danger', 'warning');
+
+@import '../node_modules/bootstrap/scss/utilities';
+@import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/type';
+@import '../node_modules/bootstrap/scss/badge';
+@import '../node_modules/bootstrap/scss/buttons';
+@import '../node_modules/bootstrap/scss/nav';
+@import '../node_modules/bootstrap/scss/navbar';
+@import '../node_modules/bootstrap/scss/transitions';
+@import '../node_modules/bootstrap/scss/print';
+@import '../node_modules/bootstrap/scss/media';
