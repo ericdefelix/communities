@@ -1,12 +1,4 @@
-// Required
-@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
-
-// Import @LEAPDev/GUI x1 Theme
-@import '../node_modules/@leapdev/gui/dist/scss/theme/leap';
-
-// Import overrides
-$theme-colors: map-remove($theme-colors, 'info', 'danger', 'warning');
-
+// Import the rest of the default BS4 components
 @import '../node_modules/bootstrap/scss/utilities';
 @import '../node_modules/bootstrap/scss/grid';
 @import '../node_modules/bootstrap/scss/type';

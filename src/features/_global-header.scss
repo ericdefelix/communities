@@ -1,0 +1,12 @@
+.#{$namespace}navbar-collapse {
+
+}
+
+.#{$namespace}navbar-brand {
+
+}
+
+.#{$namespace}global-header {
+  @extend
+    %bg-primary;
+}

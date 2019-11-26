@@ -1,1 +1,17 @@
+// Import @LEAPDev/GUI x1 Theme
+@import '../node_modules/@leapdev/gui/dist/scss/theme/leap';
+
+// Required
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+
+// Import variable overrides
+@import './variable-overrides/all';
+
+// Import bootstrap utilities converted to
+@import './bootstrap-placeholders';
+
+// Import default bootstrap components
 @import './bootstrap-components.scss';
+
+// Import features
+@import './features/all';
