@@ -1,0 +1,5 @@
+.#{$namespace}global-header {
+  @extend 
+    %bg-primary,
+    %w-100;
+}

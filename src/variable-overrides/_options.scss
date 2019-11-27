@@ -1,6 +1,0 @@
-$namespace: 'hc-';
-
-$is-dark-theme: false;
-
-// Remove not needed classes
-$theme-colors: map-remove($theme-colors, 'info', 'danger', 'warning');

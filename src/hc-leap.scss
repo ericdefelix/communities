@@ -1,17 +1,14 @@
+// Import font family
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 // Import @LEAPDev/GUI x1 Theme
 @import '../node_modules/@leapdev/gui/dist/scss/theme/leap';
 
-// Required
-@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+// Import Bootstrap Required
+@import './bootstrap-required';
 
-// Import variable overrides
-@import './variable-overrides/all';
+// Import Help Center components
+@import './components/all';
 
-// Import bootstrap utilities converted to
-@import './bootstrap-placeholders';
-
-// Import default bootstrap components
-@import './bootstrap-components.scss';
-
-// Import features
+// Import Help Center features
 @import './features/all';
