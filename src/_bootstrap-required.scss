@@ -1,13 +1,16 @@
-// Import variable overrides
-@import './bootstrap-variable-overrides';
-
 // Init
 @import '../node_modules/bootstrap/scss/functions';
-@import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/mixins';
+
+// Import variable overrides
+@import '../node_modules/@leapdev/gui/dist/scss/theme/leap';
+@import './bootstrap-variable-overrides';
+
+// Import default Bootstrap variables and reset
+@import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/reboot';
 
-// Import default bootstrap components
+// Import default Bootstrap components
 @import './bootstrap-components';
 
 // Import bootstrap utilities converted to

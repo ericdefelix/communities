@@ -2,4 +2,75 @@
   @extend 
     %bg-primary,
     %w-100;
+  
+
+  .nav-item {
+    height: 100%;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $nav-link-font-size;
+    padding-top: $navbar-nav-link-padding-y;
+    padding-bottom: $navbar-nav-link-padding-y;
+    position: relative;
+
+    &:hover {
+      background-color: $navbar-dark-hover-bg;
+    }
+
+    &.active {
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: $navbar-dark-active-border-width;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $navbar-dark-active-border-bg;
+      }
+    }
+  }
+
+  .navbar-brand-img {
+    width: 100%;
+  }
+  .navbar-collapse-sibling {
+    @extend
+      %d-flex,
+      %flex-grow-1;
+  }
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    position: relative;
+  }
+}
+
+.navbar-toggler-icon {
+  height: 100%;
+  &::before, &::after {
+    display: block;
+    content: '';
+    background-color: white;
+    position: absolute;
+
+    width: 25px;
+    height: 2px;
+    
+    top: calc(50% - 1px);
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    left: calc(50% - 12px);
+  }
+
+  &::before {
+
+  }
+
+  &::after {
+
+  }
 }
