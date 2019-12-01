@@ -1,4 +1,47 @@
+$hc-hero-gradient-start: theme-color('primary');
+$hc-hero-gradient-end: #0060AA;
+$hc-news-heading-color: theme-color('secondary');
+
 .#{$namespace}homepage-section {
   @extend 
     %w-100;
+
+  
+}
+
+.hc-hero {
+  position: relative;
+  > * {
+    z-index: 1;
+    position: relative;
+  }
+  background-color: $hc-hero-gradient-start;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    @include scrim-gradient('to top',$hc-hero-gradient-end);
+  }
+}
+
+.hc-search-container {
+  .hc-search-input {
+
+  }
+
+
+  .hc-news-heading {
+    color: $hc-news-heading-color;
+    text-transform: uppercase;
+  }
+
+  .hc-news-content {
+    a {
+      color: white;
+    }
+  }
 }

@@ -23,8 +23,10 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <div class="navbar-nav ml-auto flex-nowrap">
-          <div class="nav-item">
-            <span class="badge badge-success">Servers are Up</span>
+          <div class="nav-item hc-server-status">
+            <a href="">
+              <span class="badge badge-lg badge-success">Servers are Up</span>
+            </a>
           </div>
           <div class="nav-item">
             <a href="#" class="nav-link active">Knowledge Base</a>
@@ -40,25 +42,26 @@
     </nav>
   </header>
   
-  <section class="hc-homepage-section">
+  <section class="hc-homepage-section hc-hero">
     <div class="container">
       <div class="hc-search-container w-50">
-        <h1>Hi, how can we help?</h1>
-        <div class="form-group">
+        <h1 class="text-light">Hi, how can we help?</h1>
+        <div class="hc-search-input">
           <i class="icon-search"></i>
           <input type="text" class="form-control" placeholder="Search for help articles, community posts, ideas...">
         </div>
 
-        <div class="">
-          <h6>News and Announcements</h6>
-          <ul class="list-unstyled">
+        <div class="hc-news-content">
+          <h6 class="hc-news-heading">News and Announcements</h6>
+          <ul class="list-unstyled text-light">
             <li><a href="http://">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
             <li><a href="http://">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
           </ul>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
+
   <section class="hc-homepage-section">
     <div class="container">
       <h1>Let's learn our products...</h1>
