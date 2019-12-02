@@ -1,9 +1,52 @@
+@mixin make-toggler-status() {
+  &::after, 
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    background-color: white;
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+  }
+
+  &:not(.collapsed) {
+    &::after {
+      bottom: 0;
+    }
+
+    .navbar-toggler-icon {
+      &::before {
+        transform-origin: center;
+        // transform: rotateZ(0);
+        top: 0;
+      }
+
+      &::after {
+        transform-origin: right;
+        top: calc(50% - 2px);
+        transform: rotateZ(0);
+      }
+    }
+  }
+
+  &.collapsed > .navbar-toggler-icon {
+    &::before {
+      transform: rotateZ(45deg);
+    }
+
+    &::after {
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+
 .#{$namespace}global-header {
   @extend 
     %bg-primary,
     %w-100;
   
-
   .nav-item {
     height: 100%;
   }
@@ -34,43 +77,30 @@
     }
   }
 
+  .navbar-brand {
+    // @extend 
+    //   %d-flex,
+    //   %mx-auto;
+
+    width: 16rem;
+    // align-items: center;
+  }
+
   .navbar-brand-img {
     width: 100%;
   }
-  .navbar-collapse-sibling {
-    @extend
-      %d-flex,
-      %flex-grow-1;
+  .navbar-toggler-icon {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
   .navbar-toggler {
     border: none;
     outline: none;
     position: relative;
-  }
-}
+    width: $navbar-toggler-dimension;
+    height: $navbar-toggler-dimension - .1;
 
-.navbar-toggler-icon {
-  height: 100%;
-  &::before, &::after {
-    display: block;
-    content: '';
-    background-color: white;
-    position: absolute;
-
-    width: 25px;
-    height: 2px;
-    
-    top: calc(50% - 1px);
-    transform-origin: center;
-    transform: rotateZ(45deg);
-    left: calc(50% - 12px);
-  }
-
-  &::before {
-
-  }
-
-  &::after {
-
+    @include make-toggler-status();
   }
 }
