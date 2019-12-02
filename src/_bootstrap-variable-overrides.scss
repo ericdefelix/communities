@@ -5,9 +5,9 @@ $namespace: 'hc-';
 $spacer: 1rem;
 
 // Border-radius
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
+$border-radius:               2rem !default;
+$border-radius-lg:            3rem !default;
+$border-radius-sm:            1.5rem !default;
 
 // Typography
 //
@@ -76,6 +76,9 @@ $container-max-widths:              ( xl: 1440px );
 
 // Badge
 $badge-border-radius:               30px;
+
+// Input
+$input-border-width:                0;
 
 
 // Homepage Hero
