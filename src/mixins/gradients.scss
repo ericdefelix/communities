@@ -26,6 +26,6 @@
     $stops: append($stops, $stop, comma);
   }
   
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 222 20'%3E%3Cpath d='M222 20H0l12.3333333-1.625C24.6666667 16.75 49.3333333 13.5 74 9.16328125 98.6666667 4.8671875 123.333333-.6171875 148 .5c24.666667 1.1171875 49.333333 8.6328125 61.666667 12.4617187L222 16.75V20z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E"), linear-gradient(unquote($direction), $stops);
+  background-image: linear-gradient(unquote($direction), $stops);
   
 }
