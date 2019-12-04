@@ -81,6 +81,16 @@ $badge-border-radius:               30px;
 // Input
 $input-border-width:                0;
 
+// List group
+$list-group-color:                  null;
+$list-group-bg:                     white;
+$list-group-border-color:           null;
+$list-group-border-width:           0;
+$list-group-border-radius:          0;
+
+// $list-group-item-padding-y:         1.25rem;
+$list-group-item-padding-x:         0;
+
 
 // Homepage Hero
 $hero-shape-bg: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 57'%3E%3Cpath d='M29.7151671 21.3043478l13.9080213 5.1097895-6.4295215 12.6160787L0 56.8115942l27.4016543-28.8355209 2.3135128-6.6717255zM38.0701265 0L70 14.6531246l-4.4426355 37.0860058-4.7792975-25.66851-30.3432844-4.5516263L38.0701265 0z' fill='%23000' fill-rule='evenodd'/%3E%3C/svg%3E"), "#", "%23");
