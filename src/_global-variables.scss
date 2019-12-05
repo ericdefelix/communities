@@ -1,0 +1,8 @@
+:root {
+//
+// Color system
+//
+  @each $type, $color in $theme-colors {
+    --brand-#{$type}: #{$color};
+  }
+}

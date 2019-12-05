@@ -3,9 +3,15 @@ $hc-hero-gradient-end: #0060AA;
 $hc-news-heading-color: theme-color('secondary');
 $hc-hero-image-negative-offset: 13rem;
 
+$hc-section-articles-bg: theme-color('light-secondary');
+
 .#{$namespace}homepage-section {
   @extend 
     %w-100;
+
+  &:not(:first-of-type) {
+    margin-bottom: 6rem;
+  }
 }
 
 .hc-hero {
@@ -82,4 +88,12 @@ $hc-hero-image-negative-offset: 13rem;
 
 .hc-usp-group {
   margin-top: $hc-hero-image-negative-offset;
+}
+
+.hc-section-articles {
+  background-color: $hc-section-articles-bg;
+}
+
+.hc-section-community {
+  @extend %bg-primary;
 }

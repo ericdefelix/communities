@@ -44,9 +44,9 @@
 
 .#{$namespace}global-header {
   @extend 
-    %bg-primary,
     %w-100;
   
+  background-color: var(--brand-primary);
   .nav-item {
     height: 100%;
   }
