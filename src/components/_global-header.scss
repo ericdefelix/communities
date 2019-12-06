@@ -47,6 +47,16 @@
     %w-100;
   
   background-color: var(--brand-primary);
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: $zindex-fixed;
+
+  // & + .#{$namespace}homepage-section {
+  //   margin-top: $nav-link-height - .4;
+  // }
+
   .nav-item {
     height: 100%;
   }

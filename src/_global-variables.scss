@@ -1,8 +1,22 @@
 :root {
-//
-// Color system
-//
+  --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   @each $type, $color in $theme-colors {
     --brand-#{$type}: #{$color};
   }
+  --brand-white: #fff;
+  --btn-radius: 0.3125rem;
+  --btn-primary-bg: theme-color('secondary');
+  --btn-primary-bg-hover: theme-color('secondary-darker');
+  --btn-primary-border: darken(#{theme-color('secondary')}, 7.5%);
+  --btn-primary-border-hover: darken(#{theme-color('secondary')}, 10%);
+
+  --btn-default-bg: theme-color('light');
+  --btn-default-bg-hover: theme-color('light-secondary');
+  --btn-default-border: darken(#{theme-color('light')}, 7.5%);
+  --btn-default-border-hover: darken(#{theme-color('light-secondary')}, 10%);
+
+  --btn-outline-color: #fff;
+  --btn-outline-bg-hover: theme-color('secondary-darker');
+  --btn-primary-border: darken(#{theme-color('secondary')}, 7.5%);
+  --btn-primary-border-hover: darken(#{theme-color('secondary')}, 10%);
 }
