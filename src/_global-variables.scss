@@ -1,22 +1,29 @@
-:root {
+:root, [data-theme="leap"] {
   --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  @each $type, $color in $theme-colors {
-    --brand-#{$type}: #{$color};
-  }
+  // @each $type, $color in $theme-colors {
+  //   --brand-#{$type}: #{$color};
+  // }
   --brand-white: #fff;
-  --btn-radius: 0.3125rem;
-  --btn-primary-bg: theme-color('secondary');
-  --btn-primary-bg-hover: theme-color('secondary-darker');
-  --btn-primary-border: darken(#{theme-color('secondary')}, 7.5%);
-  --btn-primary-border-hover: darken(#{theme-color('secondary')}, 10%);
+  --brand-light: #eee;
+  --brand-light-grey: #f6f8f9;
+  --brand-dark-grey: #525252;
+  --brand-green: #2e7244;
+  --brand-blue: #0060aa;
+  --body-text-color: #58595B;
+  
+  --brand-primary: #1e365e;
+  --brand-primary-darker: #162845;
+  --brand-primary-lighter: #0060AC;
 
-  --btn-default-bg: theme-color('light');
-  --btn-default-bg-hover: theme-color('light-secondary');
-  --btn-default-border: darken(#{theme-color('light')}, 7.5%);
-  --btn-default-border-hover: darken(#{theme-color('light-secondary')}, 10%);
+  --brand-secondary: #f79239;
+  --brand-secondary-darker: #f68520;
+  
+  --text-input-radius: 2rem;
 
-  --btn-outline-color: #fff;
-  --btn-outline-bg-hover: theme-color('secondary-darker');
-  --btn-primary-border: darken(#{theme-color('secondary')}, 7.5%);
-  --btn-primary-border-hover: darken(#{theme-color('secondary')}, 10%);
+  --h1-font-size: 2.875rem;
+  --h2-font-size: 1.625rem;
+  --h3-font-size: 1.125rem;
+  --h4-font-size: 1rem;
+  --h5-font-size: 1rem;
+  --h6-font-size: 1rem;
 }

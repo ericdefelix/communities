@@ -47,13 +47,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  @include button-variant('primary');
+  @include custom-button-variant(secondary,white);
 }
 
 .btn-outline-light {
-  @include button-outline-variant('light');
+  @include custom-button-outline-light();
 }
 
 .btn-default {
-  @include button-variant('default');
+  // @include button-variant('default');
 }
