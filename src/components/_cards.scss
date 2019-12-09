@@ -1,5 +1,27 @@
-.hc-spotlight-card {
+// 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+.#{$namespace}card {
   background-color: var(--brand-white);
+  border-top: 5px solid var(--brand-secondary);
+  margin-bottom: $spacer;
+}
 
-  
+.#{$namespace}spotlight-card {
+  > a {
+    display: flex;
+  }
+
+  #{&}-thumbnail {
+    width: 8rem;
+    height: 10rem;
+    background-size: cover;
+    background-color: var(--brand-grey);
+  }
+
+  #{&}-title {
+
+  }
+
+  #{&}-body {
+    padding: $spotlight-card-padding;
+  }
 }
