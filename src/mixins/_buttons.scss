@@ -2,6 +2,7 @@
   color: var(--brand-#{$text-color});
   background-color: var(--brand-#{$variant});
   border-color: var(--brand-#{$variant}-darker);
+  padding: $btn-padding-x $btn-padding-y;
 
   @include hover {
     color: var(--brand-#{$text-color});
@@ -23,6 +24,7 @@
   background-color: transparent;
   color: var(--brand-light);
   border-color: var(--brand-light);
+  padding: $btn-padding-x $btn-padding-y;
 
   @include hover {
     color: var(--brand-secondary);

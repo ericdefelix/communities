@@ -1,20 +1,38 @@
 // 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 .#{$namespace}card {
-  background-color: var(--brand-white);
-  border-top: 5px solid var(--brand-secondary);
+  background-color: $cards-bg-color;
   margin-bottom: $spacer;
+  box-shadow: $cards-box-shadow;
+  -webkit-box-shadow: $cards-box-shadow;
 }
 
 .#{$namespace}spotlight-card {
+  overflow: hidden;
+  border-radius: 0.0625rem;
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: var(--brand-secondary);
+    width: 100%;
+    height: $cards-border-top;
+  }
+
+  &:hover > * {
+    text-decoration: none;
+  }
   > a {
     display: flex;
+    flex-wrap: wrap;
   }
 
   #{&}-thumbnail {
-    width: 8rem;
-    height: 10rem;
+    width: $spotlight-card-thumbnail-width;
+    height: auto;
     background-size: cover;
+    background-position: center center;
     background-color: var(--brand-grey);
+    margin-top: -$cards-border-top;
   }
 
   #{&}-title {
@@ -22,6 +40,13 @@
   }
 
   #{&}-body {
+    width: calc(100% - #{$spotlight-card-thumbnail-width});
+    flex-grow: 1;
     padding: $spotlight-card-padding;
+
+    > * {
+      white-space: normal;
+      word-break: break-word;
+    }
   }
 }

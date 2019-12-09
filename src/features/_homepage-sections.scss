@@ -84,6 +84,7 @@ $hc-section-articles-bg: var(--brand-light-grey);
 .#{$namespace}hero-image {
   margin-bottom: -$hc-hero-image-negative-offset;
   > img {
+    width: 100%;
     max-width: 600px;
   }
 }
@@ -96,7 +97,7 @@ $hc-section-articles-bg: var(--brand-light-grey);
   background-color: $hc-section-articles-bg;
 
   .#{$namespace}spotlights {
-    width: $hc-spotlights-width;
+    // width: $hc-spotlights-width;
   }
 
   .#{$namespace}trending-articles {
