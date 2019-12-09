@@ -37,6 +37,8 @@ $h3-font-size:                var(--h3-font-size);
 $h4-font-size:                var(--h4-font-size);
 $h5-font-size:                var(--h5-font-size);
 $h6-font-size:                var(--h6-font-size);
+$subheading-font-size:        var(--h6-font-size);
+$subheading-color:            var(--brand-dark-grey);
 
 $headings-margin-bottom:      $spacer / 2;
 $headings-font-family:        null;
@@ -87,7 +89,7 @@ $input-border-width:                0;
 $cards-bg-color:                    var(--brand-white);
 $cards-box-shadow:                  0 0 0.8125rem 0 rgba(30,54,94,0.1);
 // $cards-box-shadow:                  0 0 0.8125rem 0 rgba(30,54,94,0.1), 0 1px 0 1px #eee;
-$cards-border-top:                  0.3125rem;
+$cards-border-top:                  3px;
 $spotlight-card-padding:            $spacer-lg;
 $spotlight-card-thumbnail-width:    10rem;
 
