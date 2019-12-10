@@ -96,13 +96,27 @@ $hc-section-articles-bg: var(--brand-light-grey);
 .#{$namespace}section-articles {
   background-color: $hc-section-articles-bg;
 
+  .test {
+    // display: grid;
+    // grid: auto auto;
+    // width: 1440px;
+    // justify-content: center;
+    // grid-template-areas: 'hcSpotlights hcTrendingArticles';
+  }
+
   .#{$namespace}spotlights {
-    // width: $hc-spotlights-width;
+    // grid-area: hcSpotlights;
+    // grid-column: 1;
   }
 
   .#{$namespace}trending-articles {
-    
+    // grid-area: hcTrendingArticles;
+    // grid-column: 2;
   }
+
+  // @media screen and (max-width: $container-max-width('xl')) {
+
+  // }
 }
 
 .#{$namespace}section-community {

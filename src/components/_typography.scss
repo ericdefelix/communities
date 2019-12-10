@@ -4,15 +4,16 @@ h1 {
 
 @for $i from 1 through 6 {
   h#{$i} {
-    > small {
-      display: block;
-      font-size: $subheading-font-size;
-      text-transform: uppercase;
-      color: $subheading-color;
-    }
+
   }
 }
 
 a {
 
+}
+
+.heading-small {
+  font-size: $subheading-font-size;
+  text-transform: uppercase;
+  color: $subheading-color;
 }
