@@ -1,18 +1,20 @@
 // Namespace
 $namespace: 'hc-';
+$enable-shadows: true;
 
 // Spacing
 $spacer: 1rem;
+$spacer-lg: var(--spacer-lg);
 
 // Border-radius
-$border-radius:               2rem !default;
+$border-radius:               var(--border-radius);
 $border-radius-lg:            3rem !default;
 $border-radius-sm:            1.5rem !default;
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:      'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif:      var(--font-family);
 $font-family-base:            $font-family-sans-serif;
 
 $font-size-base:              1rem; // Assumes the browser default, typically `16px`
@@ -29,12 +31,14 @@ $font-weight-bolder:          bolder;
 $font-weight-base:            $font-weight-normal;
 $line-height-base:            1.5;
 
-$h1-font-size:                2.875rem;
-$h2-font-size:                1.625rem;
-$h3-font-size:                1.125rem;
-$h4-font-size:                1rem;
-$h5-font-size:                1rem;
-$h6-font-size:                1rem;
+$h1-font-size:                var(--h1-font-size);
+$h2-font-size:                var(--h2-font-size);
+$h3-font-size:                var(--h3-font-size);
+$h4-font-size:                var(--h4-font-size);
+$h5-font-size:                var(--h5-font-size);
+$h6-font-size:                var(--h6-font-size);
+$subheading-font-size:        var(--h6-font-size);
+$subheading-color:            var(--brand-dark-grey);
 
 $headings-margin-bottom:      $spacer / 2;
 $headings-font-family:        null;
@@ -59,11 +63,11 @@ $navbar-toggler-padding-y:          0;
 $navbar-toggler-padding-x:          0;
 $navbar-toggler-border-radius:      0;
 
-$navbar-dark-color:                 white;
-$navbar-dark-hover-color:           white;
-$navbar-dark-hover-bg:              theme-color('primary-darker');
-$navbar-dark-active-color:          white;
-$navbar-dark-active-border-bg:      theme-color('secondary');
+$navbar-dark-color:                 var(--brand-white);
+$navbar-dark-hover-color:           var(--brand-white);
+$navbar-dark-hover-bg:              var(--brand-primary-darker);
+$navbar-dark-active-color:          var(--brand-white);
+$navbar-dark-active-border-bg:      var(--brand-secondary);
 $navbar-dark-active-border-width:   3px;
 $navbar-dark-disabled-color:        rgba(white, .25);
 $navbar-dark-toggler-icon-bg:       none;
@@ -73,13 +77,79 @@ $navbar-light-toggler-icon-bg:      none; // Just to save some kbs
 
 // Grid containers
 // $grid-gutter-width:                 2rem;
-$container-max-widths:              ( xl: 1440px );
+$container-max-widths:              ( xl: 1140px );
 
 // Badge
 $badge-border-radius:               30px;
 
-// Input
+// Forms
 $input-border-width:                0;
+
+// Cards
+$cards-bg-color:                    var(--brand-white);
+$cards-box-shadow:                  0 0 0.8125rem 0 rgba(30,54,94,0.1);
+// $cards-box-shadow:                  0 0 0.8125rem 0 rgba(30,54,94,0.1), 0 1px 0 1px #eee;
+$cards-border-top:                  3px;
+$spotlight-card-padding:            $spacer-lg;
+$spotlight-card-thumbnail-width:    10rem;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .375rem;
+$input-btn-padding-x:         .75rem;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:                  0.75rem;
+$btn-padding-x:                  0.375rem;
+// $btn-font-family:             $input-btn-font-family;
+// $btn-font-size:               $input-btn-font-size;
+// $btn-line-height:             $input-btn-line-height;
+
+// $btn-padding-y-sm:            $input-btn-padding-y-sm;
+// $btn-padding-x-sm:            $input-btn-padding-x-sm;
+// $btn-font-size-sm:            $input-btn-font-size-sm;
+// $btn-line-height-sm:          $input-btn-line-height-sm;
+
+$btn-padding-y-lg:               0.625rem;
+$btn-padding-x-lg:               1.375rem;
+$btn-font-size-lg:               1rem;
+// $btn-line-height-lg:          $input-btn-line-height-lg;
+
+// $btn-border-width:            $input-btn-border-width;
+
+// $btn-font-weight:             $font-weight-normal;
+// $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+// $btn-focus-width:             $input-btn-focus-width;
+// $btn-focus-box-shadow:        $input-btn-focus-box-shadow;
+// $btn-disabled-opacity:        .65;
+// $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
+
+// $btn-link-disabled-color:     $gray-600;
+
+// $btn-block-spacing-y:         .5rem;
+
+// Allows for customizing button radius independently from global border radius
+// $btn-border-radius:           $border-radius;
+$btn-border-radius-lg:           $border-radius;
+// $btn-border-radius-sm:        $border-radius-sm;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+
+// List group
+$list-group-color:                  null;
+$list-group-bg:                     transparent;
+$list-group-border-color:           null;
+$list-group-border-width:           0;
+$list-group-border-radius:          0;
+
+// $list-group-item-padding-y:         1.25rem;
+$list-group-item-padding-x:         0;
 
 
 // Homepage Hero
