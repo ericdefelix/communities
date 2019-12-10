@@ -1,0 +1,13 @@
+@mixin grid-columns-classes($repeat) {
+  @for $i from 1 through $repeat {
+    .grid-#{$i} {
+      $template-columns: ();
+      @for $t from 1 through $i {
+        $template-columns: append($template-columns, 1fr, space);
+      }
+
+      grid-template-columns: $template-columns;
+      -ms-grid-template-columns: $template-columns;
+    }
+  }
+}

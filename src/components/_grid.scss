@@ -4,17 +4,10 @@
   @include make-container-max-widths();
 }
 
-
-// header, footer {
-//   grid-column: 1 / -1;
-//   clear: both;
-// }
-
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: -ms-grid;
   grid-column-gap: $spacer;
-  > .hc-trending-articles {
-    grid-column: 2 / span 2;
-  }
 }
+
+@include grid-columns-classes(4);
