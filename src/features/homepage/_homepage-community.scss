@@ -1,4 +1,13 @@
 .#{$namespace}section-community {
   background-color: var(--brand-primary);
   color: var(--brand-white);
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: var(--grid-gap);
+    @include media-breakpoint-up('md',$grid-breakpoints) {
+      grid-template-columns: 1fr 50%;
+      grid-gap: var(--grid-gap-lg);
+    }
+  }
 }

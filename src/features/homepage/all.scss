@@ -12,9 +12,13 @@
   padding-bottom: 4rem;
 }
 
-.grid-2-col-responsive {
+
+
+.grid-3-col-responsive {
   grid-template-columns: 1fr;
-  @include media-breakpoint-up('lg',$grid-breakpoints) {
-    grid-template-columns: 1fr 60%;
+  grid-gap: var(--grid-gap);
+  @include media-breakpoint-up('md',$grid-breakpoints) {
+    grid-gap: var(--grid-gap-lg);
+    grid-template-columns: repeat(3,1fr);
   }
 }

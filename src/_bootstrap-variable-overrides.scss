@@ -3,6 +3,13 @@ $namespace: 'hc-';
 $enable-shadows: true;
 $columns: 12;
 
+
+// Color system
+// $primary:       var(--brand-primary);
+// $secondary:     var(--brand-secondary);
+// $light:         var(--brand-light-grey);
+// $dark:          var(--brand-dark-grey);
+
 // Spacing
 $spacer: 1rem;
 $spacer-lg: var(--spacer-lg);
@@ -47,6 +54,15 @@ $headings-font-weight:        400;
 $headings-line-height:        1.2;
 $headings-color:              null;
 
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                              var(--brand-primary-lighter);
+$link-decoration:                         none !default;
+$link-hover-color:                        var(--brand-secondary);
+
 // Navbar
 $navbar-padding-y:                  0;
 $navbar-padding-x:                  $spacer;
@@ -78,13 +94,14 @@ $navbar-light-toggler-icon-bg:      none; // Just to save some kbs
 
 // Grid containers
 // $grid-gutter-width:                 2rem;
-$container-max-widths:              ( xl: 1440px );
+$container-max-widths:              ( lg: 1240px );
 
 // Badge
 $badge-border-radius:               30px;
 
 // Forms
 $input-border-width:                0;
+$input-border-radius:               var(--text-input-radius);
 
 // Cards
 $cards-bg-color:                    var(--brand-white);

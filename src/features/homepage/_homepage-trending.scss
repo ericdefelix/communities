@@ -9,6 +9,23 @@ $hc-section-articles-bg: var(--brand-light-grey);
   }
 
   .#{$namespace}trending-articles {
+    .list-group > .list-group-item {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: var(--grid-gap);
+    @include media-breakpoint-between('md', 'lg',$grid-breakpoints) {
+      grid-template-columns: 1fr 50%;
+      grid-gap: var(--grid-gap);
+    }
+    @include media-breakpoint-up('lg',$grid-breakpoints) {
+      grid-template-columns: 1fr 60%;
+      grid-gap: var(--grid-gap-lg);
+    }
   }
 }
