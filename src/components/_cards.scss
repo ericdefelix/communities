@@ -6,10 +6,7 @@
   -webkit-box-shadow: $cards-box-shadow;
 }
 
-.#{$namespace}spotlight-card {
-  overflow: hidden;
-  border-radius: 0.0625rem;
-
+.#{$namespace}card-line-top {
   &::before {
     content: '';
     display: block;
@@ -17,6 +14,11 @@
     width: 100%;
     height: $cards-border-top;
   }
+}
+
+.#{$namespace}spotlight-card {
+  overflow: hidden;
+  border-radius: 0.0625rem;
 
   &:hover > * {
     text-decoration: none;
@@ -49,5 +51,56 @@
       white-space: normal;
       word-break: break-word;
     }
+  }
+}
+.#{$namespace}question-card {
+  background-image: $question-card-bg;
+  background-repeat: no-repeat;
+  background-position: 95% 0%;
+  
+  h6 {
+    color: var(--brand-primary-lighter);
+    margin-bottom: 0;
+  }
+  .time-stamp {
+    
+    font-size: $subheading-font-size;
+  }
+  .user-avatar {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    font-size: $h6-font-size;
+    color: var(--brand-white);
+    line-height: 1.875rem;
+    text-align: center;
+    background: var(--brand-secondary);
+
+  }
+  .question-label {
+    font-size: $h6-font-size;
+    color: $label;
+    text-transform: uppercase;
+
+  }
+  .question {
+    font-size: $h4-font-size;
+    color: var(--brand-primary);
+    font-weight: $font-weight-semibold;
+    margin: 1rem 0;
+    
+  }
+  .user-profile {
+    display: flex;
+
+  }
+  .user-name {
+    margin-left: 1.25rem;
+    
+
+  }
+  .card-body{
+    padding: $card-padding;
+
   }
 }
