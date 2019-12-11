@@ -1,4 +1,3 @@
-
 .container {
   @include make-container();
   @include make-container-max-widths();
@@ -10,4 +9,4 @@
   grid-column-gap: $spacer;
 }
 
-@include grid-columns-classes(4);
+@include grid-columns-classes();
