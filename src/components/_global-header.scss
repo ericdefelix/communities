@@ -1,62 +1,9 @@
-@mixin make-toggler-status() {
-  &::after, 
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
-    content: '';
-    display: block;
-    background-color: white;
-    position: absolute;
-    height: 2px;
-    left: 0;
-    right: 0;
-  }
-
-  &:not(.collapsed) {
-    &::after {
-      bottom: 0;
-    }
-
-    .navbar-toggler-icon {
-      &::before {
-        transform-origin: center;
-        // transform: rotateZ(0);
-        top: 0;
-      }
-
-      &::after {
-        transform-origin: right;
-        top: calc(50% - 2px);
-        transform: rotateZ(0);
-      }
-    }
-  }
-
-  &.collapsed > .navbar-toggler-icon {
-    &::before {
-      transform: rotateZ(45deg);
-    }
-
-    &::after {
-      transform: rotateZ(-45deg);
-    }
-  }
-}
 
 .#{$namespace}global-header {
   @extend 
     %w-100;
   
   background-color: var(--brand-primary);
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: $zindex-fixed;
-
-  // & + .#{$namespace}homepage-section {
-  //   margin-top: $nav-link-height - .4;
-  // }
-
   .nav-item {
     height: 100%;
   }

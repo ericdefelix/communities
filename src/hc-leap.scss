@@ -1,10 +1,20 @@
 // Import font family
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600, 700&display=swap');
 
-// Import Bootstrap Required
-@import './bootstrap-required';
+// Init
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/mixins';
+@import './mixins/all.scss';
 
-// Import Help Center components
+// Import Variables
+@import './variables/all';
+@import './bootstrap-variable-overrides';
+@import '../node_modules/bootstrap/scss/variables';
+
+@import './placeholders/all';
+
+// Import Components
+@import './bootstrap-components';
 @import './components/all';
 
 // Import Help Center features
