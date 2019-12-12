@@ -18,26 +18,34 @@
   --brand-secondary-darker: #f68520;
 }
 
-// Body
-$body-color: var(--body-text-color);
-$subheading-color: var(--brand-dark-grey);
+$primary: #1e365e;
+$secondary: #f79239;
 
-$link-color: var(--brand-primary-lighter);
-$link-hover-color: var(--brand-secondary);
+// Body
+$body-color: v('body-text-color');
+$subheading-color: v('brand-dark-grey');
+
+$link-color: v('brand-primary-lighter');
+$link-hover-color: v('brand-secondary');
 
 // Navbar
-$navbar-dark-color: var(--brand-white);
-$navbar-dark-hover-color: var(--brand-white);
-$navbar-dark-hover-bg: var(--brand-primary-darker);
-$navbar-dark-active-color: var(--brand-white);
-$navbar-dark-active-border-bg: var(--brand-secondary);
-$navbar-dark-disabled-color: rgba(white, 0.25);
-$navbar-dark-toggler-border-color: rgba(white, 0.1);
+$navbar-dark-color: v('brand-white');
+$navbar-dark-hover-color: v('brand-white');
+$navbar-dark-hover-bg: v('brand-primary-darker');
+$navbar-dark-active-color: v('brand-white');
+$navbar-dark-active-border-bg: v('brand-secondary');
+$navbar-dark-disabled-color: alpha(v('brand-white'), 0.25);
+$navbar-dark-toggler-border-color: alpha(v('brand-white'), 0.1);
 
 // Cards
-$cards-bg-color: var(--brand-white);
+$cards-bg-color: v('brand-white');
 
 // List group
 $list-group-color: null;
 $list-group-bg: transparent;
 $list-group-border-color: null;
+
+// Text Color Modifiers
+$text-primary: v('brand-primary');
+$text-primary-lighter: v('brand-primary-lighter');
+$text-secondary: v('brand-secondary');

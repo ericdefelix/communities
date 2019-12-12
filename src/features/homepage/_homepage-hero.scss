@@ -2,6 +2,7 @@ $hc-hero-gradient-start: #1C365F;
 $hc-hero-gradient-end: #0060AA;
 $hc-news-heading-color: var(--brand-secondary);
 $hc-hero-image-negative-offset: 13rem;
+$hc-hero-title-mbottom: v('space-lg');
 
 .#{$namespace}hero {
   position: relative;
@@ -28,6 +29,10 @@ $hc-hero-image-negative-offset: 13rem;
 }
 
 .#{$namespace}search-container {
+  h1 {
+    margin-top: 0;
+    margin-bottom: $hc-hero-title-mbottom;
+  }
   .#{$namespace}search-input {
 
   }

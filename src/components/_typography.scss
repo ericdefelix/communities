@@ -4,7 +4,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  // margin-bottom: $headings-margin-bottom;
+  margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
@@ -30,14 +30,24 @@ h6, .h6 { font-size: $h6-font-size }
 
 h1 {
   font-weight: $font-weight-light;
+  margin-bottom: $homepage-section-title-mbottom;
 }
 
 
 .subheading {
   display: block;
   font-size: $subheading-font-size;
+  font-weight: $font-weight-semibold;
   text-transform: uppercase;
   color: $subheading-color;
   letter-spacing: 0.0625rem;
   margin-bottom: var(--space-xs);
+}
+
+.text-primary-lighter {
+ color: $text-primary-lighter;
+}
+
+.text-secondary {
+  
 }

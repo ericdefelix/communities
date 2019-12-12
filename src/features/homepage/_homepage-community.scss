@@ -10,4 +10,10 @@
       grid-gap: var(--grid-gap-lg);
     }
   }
+
+  .#{$namespace}explore-image {
+    img {
+      width: 100%;
+    }
+  }
 }

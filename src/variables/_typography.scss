@@ -31,26 +31,27 @@ $font-size-lg: 1.5rem;
 $font-size-sm: 0.875rem;
 $font-size-xs: 0.75rem;
 
+$line-height-base: 1.5;
 $font-weight-light: 300;
 $font-weight-normal: 400;
-$font-weight-bold: 600;
-$font-weight-bolder: 700;
-
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
-$line-height-base: 1.5;
 
-$h1-font-size: var(--text-xxl);
-$h2-font-size: var(--text-xl);
-$h3-font-size: var(--text-lg);
-$h4-font-size: var(--text-md);
-$h5-font-size: var(--text-sm);
-$h6-font-size: var(--text-xs);
+$headings-font-weight: $font-weight-semibold;
 
-$subheading-font-size: var(--text-sm);
+$h1-font-size: v('text-xxl');
+$h2-font-size: v('text-xl');
+$h3-font-size: v('text-lg');
+$h4-font-size: v('text-md');
+$h5-font-size: v('text-sm');
+$h6-font-size: v('text-xs');
+
+$subheading-font-size: v('text-sm');;
 
 $link-decoration: none !default;
 
-$nav-link-font-size: var(--text-sm);
+$nav-link-font-size: v('text-sm');;
 $nav-link-height: calc(
   var(--font-size-base) * $line-height-base + $navbar-nav-link-padding-y * 2
 );

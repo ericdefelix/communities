@@ -5,7 +5,9 @@ $hc-section-articles-bg: var(--brand-light-grey);
   background-color: $hc-section-articles-bg;
 
   .#{$namespace}spotlights {
+    .#{$namespace}spotlight-card-title {
 
+    }
   }
 
   .#{$namespace}trending-articles {
