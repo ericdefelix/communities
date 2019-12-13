@@ -1,5 +1,10 @@
 $hc-spotlights-width: 36rem;
 $hc-section-articles-bg: var(--brand-light-grey);
+$hc-pinned-bg: v('brand-white');
+$hc-heading-color: v('brand-primary');
+$hc-text-color: $body-color;
+$hc-list-group-item-link-hover: $card-bg-color;
+$hc-pinned-m-bottom: v('font-size-base');
 
 .#{$namespace}section-articles {
   background-color: $hc-section-articles-bg;
@@ -15,6 +20,21 @@ $hc-section-articles-bg: var(--brand-light-grey);
       &:hover {
         text-decoration: none;
       }
+    }
+  }
+
+  .#{$namespace}trending-pinned {
+    background-color: $hc-pinned-bg;
+    margin-bottom: $hc-pinned-m-bottom;
+  }
+
+  .#{$namespace}list-item-summary {
+    h4 {
+      color: $hc-heading-color;
+    }
+    p {
+      color: $hc-text-color;
+      margin-bottom: 0;
     }
   }
 

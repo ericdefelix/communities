@@ -1,5 +1,3 @@
-
-
 @import './global-header';
 @import './global-footer';
 @import './grid';
@@ -7,3 +5,7 @@
 @import './list-group';
 @import './buttons';
 @import './typography';
+
+// @include media-breakpoint-up('xl', $grid-breakpoints) {
+
+// }

@@ -1,21 +1,23 @@
 .#{$namespace}usps {
   // margin-top: $hc-hero-image-negative-offset;
 
-  .#{$namespace}-item {
-    .#{$namespace}-img {
+  &-item {
+    @extend %d-flex;
+    .#{$namespace}-list-item-summary {
 
-    } 
-    .#{$namespace}-content {
-      p {
+    }
+  }
 
-      }
+  &-img {
+    width: 4rem;
+    height: 4rem;
+  } 
+  &-content {
+    p {
 
-      a {
-
-      }
     }
 
-    .#{$namespace}-list-item-summary {
+    a {
 
     }
   }

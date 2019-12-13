@@ -38,7 +38,8 @@ $navbar-dark-disabled-color: alpha(v('brand-white'), 0.25);
 $navbar-dark-toggler-border-color: alpha(v('brand-white'), 0.1);
 
 // Cards
-$cards-bg-color: v('brand-white');
+$card-bg-color: v('brand-white');
+$card-border-top-color: v('brand-secondary');
 
 // List group
 $list-group-color: null;

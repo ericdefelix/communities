@@ -6,8 +6,9 @@
 
 // Border-radius
 $border-radius: var(--border-radius);
-$border-radius-lg: 3rem !default;
-$border-radius-sm: 1.5rem !default;
+$border-radius-lg: 3rem;
+$border-radius-sm: 1.5rem;
+$border-radius-xs: 0.0625rem;
 
 // Badge
 $badge-border-radius: 30px;
@@ -24,11 +25,9 @@ $input-border-width: 0;
 $input-border-radius: var(--text-input-radius);
 
 //Cards
-$cards-border-top: 3px;
-$cards-box-shadow: 0 0 0.8125rem 0 rgba(30, 54, 94, 0.1);
-
-// Spotlight
-$spotlight-card-padding: var(--space-lg) var(--space-md);
+$card-border-top: 3px;
+$card-box-shadow: 0 0 0.8125rem 0 rgba(30, 54, 94, 0.1);
+$card-box-shadow-darker: 0 0 1rem 0 rgba(30, 54, 94, 0.3);
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-lg: $border-radius;

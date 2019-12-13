@@ -1,25 +1,28 @@
 // 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 .#{$namespace}card {
-  background-color: $cards-bg-color;
+  background-color: $card-bg-color;
   margin-bottom: $spacer;
-  box-shadow: $cards-box-shadow;
-  -webkit-box-shadow: $cards-box-shadow;
+
+  @include box-shadow($card-box-shadow);
 }
 
 .#{$namespace}spotlight-card {
   overflow: hidden;
-  border-radius: 0.0625rem;
+  border-radius: $border-radius-xs;
 
   &::before {
     content: '';
     display: block;
-    background-color: var(--brand-secondary);
+    background-color: $card-border-top-color;
     width: 100%;
-    height: $cards-border-top;
+    height: $card-border-top;
   }
 
-  &:hover > * {
-    text-decoration: none;
+  &:hover {
+    @include box-shadow($card-box-shadow-darker);
+    > * {
+      text-decoration: none;
+    }
   }
   > a {
     display: flex;
@@ -33,7 +36,7 @@
     background-size: cover;
     background-position: center center;
     background-color: var(--brand-grey);
-    margin-top: -$cards-border-top;
+    margin-top: -$card-border-top;
   }
 
   #{&}-title {

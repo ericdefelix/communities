@@ -9,9 +9,10 @@
     %w-100;
   
   display: flex;
+
+  padding-top: v('component-padding-tall');
+  padding-bottom: v('component-padding-tall');
 }
-
-
 
 .grid-3-col-responsive {
   grid-template-columns: 1fr;
