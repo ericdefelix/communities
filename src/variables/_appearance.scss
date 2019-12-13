@@ -1,0 +1,46 @@
+:root,
+[data-theme="leap"] {
+  --text-input-radius: 2rem;
+  --border-radius: 0.125rem;
+}
+
+// Border-radius
+$border-radius: var(--border-radius);
+$border-radius-lg: 3rem;
+$border-radius-sm: 1.5rem;
+$border-radius-xs: 0.0625rem;
+
+// Badge
+$badge-border-radius: 30px;
+
+//Navbar
+$navbar-toggler-border-radius: 0;
+$navbar-dark-active-border-width: 3px;
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none; // Just to save some kbs
+
+// Forms
+$input-border-width: 0;
+$input-border-radius: var(--text-input-radius);
+
+//Cards
+$card-border-top: 3px;
+$card-box-shadow: 0 0 0.8125rem 0 rgba(30, 54, 94, 0.1);
+$card-box-shadow-darker: 0 0 1rem 0 rgba(30, 54, 94, 0.3);
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-lg: $border-radius;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+// List Group
+$list-group-border-width: 0;
+$list-group-border-radius: 0;
+
+// Homepage Hero
+$hero-shape-bg: str-replace(
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 57'%3E%3Cpath d='M29.7151671 21.3043478l13.9080213 5.1097895-6.4295215 12.6160787L0 56.8115942l27.4016543-28.8355209 2.3135128-6.6717255zM38.0701265 0L70 14.6531246l-4.4426355 37.0860058-4.7792975-25.66851-30.3432844-4.5516263L38.0701265 0z' fill='%23000' fill-rule='evenodd'/%3E%3C/svg%3E"),
+  "#",
+  "%23"
+);

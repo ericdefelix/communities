@@ -1,0 +1,12 @@
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.grid {
+  display: grid;
+  display: -ms-grid;
+  grid-column-gap: $spacer;
+}
+
+@include grid-columns-classes();

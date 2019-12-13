@@ -1,0 +1,71 @@
+// Typography
+//
+// Font, line-height, headings, and more.
+:root,
+[data-theme="leap"] {
+  // Typography
+  --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-size-base: 1rem;
+  --font-scale-ratio: 1.3;
+  --text-xs: calc(1rem / (var(--font-scale-ratio) * var(--font-scale-ratio)));
+  --text-sm: calc(1rem / var(--font-scale-ratio));
+  --text-md: calc(1rem * var(--font-scale-ratio));
+  --text-lg: calc(1rem * var(--font-scale-ratio) * var(--font-scale-ratio));
+  --text-xl: calc(
+    1rem * var(--font-scale-ratio) * var(--font-scale-ratio) *
+      var(--font-scale-ratio)
+  );
+  --text-xxl: calc(
+    1rem * var(--font-scale-ratio) * var(--font-scale-ratio) *
+      var(--font-scale-ratio) * var(--font-scale-ratio)
+  );
+}
+
+$font-family-sans-serif: var(--font-family);
+$font-family-base: $font-family-sans-serif;
+$font-size-base: var(--font-size-base);
+
+$font-size-lg: v('text-lg');
+$font-size-sm: v('text-sm');
+$font-size-xs: v('text-xs');
+
+$line-height-base: 1.375;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-base: $font-weight-normal;
+
+$headings-font-weight: $font-weight-semibold;
+
+$h1-font-size: v('text-xxl');
+$h2-font-size: v('text-xl');
+$h3-font-size: v('text-lg');
+$h4-font-size: v('text-md');
+$h5-font-size: v('font-size-base');
+$h6-font-size: v('text-sm');
+
+$subheading-font-size: v('text-sm');
+$hero-heading-font-size: calc(var(--text-xxl) * 1.4);
+$lead-font-size: calc(v('font-size-base') * 1.25);
+
+$link-decoration: none !default;
+
+$nav-link-font-size: v('text-sm');
+$nav-link-height: calc(
+  var(--font-size-base) * $line-height-base + $navbar-nav-link-padding-y * 2
+);
+
+$btn-font-size-lg: 1rem;
+
+$blockquote-font-size: calc(v('font-size-base') * 1.25);
+
+// $input-btn-font-size: calc(v('font-size-base'));
+$input-font-size-lg: v('text-md');
+
+$dropdown-font-size: calc(v('font-size-base'));
+$progress-font-size: calc(v('font-size-base') * 0.75);
+$close-font-size: calc(v('font-size-base') * 1.5);
+

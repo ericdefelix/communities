@@ -46,29 +46,26 @@
   
   <section class="hc-homepage-section hc-hero">
     <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <div class="hc-search-container">
-            <h1 class="text-light mb-4">Hi, how can we help?</h1>
-            <div class="hc-search-input mb-5">
-              <i class="icon-search"></i>
-              <input type="text" class="form-control" placeholder="Search for help articles, community posts, ideas...">
-            </div>
-          </div>
+      <div class="grid grid-2">
 
-          <div class="hc-news-content mt-4">
-            <h6 class="hc-news-heading">News and Announcements</h6>
-            <ul class="list-unstyled text-light">
+        <div class="hc-hero-container">
+          <div class="hc-hero-row">
+            <h1 class="text-light">Hi, how can we help?</h1>
+            <div class="hc-search-input">
+              <i class="icon-search"></i>
+              <input type="text" class="form-control form-control-lg" placeholder="Search for help articles, community posts, ideas...">
+            </div>
+            
+            <h5 class="hc-news-heading">News and Announcements</h5>
+            <ul class="hc-news-content list-unstyled text-light">
               <li><a href="http://">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
               <li><a href="http://">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="col-6">
-          <div class="hc-hero-image">
-            <img class="img-fluid" src="/src/assets/hero-image_@2x.png" alt="">
-          </div>
+        <div class="hc-hero-image">
+          <img class="img-fluid" src="/src/assets/hero-image_@2x.png" alt="">
         </div>
       </div>
     </div>
@@ -82,144 +79,120 @@
     </div> -->
   </section>
 
-  <section class="hc-homepage-section">
+  <section class="hc-homepage-section hc-usps">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Let's learn our products...</h1>
-          <ul class="list-unstyled row hc-usp-group">
-            <li class="col-4">
-              <article class="hc-usp-item">
-                <img src="" alt="">              
-                <div class="hc-usp-content">
-                  <div class="hc-list-item-summary">
-                    <h2>Knowledge Base</h2>
-                    <dd>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</dd>
-                  </div>
-                  <a href="http://">Browse articles</a>
-                </div>
-              </article>
-            </li>
-            <li class="col-4">
-              <article class="hc-usp-item">
-                <img src="" alt="">              
-                <div class="hc-usp-content">
-                  <div class="hc-list-item-summary">
-                    <h2>Community</h2>
-                    <dd>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</dd>
-                  </div>
-                  <a href="http://">Join the Community</a>
-                </div>
-              </article>
-            </li>
-            <li class="col-4">
-              <article class="hc-usp-item">
-                <img src="" alt="">              
-                <div class="hc-usp-content">
-                  <div class="hc-list-item-summary">
-                    <h2>What's New</h2>
-                    <dd>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</dd>
-                  </div>
-                  <a href="http://">Learn about new features</a>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>  
-      </div>
+      <h1>Let's learn our products...</h1>
+      <ul class="list-unstyled hc-usp-group grid grid-3">
+        <li>
+          <article class="hc-usps-item">
+            <div class="hc-usps-img"><img src="" alt="Image"/></div>
+            <div class="hc-usps-content">
+              <div class="hc-list-item-summary">
+                <h3 class="text-primary-lighter">Knowledge Base</h3>
+                <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
+              </div>
+              <a href="http://">Browse articles</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="hc-usps-item">
+            <div class="hc-usps-img"><img src="" alt="Image"/></div>
+            <div class="hc-usps-content">
+              <div class="hc-list-item-summary">
+                <h3 class="text-primary-lighter">Community</h3>
+                <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
+              </div>
+              <a href="http://">Join the Community</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="hc-usps-item">
+            <div class="hc-usps-img"><img src="" alt="Image"/></div>
+            <div class="hc-usps-content">
+              <div class="hc-list-item-summary">
+                <h3 class="text-primary-lighter">What's New</h3>
+                <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
+              </div>
+              <a href="http://">Learn about new features</a>
+            </div>
+          </article>
+        </li>
+      </ul>
     </div>
   </section>
 
   <section class="hc-homepage-section hc-section-articles">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="text-center">Popular Articles and Highlights</h1>
-
-          <div class="row">
-            <div class="col-5 col-md-6 col-sm-12">
-              <div class="hc-spotlights">
-                <article class="hc-card hc-spotlight-card">
-                  <a href="">
-                    <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample1.jpg')"></div>
-                    <div class="hc-spotlight-card-body">
-                      <h3 class="hc-spotlight-card-title">
-                        <small>Learning</small> <br>
-                        University
-                      </h3>
-                      <dd>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</dd>
-                    </div>
-                  </a>
-                </article>
-
-                <article class="hc-card hc-spotlight-card">
-                  <a href="">
-                    <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample2.jpg')"></div>
-                    <div class="hc-spotlight-card-body">
-                      <h3 class="hc-spotlight-card-title">
-                        <small>Learning</small> <br>
-                        University
-                      </h3>
-                      <dd>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</dd>
-                    </div>
-                  </a>
-                </article>
-
-                <article class="hc-card hc-spotlight-card">
-                  <a href="">
-                    <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample3.jpg')"></div>
-                    <div class="hc-spotlight-card-body">
-                      <h3 class="hc-spotlight-card-title">
-                        <small>Learning</small> <br>
-                        University
-                      </h3>
-                      <dd>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</dd>
-                    </div>
-                  </a>
-                </article>
+      <h1 class="text-center">Popular articles and highlights</h1>
+      <div class="grid grid-2 grid-2-col-responsive">
+        <div class="hc-spotlights">
+          <article class="hc-card hc-spotlight-card">
+            <a href="">
+              <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample1.jpg')"></div>
+              <div class="hc-spotlight-card-body">
+                <small class="subheading">Learning</small>
+                <h4 class="text-primary-lighter">University</h4>
+                <p>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
               </div>
-            </div>
+            </a>
+          </article>
 
-            <div class="col-7 col-md-6 col-sm-12">
-              <div class="hc-trending-articles list-group">
-                <a href="#" class="list-group-item">
-                  <article class="hc-list-item-summary">
-                    <h3>
-                      <small>Installing and Setup</small><br>
-                      Getting Started
-                    </h3>
-                    <dd>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</dd>
-                  </article>
-                </a>
-                <a href="#" class="list-group-item">
-                  <article class="hc-list-item-summary">
-                    <h3>
-                      <small>sadfadfsadfa</small><br>
-                      Importing a document to a matter
-                    </h3>
-                    <dd>Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</dd>
-                  </article>
-                </a>
-                <a href="#" class="list-group-item">
-                  <article class="hc-list-item-summary">
-                    <h3>
-                      <small>sadfadfsadfa</small><br>
-                      Calculation of VAT on Invoices - Rounding of Amounts
-                    </h3>
-                    <dd>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</dd>
-                  </article>
-                </a>
-                <a href="#" class="list-group-item">
-                  <article class="hc-list-item-summary">
-                    <h3>
-                      <small>sadfadfsadfa</small><br>
-                      Recording time in Microsoft Outlook
-                    </h3>
-                    <dd>Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</dd>
-                  </article>
-                </a>
+          <article class="hc-card hc-spotlight-card">
+            <a href="">
+              <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample2.jpg')"></div>
+              <div class="hc-spotlight-card-body">
+                <small class="subheading">Learning</small>
+                <h4 class="text-primary-lighter">University</h4>
+                <p>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
               </div>
-            </div>
+            </a>
+          </article>
+
+          <article class="hc-card hc-spotlight-card">
+            <a href="">
+              <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample3.jpg')"></div>
+              <div class="hc-spotlight-card-body">
+                <small class="subheading">Learning</small>
+                <h4 class="text-primary-lighter">University</h4>
+                <p>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="hc-trending-articles">
+          <h3 class="text-primary-lighter">Trending Articles</h3>
+          <div class="list-group">
+            <a href="#" class="list-group-item hc-trending-pinned">
+              <article class="hc-list-item-summary">
+                <small class="subheading">Installing and Setup</small>
+                <h4>Getting Started</h4>
+                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              </article>
+            </a>
+            <a href="#" class="list-group-item">
+              <article class="hc-list-item-summary">
+                <small class="subheading">sadfadfsadfa</small>
+                <h4>Importing a document to a matter</h4>
+                <p>Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
+              </article>
+            </a>
+            <a href="#" class="list-group-item">
+              <article class="hc-list-item-summary">
+                <small class="subheading">sadfadfsadfa</small>
+                <h4>Calculation of VAT on Invoices - Rounding of Amounts</h4>
+                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              </article>
+            </a>
+            <a href="#" class="list-group-item">
+              <article class="hc-list-item-summary">
+                <small class="subheading">sadfadfsadfa</small>
+                <h4>Recording time in Microsoft Outlook</h4>
+                <p>Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
+              </article>
+            </a>
           </div>
         </div>
       </div>
@@ -228,18 +201,14 @@
 
   <section class="hc-homepage-section hc-section-companion">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="">Companion Products</h1>
-        </div>  
-      </div>
+      <h1 class="">Companion Products</h1>
     </div>
   </section>
 
   <section class="hc-homepage-section hc-section-community">
     <div class="container">
-      <div class="row">
-        <div class="col-6">
+      <div class="grid grid-2">
+        <div class="hc-explore">
           <h1 class="text-light">Explore Our Community</h1>
           <p>Officia ultrices. Nisl earum cursus blanditiis molestiae dui aspernatur non quae odit mattis laoreet. Porro blandit
             ullamcorper pulvinar turpis vivamus dolore eveniet necessitatibus sagittis cillum metus necessitatibus, ornare eros
@@ -256,8 +225,7 @@
     </div>
   </section>
 
-  <footer class="hc-global-footer">
-
+  <footer class="hc-global-footer grid-full">
     <div class="container">
 
       <div class="footer-top">
@@ -312,8 +280,6 @@
 
       </div>
 
-      
-    
     </div>
     <div class="hc-copyright">
       <div class="container">
@@ -331,7 +297,6 @@
       </div>
     </div>
   </footer> 
-
 
   <script src="index.js"></script>
 </body>

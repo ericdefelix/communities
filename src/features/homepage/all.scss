@@ -1,0 +1,24 @@
+@import './homepage-hero';
+@import './homepage-usps';
+@import './homepage-trending';
+@import './homepage-companion-apps';
+@import './homepage-community';
+
+.#{$namespace}homepage-section {
+  @extend 
+    %w-100;
+  
+  display: flex;
+
+  padding-top: v('component-padding-tall');
+  padding-bottom: v('component-padding-tall');
+}
+
+.grid-3-col-responsive {
+  grid-template-columns: 1fr;
+  grid-gap: var(--grid-gap);
+  @include media-breakpoint-up('md',$grid-breakpoints) {
+    grid-gap: var(--grid-gap-lg);
+    grid-template-columns: repeat(3,1fr);
+  }
+}

@@ -1,0 +1,52 @@
+:root,
+[data-theme="leap"] {
+  // Brand Colors
+  --brand-black: #000;
+  --brand-white: #fff;
+  --brand-light: #eee;
+  --brand-light-grey: #f6f8f9;
+  --brand-dark-grey: #525252;
+  --brand-green: #2e7244;
+  --brand-blue: #0060aa;
+  --body-text-color: #58595b;
+
+  --brand-primary: #1e365e;
+  --brand-primary-darker: #162845;
+  --brand-primary-lighter: #0060ac;
+
+  --brand-secondary: #f79239;
+  --brand-secondary-darker: #f68520;
+}
+
+$primary: #1e365e;
+$secondary: #f79239;
+
+// Body
+$body-color: v('body-text-color');
+$subheading-color: v('brand-dark-grey');
+
+$link-color: v('brand-primary-lighter');
+$link-hover-color: v('brand-secondary');
+
+// Navbar
+$navbar-dark-color: v('brand-white');
+$navbar-dark-hover-color: v('brand-white');
+$navbar-dark-hover-bg: v('brand-primary-darker');
+$navbar-dark-active-color: v('brand-white');
+$navbar-dark-active-border-bg: v('brand-secondary');
+$navbar-dark-disabled-color: alpha(v('brand-white'), 0.25);
+$navbar-dark-toggler-border-color: alpha(v('brand-white'), 0.1);
+
+// Cards
+$card-bg-color: v('brand-white');
+$card-border-top-color: v('brand-secondary');
+
+// List group
+$list-group-color: null;
+$list-group-bg: transparent;
+$list-group-border-color: null;
+
+// Text Color Modifiers
+$text-primary: v('brand-primary');
+$text-primary-lighter: v('brand-primary-lighter');
+$text-secondary: v('brand-secondary');
