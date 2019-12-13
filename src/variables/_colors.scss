@@ -4,8 +4,11 @@
   --brand-black: #000;
   --brand-white: #fff;
   --brand-light: #eee;
+
   --brand-light-grey: #f6f8f9;
   --brand-dark-grey: #525252;
+  --brand-label-grey: #889099;
+
   --brand-green: #2e7244;
   --brand-blue: #0060aa;
   --body-text-color: #58595b;
@@ -27,6 +30,8 @@ $subheading-color: v('brand-dark-grey');
 
 $link-color: v('brand-primary-lighter');
 $link-hover-color: v('brand-secondary');
+
+$label: v('brand-label-grey');
 
 // Navbar
 $navbar-dark-color: v('brand-white');
