@@ -1,6 +1,11 @@
 @function v($var) {
   @return var(--#{$var});
 }
+
+@function rvr($multiple) {
+  @return calc(var(--baseline) * $multiple * 1rem);
+}
+
 @import './appearance';
 @import './colors';
 @import './dimensions';

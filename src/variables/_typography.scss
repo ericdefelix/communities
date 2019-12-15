@@ -8,7 +8,7 @@
     'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-size-base: 1rem;
-  --font-scale-ratio: 1.3;
+  --font-scale-ratio: 1.333;
   --text-xs: calc(1rem / (var(--font-scale-ratio) * var(--font-scale-ratio)));
   --text-sm: calc(1rem / var(--font-scale-ratio));
   --text-md: calc(1rem * var(--font-scale-ratio));
@@ -21,6 +21,7 @@
     1rem * var(--font-scale-ratio) * var(--font-scale-ratio) *
       var(--font-scale-ratio) * var(--font-scale-ratio)
   );
+  --line-height-base: 1.5;
 }
 
 $font-family-sans-serif: var(--font-family);
@@ -31,14 +32,14 @@ $font-size-lg: v('text-lg');
 $font-size-sm: v('text-sm');
 $font-size-xs: v('text-xs');
 
-$line-height-base: 1.375;
+// $line-height-base: v('line-height-base');
+$line-height-base: 1.5;
+
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
-
-$headings-font-weight: $font-weight-semibold;
 
 $h1-font-size: v('text-xxl');
 $h2-font-size: v('text-xl');
@@ -46,9 +47,10 @@ $h3-font-size: v('text-lg');
 $h4-font-size: v('text-md');
 $h5-font-size: v('font-size-base');
 $h6-font-size: v('text-sm');
+$headings-font-weight: $font-weight-semibold;
 
 $subheading-font-size: v('text-sm');
-$hero-heading-font-size: calc(var(--text-xxl) * 1.4);
+$hero-heading-font-size: calc(var(--text-xxl) * 1.2);
 $lead-font-size: calc(v('font-size-base') * 1.25);
 
 $link-decoration: none !default;
@@ -63,7 +65,7 @@ $btn-font-size-lg: 1rem;
 $blockquote-font-size: calc(v('font-size-base') * 1.25);
 
 // $input-btn-font-size: calc(v('font-size-base'));
-$input-font-size-lg: v('text-md');
+$input-font-size-lg: v('font-size-base');
 
 $dropdown-font-size: calc(v('font-size-base'));
 $progress-font-size: calc(v('font-size-base') * 0.75);
