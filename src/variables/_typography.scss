@@ -1,73 +1,98 @@
 // Typography
 //
 // Font, line-height, headings, and more.
+$text-scale-ratios: (
+  "0": 1.067,
+  // minor-second
+    "1": 1.125,
+  // major-second
+    "2": 1.2,
+  // minor-third
+    "3": 1.25,
+  // major-third
+    "4": 1.333,
+  // perfect-fourth
+    "5": 1.414,
+  // augmented-fourth
+    "6": 1.5,
+  // perfect-fifth
+    "7": 1.618 // golden-ratio
+);
+
 :root,
 [data-theme="leap"] {
-  // Typography
-  --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  // Font Family
+  --font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+
+  // Body Font Size
   --font-size-base: 1rem;
-  --font-scale-ratio: 1.333;
-  --text-xs: calc(1rem / (var(--font-scale-ratio) * var(--font-scale-ratio)));
-  --text-sm: calc(1rem / var(--font-scale-ratio));
-  --text-md: calc(1rem * var(--font-scale-ratio));
-  --text-lg: calc(1rem * var(--font-scale-ratio) * var(--font-scale-ratio));
-  --text-xl: calc(
-    1rem * var(--font-scale-ratio) * var(--font-scale-ratio) *
-      var(--font-scale-ratio)
-  );
-  --text-xxl: calc(
-    1rem * var(--font-scale-ratio) * var(--font-scale-ratio) *
-      var(--font-scale-ratio) * var(--font-scale-ratio)
-  );
-  --line-height-base: 1.5;
+
+  // Line Height
+  --line-height-base: 1.4;
+  --line-height-heading: 1.2;
+
+  // Type Scale
+  --text-scale-ratio: 1.333;
+  --text-xs: calc((1rem / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
 }
 
+// SASS
+$line-height-base: 1.4;
 $font-family-sans-serif: var(--font-family);
 $font-family-base: $font-family-sans-serif;
 $font-size-base: var(--font-size-base);
 
-$font-size-lg: v('text-lg');
-$font-size-sm: v('text-sm');
-$font-size-xs: v('text-xs');
+$font-size-lg: v("text-lg");
+$font-size-sm: v("text-sm");
+$font-size-xs: v("text-xs");
 
-// $line-height-base: v('line-height-base');
-$line-height-base: 1.5;
-
+// Font weight
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
-
-$h1-font-size: v('text-xxl');
-$h2-font-size: v('text-xl');
-$h3-font-size: v('text-lg');
-$h4-font-size: v('text-md');
-$h5-font-size: v('font-size-base');
-$h6-font-size: v('text-sm');
 $headings-font-weight: $font-weight-semibold;
 
-$subheading-font-size: v('text-sm');
-$hero-heading-font-size: calc(var(--text-xxl) * 1.2);
-$lead-font-size: calc(v('font-size-base') * 1.25);
+$h1-font-size: v("text-xxl");
+$h2-font-size: v("text-xl");
+$h3-font-size: v("text-lg");
+$h4-font-size: v("text-md");
+$h5-font-size: v("text-sm");
+$h6-font-size: v("text-xs");
+
+$subheading-font-size: v("text-sm");
+$lead-font-size: calc(v("font-size-base") * 1.25);
 
 $link-decoration: none !default;
 
-$nav-link-font-size: v('text-sm');
+$nav-link-font-size: v("text-sm");
 $nav-link-height: calc(
   var(--font-size-base) * $line-height-base + $navbar-nav-link-padding-y * 2
 );
 
 $btn-font-size-lg: 1rem;
 
-$blockquote-font-size: calc(v('font-size-base') * 1.25);
+$blockquote-font-size: calc(v("font-size-base") * 0.25);
 
 // $input-btn-font-size: calc(v('font-size-base'));
-$input-font-size-lg: v('font-size-base');
+$input-font-size-lg: v("font-size-base");
 
-$dropdown-font-size: calc(v('font-size-base'));
-$progress-font-size: calc(v('font-size-base') * 0.75);
-$close-font-size: calc(v('font-size-base') * 1.5);
+$dropdown-font-size: calc(v("font-size-base"));
+$progress-font-size: calc(v("font-size-base") * 0.75);
+$close-font-size: calc(v("font-size-base") * 1.5);
 
+// @include media-breakpoint-down('lg') {
+//   :root,
+//   [data-theme="leap"] {
+//     --text-scale-ratio: 1.250;
+//   }
+// }

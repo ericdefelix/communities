@@ -6,10 +6,9 @@ $grid-width-md: map-get($grid-breakpoints, "md");
   @extend %w-100;
   background-color: #303030;
   color: #9C9C9C;
-  padding: 2.25rem 0rem 0rem 0rem;
-
 
   .footer-top {
+    padding: 2.25rem 0;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     display: grid;

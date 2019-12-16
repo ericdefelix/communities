@@ -3,8 +3,10 @@
 }
 
 @function rvr($multiple) {
-  @return calc(var(--baseline) * $multiple * 1rem);
+  @return calc(var(--line-height-base) * $multiple * 1rem);
 }
+
+// @import '../../node_modules/bootstrap/scss/functions';
 
 @import './appearance';
 @import './colors';

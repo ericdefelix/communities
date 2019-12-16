@@ -1,28 +1,24 @@
 :root,
 [data-theme="leap"] {
   // Spacing
-  --space-unit:  1rem;
-  --space-xxxxs: calc(0.125 * var(--space-unit)); 
-  --space-xxxs:  calc(0.25 * var(--space-unit));
-  --space-xxs:   calc(0.375 * var(--space-unit));
-  --space-xs:    calc(0.5 * var(--space-unit));
-  --space-sm:    calc(0.75 * var(--space-unit));
-  --space-md:    calc(1.25 * var(--space-unit));
-  --space-lg:    calc(2 * var(--space-unit));
-  --space-xl:    calc(3.25 * var(--space-unit));
-  --space-xxl:   calc(5.25 * var(--space-unit));
-  --space-xxxl:  calc(8.5 * var(--space-unit));
-  --space-xxxxl: calc(13.75 * var(--space-unit));
+  --baseline: 1rem;
+  --space-sm: calc(var(--baseline) / 2);
+  --space-md: var(--baseline);
+  --space-lg: calc(var(--baseline) * 2);
+  --space-xl: calc(var(--baseline) * 3);
+  --space-xxl: calc(var(--baseline) * 4);
+  --space-xxxl: calc(var(--baseline) * 5);
 
-  --component-padding-tall: calc(5.25 * var(--font-size-base));
-  --component-padding-loose: calc(3.25 * var(--font-size-base));
-  --component-padding-normal: calc(2 * var(--font-size-base));
-  --component-padding-compact: calc(1.25 * var(--font-size-base));
+  --component-padding-xxl: var(--space-xxl);
+  --component-padding-xl: var(--space-xl);
+  --component-padding-lg: var(--space-lg);
+  --component-padding: var(--space-md);
+  --component-padding-sm: var(--space-sm);
 
   --card-padding: 1.5rem 2.25rem;
 
-  --grid-gap-lg: 4rem;
-  --grid-gap: 2.5rem;
+  --grid-gap-lg: var(--space-xxl);
+  --grid-gap: var(--space-lg);
 }
 
 // Navbar
@@ -58,7 +54,7 @@ $spotlight-card-padding: var(--space-lg) var(--space-md);
 $card-padding: var(--card-padding);
 
 // Homepage Sections
-$homepage-hero-img-offset: -15rem;
+$homepage-hero-img-offset: 0;
 $homepage-sections-padding: v("space-xl") 0;
 $homepage-section-title-mbottom: v("space-lg");
 // $homepage-section-title-mtop: v('space-xxl');
