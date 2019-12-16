@@ -6,6 +6,19 @@
   @return calc(var(--line-height-base) * $multiple * 1rem);
 }
 
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // @import '../../node_modules/bootstrap/scss/functions';
 
 @import './appearance';

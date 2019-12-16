@@ -25,4 +25,12 @@
       margin-top: v('space-lg')
     }
   }
+
+  .grid {
+    grid-gap: var(--grid-gap);
+
+    > li {
+      width: 33.333%;
+    }
+  }
 }

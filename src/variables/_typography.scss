@@ -35,7 +35,7 @@ $text-scale-ratios: (
 
   // Type Scale
   --text-scale-ratio: 1.333;
-  --text-xs: calc((1rem / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-xs: calc((var(--font-size-base) / var(--text-scale-ratio)) / var(--text-scale-ratio));
   --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
   --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
@@ -74,7 +74,7 @@ $lead-font-size: calc(v("font-size-base") * 1.25);
 
 $link-decoration: none !default;
 
-$nav-link-font-size: v("text-sm");
+$nav-link-font-size: $font-size-base;
 $nav-link-height: calc(
   var(--font-size-base) * $line-height-base + $navbar-nav-link-padding-y * 2
 );
