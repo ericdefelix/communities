@@ -1,0 +1,67 @@
+$nav-icon-width: 1.5625rem;
+$nav-icon-height: 1rem;
+$line-thickness: 0.125rem;
+
+.navicon-wrap {}
+
+.navicon {
+  width: $nav-icon-width;
+  height: $nav-icon-height;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  outline: none !important;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  // padding-top: $navbar-nav-link-padding-y;
+  // padding-bottom: $navbar-nav-link-padding-y;
+  @include transform(rotate(0deg));
+  @include transition(.5s ease-in-out);
+
+  i  {
+    display: block;
+    position: absolute;
+    height: $line-thickness;
+    width: 100%;
+    background: v('brand-white');
+    border-radius: 0.0625rem;
+    left: 0;
+    opacity: 1;
+    @include transform(rotate(0deg));
+    @include transition(.25s ease-in-out);
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: calc(50% - $line-thickness);
+    }
+
+    &:nth-child(4) {
+      top: 100%;
+    }
+  }
+
+  &.collapsed i:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  &.collapsed i:nth-child(2) {
+    @include transform(rotate(45deg));
+  }
+
+  &.collapsed i:nth-child(3) {
+    @include transform(rotate(-45deg));
+  }
+
+  &.collapsed i:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+}

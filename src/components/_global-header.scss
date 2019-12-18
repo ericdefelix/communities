@@ -1,3 +1,4 @@
+@import 'http://fonts.googleapis.com/css?family=Lato:300&text=HelpCntr';
 
 .#{$namespace}global-header {
   @extend 
@@ -11,7 +12,7 @@
   .nav-link {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: $nav-link-font-size;
+    font-size: v('navlink-text-size');
     padding-top: $navbar-nav-link-padding-y;
     padding-bottom: $navbar-nav-link-padding-y;
     position: relative;
@@ -35,16 +36,23 @@
   }
 
   .navbar-brand {
-    // @extend 
-    //   %d-flex,
-    //   %mx-auto;
-
-    width: 16rem;
-    // align-items: center;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
   }
 
   .navbar-brand-img {
-    width: 100%;
+    width: auto;
+    height: 1.6875rem;
+
+    + span {
+      display: block;
+      font-family: 'Lato';
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 1;
+      margin-left: 0.75rem;
+    }
   }
   .navbar-toggler-icon {
     width: 100%;

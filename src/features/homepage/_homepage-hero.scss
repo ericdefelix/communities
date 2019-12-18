@@ -6,7 +6,7 @@ $hc-hero-title-mbottom: v('space-lg');
 
 .#{$namespace}hero {
   position: relative;
-  background-color: $hc-hero-gradient-end;
+  background-color: #12467B;
   @include scrim-gradient('to bottom',$hc-hero-gradient-start);
   // padding-top: 4rem;
 
@@ -74,6 +74,9 @@ $hc-hero-title-mbottom: v('space-lg');
 }
 
 .#{$namespace}news-content {
+  li {
+    margin-bottom: v('')
+  }
   a {
     color: white;
   }

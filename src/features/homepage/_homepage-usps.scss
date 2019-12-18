@@ -2,16 +2,16 @@
   // margin-top: $hc-hero-image-negative-offset;
 
   &-item {
-    @extend %d-flex;
+
     .#{$namespace}-list-item-summary {
 
     }
   }
 
   &-img {
-    width: 16rem;
-    height: auto;
-    padding-right: v('component-padding-lg');
+    img {
+      width: 100%;
+    }
   } 
   &-content {
     p {
@@ -23,14 +23,6 @@
       color: v('brand-primary');
       font-weight: $font-weight-semibold;
       margin-top: v('space-lg')
-    }
-  }
-
-  .grid {
-    grid-gap: var(--grid-gap);
-
-    > li {
-      width: 33.333%;
     }
   }
 }

@@ -4,13 +4,15 @@
 @import './homepage-companion-apps';
 @import './homepage-community';
 
+
+$hc-padding: calc(var(--text-xxl));
+
 .#{$namespace}homepage-section {
   @extend 
     %w-100;
   
   display: flex;
-  padding-top: v('component-padding-xxl');
-  padding-bottom: v('component-padding-xxl');
+  padding: $hc-padding 0;
 }
 
 .grid-3-col-responsive {

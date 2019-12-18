@@ -42,7 +42,14 @@ $text-scale-ratios: (
   --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+
+  --navlink-text-size: 0.875rem;
+
+  @include media-breakpoint-down('md') {
+    --navlink-text-size: v('font-size-base');
+  }
 }
+
 
 // SASS
 $line-height-base: 1.4;
@@ -62,19 +69,18 @@ $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
 $headings-font-weight: $font-weight-semibold;
 
-$h1-font-size: v("text-xxl");
-$h2-font-size: v("text-xl");
-$h3-font-size: v("text-lg");
-$h4-font-size: v("text-md");
-$h5-font-size: v("text-sm");
-$h6-font-size: v("text-xs");
+$h1-font-size: '';
+$h2-font-size: '';
+$h3-font-size: '';
+$h4-font-size: '';
+$h5-font-size: '';
+$h6-font-size: '';
 
 $subheading-font-size: v("text-sm");
 $lead-font-size: calc(v("font-size-base") * 1.25);
-
 $link-decoration: none !default;
 
-$nav-link-font-size: $font-size-base;
+
 $nav-link-height: calc(
   var(--font-size-base) * $line-height-base + $navbar-nav-link-padding-y * 2
 );

@@ -9,15 +9,11 @@
   --space-xxl: calc(var(--baseline) * 4);
   --space-xxxl: calc(var(--baseline) * 5);
 
-  --component-padding-xxl: var(--space-xxl);
-  --component-padding-xl: var(--space-xl);
-  --component-padding-lg: var(--space-lg);
   --component-padding: var(--space-md);
-  --component-padding-sm: var(--space-sm);
-
-  --card-padding: 1.5rem 2.25rem;
 
   --grid-gap: var(--space-sm);
+  --card-padding: 1.5rem 2.25rem;
+
 
   @include media-breakpoint-between('md', 'lg', $grid-breakpoints) {
     --grid-gap: var(--space-md);
