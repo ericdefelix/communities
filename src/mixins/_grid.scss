@@ -14,8 +14,8 @@
 
 @mixin create-container() {
   width: 100%;
-  padding-right: v('space-lg');
-  padding-left: v('space-lg');
+  padding-right: v('container-padding');
+  padding-left: v('container-padding');
   margin-right: auto;
   margin-left: auto;
 }

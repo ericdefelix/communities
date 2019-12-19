@@ -10,27 +10,25 @@
 </head>
 <body>
   <header class="hc-global-header">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
+    <div class="navbar navbar-expand-lg navbar-dark container" role="navigation">
       <a class="navbar-brand" href="#">
         <img class="navbar-brand-img" src="src/assets/leap-logo-small.svg" alt="logo" />
         <span>Help Center</span>
       </a>
 
-      <div class="d-flex">
-        <div class="hc-server-status">
-          <a href="">
-            <span class="badge badge-lg badge-success">Servers are Up</span>
-          </a>
-        </div>
+      <div class="d-flex ml-auto align-items-center">
+        <a href="#" class="badge hc-server-status">
+          <span class="">Servers are Up</span>
+        </a>
 
-        
-        <button class="navicon nav-button navbar-toggle" tabindex="0" data-target="#navbar" data-toggle="collapse" aria-expanded="false">
+        <button class="navicon nav-button navbar-toggle navbar-toggler" tabindex="0" data-target="#navbar"
+          data-toggle="collapse" aria-expanded="false">
           <div class="navicon-wrap"><i></i><i></i><i></i><i></i></div>
         </button>
       </div>
 
       <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav ml-auto flex-nowrap">
+        <nav class="navbar-nav">
           <div class="nav-item">
             <a href="#" class="nav-link active">Knowledge Base</a>
           </div>
@@ -40,10 +38,9 @@
           <div class="nav-item">
             <a href="#" class="nav-link">Sign In</a>
           </div>
-        </div>
+          </ul>
       </div>
-
-    </nav>
+    </div>
   </header>
   
   <section class="hc-homepage-section hc-hero">

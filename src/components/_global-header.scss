@@ -3,8 +3,21 @@
 .#{$namespace}global-header {
   @extend 
     %w-100;
-  
   background-color: var(--brand-primary);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: $zindex-fixed;
+
+  .navbar {
+    @include media-breakpoint-up('lg') {
+      display: grid;
+      display: -webkit-grid;
+      grid-template-columns: auto 1fr auto;
+      -webkit-grid-template-columns: auto 1fr auto;
+    }
+  }
+
   .nav-item {
     height: 100%;
   }
@@ -13,8 +26,8 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: v('navlink-text-size');
-    padding-top: $navbar-nav-link-padding-y;
-    padding-bottom: $navbar-nav-link-padding-y;
+    padding-top: 0;
+    padding-bottom: 0;
     position: relative;
 
     &:hover {
@@ -39,6 +52,7 @@
     display: flex;
     align-items: center;
     margin-right: 0;
+    height: $navbar-brand-height;
   }
 
   .navbar-brand-img {
