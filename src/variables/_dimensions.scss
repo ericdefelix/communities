@@ -1,14 +1,11 @@
-$navbar-toggler-dimension: 1.5rem;
-$navbar-brand-height: calc(var(--font-size-base) * 4);
+:root,
+[data-theme="leap"] {
+  --navbar-brand-height: 1.6rem;
+}
+
 $spotlight-card-thumbnail-width: 10rem;
 
 // Input Boxes
-$ihb: 1px;
-$ilh: var(--line-height-base);
-$ipy: var(--space-md);
-$ipy-sm: var(--space-sm);
-$ipy-lg: var(--space-lg);
-
 // $input-height: calc(#{$input-line-height * 1rem} + #{$input-padding-y * 2} + #{$input-height-border});
 // $input-height-sm: calc(#{$input-line-height-sm * 1rem} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border});
 $input-height-lg: calc(1.5 * 1rem + (var(--space-sm) * 2) + 0.0625rem);
