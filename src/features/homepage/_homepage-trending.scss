@@ -40,7 +40,6 @@ $hc-pinned-m-bottom: v('font-size-base');
 
   .grid {
     grid-template-columns: 1fr;
-    grid-gap: var(--grid-gap);
     @include media-breakpoint-between('md', 'xlg',$grid-breakpoints) {
       grid-template-columns: 1fr 1fr;
     }

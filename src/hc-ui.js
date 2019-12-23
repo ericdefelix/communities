@@ -1,5 +1,6 @@
 import 'bootstrap.native/dist/bootstrap-native-v4';
 
+import { CustomToggleNavbar } from './js/navbar-toggle';
 import cssVars from "css-vars-ponyfill";
 
 const hcUI = {
@@ -11,6 +12,9 @@ const hcUI = {
       // alert("IE " + parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
       cssVars({});
     }
+
+    const toggleSelector = document.querySelector('[data-target="#navbar"]');
+    CustomToggleNavbar(toggleSelector);
   }
 }
 

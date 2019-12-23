@@ -46,7 +46,7 @@ $text-scale-ratios: (
   --navlink-text-size: 0.875rem;
 
   @include media-breakpoint-down('md') {
-    --navlink-text-size: v('font-size-base');
+    --navlink-text-size: var(--font-size-base);
   }
 }
 

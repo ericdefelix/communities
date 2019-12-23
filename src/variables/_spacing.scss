@@ -17,7 +17,7 @@
 
 
   @include media-breakpoint-between('md', 'lg', $grid-breakpoints) {
-    --grid-gap: var(--space-md);
+    --grid-gap: var(--space-lg);
   }
   @include media-breakpoint-up('xl', $grid-breakpoints) {
     --grid-gap: var(--space-xxl);

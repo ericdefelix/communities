@@ -1,5 +1,5 @@
-$navbar-toggler-dimension: 1.5rem;
-$navbar-toggler-padding-x: 0;
+$navbar-toggler-padding-x: v("space-md");
+$navbar-toggler-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));
 
 // Navbar
 $navbar-brand-height: '';

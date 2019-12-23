@@ -1,0 +1,34 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+// Settings
+// ==================================================
+$hamburger-padding-x           : $navbar-toggler-padding-x;
+$hamburger-padding-y           : calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2) - 2px);
+$hamburger-layer-width         : 26px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 6px;
+$hamburger-layer-color         : v('brand-white');
+$hamburger-layer-border-radius : 1px;
+$hamburger-hover-opacity       : 1;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter   : false !default;
+$hamburger-hover-filter       : opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+// Types (Remove or comment out what you don’t need)
+// ==================================================
+$hamburger-types: (slider);
+
+@import '../../node_modules/hamburgers/_sass/hamburgers/base';
+@import "../../node_modules/hamburgers/_sass/hamburgers/types/slider";

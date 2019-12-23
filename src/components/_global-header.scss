@@ -10,6 +10,9 @@
   z-index: $zindex-fixed;
 
   .navbar {
+    @include media-breakpoint-down('lg') {
+      padding-right: 0;
+    }
     @include media-breakpoint-up('lg') {
       display: grid;
       display: -webkit-grid;
@@ -36,7 +39,6 @@
     }
 
     &.active {
-
       &::before {
         content: '';
         position: absolute;
@@ -63,24 +65,17 @@
     + span {
       display: block;
       font-family: 'Lato';
-      font-weight: bold;
       font-size: calc(var(--navbar-brand-height) + 0.4rem);
       line-height: 1;
-      margin-left: 0.75rem;
+      margin-left: 0.5rem;
+      margin-top: -0.125rem;
     }
   }
-  .navbar-toggler-icon {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .navbar-toggler {
+  .navbar-toggle {
     border: none;
     outline: none;
     position: relative;
-    width: $navbar-toggler-dimension;
-    height: $navbar-toggler-dimension - .1;
-
-    @include make-toggler-status();
+    line-height: 1;
+    display: inline-flex;
   }
 }

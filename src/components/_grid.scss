@@ -9,4 +9,8 @@
   grid-column-gap: $spacer;
 }
 
+.grid-gap-responsive {
+  grid-column-gap: v('grid-gap');
+}
+
 @include grid-columns-classes();

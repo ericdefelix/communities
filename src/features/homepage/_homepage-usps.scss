@@ -1,11 +1,23 @@
 .#{$namespace}usps {
   // margin-top: $hc-hero-image-negative-offset;
+  &-group {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    @include media-breakpoint-down('sm') {
+      grid-template-columns: 1fr;
+    }
+  }
 
   &-item {
-
-    .#{$namespace}-list-item-summary {
-
-    }
+    grid-template-columns: 1fr 1fr;
+    // @include media-breakpoint-down('sm','md') {
+    //   grid-template-columns: 1fr;
+    // }
+    // @include media-breakpoint-between('sm','md') {
+    //   grid-template-columns: 1fr;
+    // }
   }
 
   &-img {
