@@ -10,7 +10,7 @@
 }
 
 .grid-gap-responsive {
-  grid-column-gap: v('grid-gap');
+  grid-column-gap: v('grid-gap-responsive');
 }
 
 @include grid-columns-classes();

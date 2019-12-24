@@ -71,11 +71,16 @@
       margin-top: -0.125rem;
     }
   }
+
   .navbar-toggle {
     border: none;
     outline: none;
     position: relative;
     line-height: 1;
     display: inline-flex;
+  }
+
+  @include media-breakpoint-up('lg') {
+    .navbar-toggle { display: none; }
   }
 }

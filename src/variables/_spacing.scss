@@ -11,16 +11,17 @@
 
   --component-padding: var(--space-md);
 
-  --grid-gap: var(--space-sm);
+  --grid-gap: var(--space-md);
+  --grid-gap-responsive: var(--grid-gap);
   --container-padding: var(--space-md);
   --card-padding: 1.5rem 2.25rem;
 
 
   @include media-breakpoint-between('md', 'lg', $grid-breakpoints) {
-    --grid-gap: var(--space-lg);
+    --grid-gap-responsive: var(--space-lg);
   }
   @include media-breakpoint-up('xl', $grid-breakpoints) {
-    --grid-gap: var(--space-xxl);
+    --grid-gap-responsive: var(--space-md);
   }
 }
 

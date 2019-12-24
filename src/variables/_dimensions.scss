@@ -10,7 +10,17 @@ $spotlight-card-thumbnail-width: 10rem;
 // $input-height-sm: calc(#{$input-line-height-sm * 1rem} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border});
 $input-height-lg: calc(1.5 * 1rem + (var(--space-sm) * 2) + 0.0625rem);
 
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1300px
+);
+
 $container-max-widths: (
-  // lg: 1240px,
-  xl: 1440px
+  lg: 1200px,
+  xxl: 1240px
 );

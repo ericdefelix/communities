@@ -1,7 +1,7 @@
 // 0 0 0 $input-btn-focus-width $input-btn-focus-color;
 .#{$namespace}card {
   background-color: $card-bg-color;
-  margin-bottom: $spacer;
+  margin-bottom: v('space-md');
 
   @include box-shadow($card-box-shadow);
 }
