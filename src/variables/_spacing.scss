@@ -1,5 +1,6 @@
 :root,
 [data-theme="leap"] {
+  
   // Spacing
   --baseline: 1rem;
   --space-sm: calc(var(--baseline) / 2);
@@ -15,11 +16,16 @@
   --container-padding: var(--space-md);
   --card-padding: 1.5rem 2.25rem;
 
-
-  @include media-breakpoint-between('md', 'lg', $grid-breakpoints) {
+  @include media-breakpoint-up('md') {
+    --grid-gap: var(--space-md);
+  }
+  @include media-breakpoint-up('lg') {
     --grid-gap: var(--space-lg);
   }
-  @include media-breakpoint-up('xl', $grid-breakpoints) {
+  @include media-breakpoint-up('xl') {
+    --grid-gap: var(--space-xl);
+  }
+  @include media-breakpoint-up('xxl') {
     --grid-gap: var(--space-xxl);
   }
 }
@@ -53,3 +59,14 @@ $homepage-hero-img-offset: 0;
 $homepage-sections-padding: v("space-xl") 0;
 $homepage-section-title-mbottom: v("space-lg");
 // $homepage-section-title-mtop: v('space-xxl');
+
+//Navbar
+$navbar-toggler-padding-x: v("space-md");
+$navbar-toggler-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));
+
+// Navbar
+$navbar-brand-padding-y: 0;
+$navbar-padding-x: v("space-sm"); 
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: v("space-md");
+$navbar-nav-link-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));

@@ -15,27 +15,9 @@ $hc-pinned-m-bottom: v('font-size-base');
     }
   }
 
-  .#{$namespace}trending-articles {
-    .list-group > .list-group-item {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
   .#{$namespace}trending-pinned {
     background-color: $hc-pinned-bg;
     margin-bottom: $hc-pinned-m-bottom;
-  }
-
-  .#{$namespace}list-item-summary {
-    h4 {
-      color: $hc-heading-color;
-    }
-    p {
-      color: $hc-text-color;
-      margin-bottom: 0;
-    }
   }
 
   .grid {

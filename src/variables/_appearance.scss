@@ -45,6 +45,12 @@ $hero-shape-bg: str-replace(
   "%23"
 );
 
+$wave-shape-bg-white: str-replace(
+  url("data:image/svg+xml,%3Csvg width='100%' viewBox='0 0 310 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='none'%3E %3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cpath d='M0,28 L310,28 L310,23.3863125 C264.496545,7.79543748 227.505063,0 199.025552,0 C158.450006,0 142.087536,7.35193013 76.418288,17.0276774 C32.6387895,23.4781756 7.16602681,27.1356165 0,28 Z' fill='#FFFFFF'%3E%3C/path%3E %3C/g%3E %3C/svg%3E"),
+  "#",
+  "%23"  
+);
+
 // Discussions
 $question-card-bg: str-replace(
   url("data:image/svg+xml,%3Csvg width='82' height='133' viewBox='0 0 82 133' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cfilter x='-2.3%25' y='-11.8%25' width='104.7%25' height='123.7%25' filterUnits='objectBoundingBox' id='b'%3E%3CfeOffset in='SourceAlpha' result='shadowOffsetOuter1'/%3E%3CfeGaussianBlur stdDeviation='7.5' in='shadowOffsetOuter1' result='shadowBlurOuter1'/%3E%3CfeColorMatrix values='0 0 0 0 0.117647059 0 0 0 0 0.211764706 0 0 0 0 0.368627451 0 0 0 0.1 0' in='shadowBlurOuter1'/%3E%3C/filter%3E%3Cpath id='a' d='M0 0h960v190H0z'/%3E%3C/defs%3E%3Cg transform='translate(-847 -17)' fill='none' fill-rule='evenodd'%3E%3Cmask id='c' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Cuse fill='%23000' filter='url(%23b)' xlink:href='%23a'/%3E%3Cuse fill='%23FFF' xlink:href='%23a'/%3E%3Cpath d='M870.73 104.903v-6.518c0-5.637 1.202-10.54 3.604-14.709 2.402-4.169 6.797-8.602 13.184-13.3 6.152-4.404 10.21-7.986 12.172-10.746 1.963-2.76 2.945-5.842 2.945-9.248 0-3.817-1.406-6.723-4.219-8.72-2.812-1.996-6.738-2.994-11.777-2.994-8.79 0-18.809 2.877-30.059 8.631L847 28.01C860.066 20.67 873.924 17 888.572 17c12.07 0 21.665 2.907 28.784 8.72 7.12 5.813 10.68 13.564 10.68 23.253 0 6.459-1.466 12.037-4.395 16.735-2.93 4.698-8.496 9.982-16.7 15.854l-.894.668c-5.11 3.841-8.37 6.79-9.784 8.845-1.494 2.172-2.242 5.02-2.242 8.544v5.284h-23.29zm-2.812 30.123c0-4.932 1.318-8.66 3.955-11.186 2.637-2.525 6.475-3.787 11.514-3.787 4.863 0 8.628 1.292 11.294 3.875 2.666 2.584 3.999 6.283 3.999 11.098 0 4.64-1.348 8.295-4.043 10.966-2.696 2.672-6.446 4.008-11.25 4.008-4.922 0-8.73-1.306-11.426-3.92-2.695-2.613-4.043-6.297-4.043-11.054z' fill-opacity='.2' fill='%23F69139' fill-rule='nonzero' mask='url(%23c)'/%3E%3C/g%3E%3C/svg%3E"),

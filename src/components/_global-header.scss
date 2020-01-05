@@ -1,4 +1,4 @@
-@import 'http://fonts.googleapis.com/css?family=Lato:300&text=HelpCntr';
+@import 'http://fonts.googleapis.com/css?family=Lato:400&text=HelpCntrELPNTR';
 
 .#{$namespace}global-header {
   @extend 
@@ -20,7 +20,7 @@
       -webkit-grid-template-columns: auto 1fr auto;
     }
   }
-
+  
   .nav-item {
     height: 100%;
   }
@@ -62,13 +62,33 @@
     width: auto;
     height: 100%;
 
+    // Help Center text
     + span {
-      display: block;
       font-family: 'Lato';
-      font-size: calc(var(--navbar-brand-height) + 0.4rem);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $navbar-text-color;
+      text-transform: uppercase;
       line-height: 1;
-      margin-left: 0.5rem;
-      margin-top: -0.125rem;
+      margin-left: 1rem;
+      padding-left: 1rem;
+      display: block;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0.0625rem;
+        top: -0.25rem;
+        bottom: -0.25rem;
+        left: 0;
+        background-color: $navbar-text-color;
+      }
+
+      @include media-breakpoint-down('sm') {
+        display: none;
+      }
     }
   }
   .navbar-toggle {
@@ -77,5 +97,32 @@
     position: relative;
     line-height: 1;
     display: inline-flex;
+
+    &:active {
+      background-color: v('brand-primary-darker');
+    }
+
+    @include media-breakpoint-up('lg') {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down('lg') {
+    .navbar-collapse.expanded {
+      display: flex;
+      background-color: v('brand-primary');
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: v('space-md');
+      overflow-y: auto;
+      align-items: start;
+    }
+
+    .no-scroll {
+      position: fixed;
+      overflow-y: scroll;
+    }
   }
 }

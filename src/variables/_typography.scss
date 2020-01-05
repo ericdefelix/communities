@@ -44,9 +44,14 @@ $text-scale-ratios: (
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
 
   --navlink-text-size: 0.875rem;
+}
 
-  @include media-breakpoint-down('md') {
-    --navlink-text-size: var(--font-size-base);
+
+@include media-breakpoint-down('md') {
+  :root,
+  [data-theme="leap"] {
+    --text-scale-ratio: 1.2;
+    // --font-size-base: 0.875rem;
   }
 }
 
@@ -68,6 +73,7 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
 $headings-font-weight: $font-weight-semibold;
+$btn-font-weight: 600;
 
 $h1-font-size: '';
 $h2-font-size: '';
@@ -78,12 +84,7 @@ $h6-font-size: '';
 
 $subheading-font-size: v("text-sm");
 $lead-font-size: calc(v("font-size-base") * 1.25);
-$link-decoration: none !default;
-
-
-$nav-link-height: calc(
-  var(--font-size-base) * $line-height-base + $navbar-nav-link-padding-y * 2
-);
+$link-decoration: none;
 
 $btn-font-size-lg: 1rem;
 
@@ -96,9 +97,4 @@ $dropdown-font-size: calc(v("font-size-base"));
 $progress-font-size: calc(v("font-size-base") * 0.75);
 $close-font-size: calc(v("font-size-base") * 1.5);
 
-// @include media-breakpoint-down('lg') {
-//   :root,
-//   [data-theme="leap"] {
-//     --text-scale-ratio: 1.250;
-//   }
-// }
+$link-decoration: none;

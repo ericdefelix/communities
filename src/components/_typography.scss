@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6,
 
 @function getMarginBottom($headingNumber) {
   @if $headingNumber < 3 {
-    @return v('space-lg');
+    @return v('space-xl');
   }
   @else {
     @return v('space-md');
@@ -35,17 +35,17 @@ h1, h2, h3, h4, h5, h6,
 @each $text-size, $headingNumber in $text-sizes {
   h#{$headingNumber}, .h#{$headingNumber} {
     font-size: v('text-#{$text-size}');
-    // @if $headingNumber < 5 {
-    //   font-size: v('text-#{$text-size}');
-    // }
-    // @else {
-    //   @if $headingNumber == 5 {
-    //     font-size: 1rem;
-    //   }
-    //   @else {
-    //     font-size: 0.875rem;
-    //   }
-    // }
+    @if $headingNumber < 5 {
+      font-size: v('text-#{$text-size}');
+    }
+    @else {
+      @if $headingNumber == 5 {
+        font-size: v('font-size-base');
+      }
+      @else {
+        font-size: 0.875rem;
+      }
+    }
 
     margin-bottom: getMarginBottom($headingNumber);
   }
@@ -53,6 +53,17 @@ h1, h2, h3, h4, h5, h6,
 
 h1 {
   font-weight: $font-weight-light;
+  
+}
+
+@include media-breakpoint-down('md') {
+  @each $text-size, $headingNumber in $text-sizes {
+    h#{$headingNumber}, .h#{$headingNumber} {
+      @if $headingNumber < 3 {
+        margin-bottom: getMarginBottom($headingNumber + 2);
+      }
+    }
+  }
 }
 
 .subheading {
@@ -79,5 +90,5 @@ h1 {
 }
 
 .text-secondary {
-  
+  color: $text-secondary; 
 }
