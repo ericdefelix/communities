@@ -5,7 +5,7 @@
   display: block;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
+  line-height: v('line-height-heading');
   color: $headings-color;
 }
 
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6,
 
 @function getMarginBottom($headingNumber) {
   @if $headingNumber < 3 {
-    @return v('space-lg');
+    @return v('space-xl');
   }
   @else {
     @return v('space-md');
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6,
     }
     @else {
       @if $headingNumber == 5 {
-        font-size: 1rem;
+        font-size: v('font-size-base');
       }
       @else {
         font-size: 0.875rem;
@@ -53,6 +53,17 @@ h1, h2, h3, h4, h5, h6,
 
 h1 {
   font-weight: $font-weight-light;
+  
+}
+
+@include media-breakpoint-down('md') {
+  @each $text-size, $headingNumber in $text-sizes {
+    h#{$headingNumber}, .h#{$headingNumber} {
+      @if $headingNumber < 3 {
+        margin-bottom: getMarginBottom($headingNumber + 2);
+      }
+    }
+  }
 }
 
 .subheading {
@@ -62,7 +73,6 @@ h1 {
   text-transform: uppercase;
   color: $subheading-color;
   letter-spacing: 0.0625rem;
-  // margin-bottom: var(--space-xs);
 }
 
 .lead {
@@ -79,5 +89,5 @@ h1 {
 }
 
 .text-secondary {
-  // color: $text
+  color: $text-secondary; 
 }

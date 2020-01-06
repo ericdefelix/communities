@@ -6,12 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./src/hc-leap.scss"/>
+  
   <title>LEAP Help Center</title>
 </head>
 <body>
   <header class="hc-global-header">
     <div class="navbar navbar-expand-lg navbar-dark container" role="navigation">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.html">
         <img class="navbar-brand-img" src="src/assets/leap-logo-small.svg" alt="logo" />
         <span>Help Center</span>
       </a>
@@ -31,10 +33,10 @@
       <div class="collapse navbar-collapse" id="navbar">
         <nav class="navbar-nav">
           <div class="nav-item">
-            <a href="#" class="nav-link active">Knowledge Base</a>
+            <a href="./category.html" class="nav-link active">Knowledge Base</a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link">Community</a>
+            <a href="./discussions.html" class="nav-link">Community</a>
           </div>
           <div class="nav-item">
             <a href="#" class="nav-link">Sign In</a>
@@ -44,7 +46,7 @@
     </div>
   </header>
   
-  <section class="hc-homepage-section hc-hero">
+  <section class="hc-section hc-hero">
     <div class="container">
       <div class="grid grid-2">
 
@@ -65,26 +67,20 @@
         </div>
 
         <div class="hc-hero-image">
-          <!-- <img class="img-fluid" src="/src/assets/hero-image_@2x.png" alt=""> -->
+          <img class="img-fluid" src="/src/assets/hero-image_@2x.png" alt="">
         </div>
       </div>
     </div>
-
-    <!-- <div class="hc-hero-background">
-      <svg width="100%" viewBox="0 0 310 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <path d="M0,28 L310,28 L310,23.3863125 C264.496545,7.79543748 227.505063,0 199.025552,0 C158.450006,0 142.087536,7.35193013 76.418288,17.0276774 C32.6387895,23.4781756 7.16602681,27.1356165 0,28 Z" fill="#FFFFFF"></path>
-        </g>
-      </svg>
-    </div> -->
   </section>
 
-  <section class="hc-homepage-section hc-usps">
+  <div class="hc-hero-background"></div>
+
+  <section class="hc-section hc-usps">
     <div class="container">
-      <h1>Let's learn our products...</h1>
+      <h1 class="text-secondary">Let's learn our products...</h1>
       <ul class="hc-usps-group grid grid-3 grid-gap-responsive">
         <li>
-          <article class="hc-usps-item grid">
+          <article class="hc-usps-item">
             <div class="hc-usps-img"><img src="/src/assets/picture.svg" alt="Image"/></div>
             <div class="hc-usps-content">
               <div class="hc-list-item-summary">
@@ -96,7 +92,7 @@
           </article>
         </li>
         <li>
-          <article class="hc-usps-item grid">
+          <article class="hc-usps-item">
             <div class="hc-usps-img"><img src="/src/assets/picture.svg" alt="Image"/></div>
             <div class="hc-usps-content">
               <div class="hc-list-item-summary">
@@ -108,7 +104,7 @@
           </article>
         </li>
         <li>
-          <article class="hc-usps-item grid">
+          <article class="hc-usps-item">
             <div class="hc-usps-img"><img src="/src/assets/picture.svg" alt="Image"/></div>
             <div class="hc-usps-content">
               <div class="hc-list-item-summary">
@@ -123,9 +119,9 @@
     </div>
   </section>
 
-  <section class="hc-homepage-section hc-section-articles">
+  <section class="hc-section hc-section-articles">
     <div class="container">
-      <h1 class="text-center">Popular articles and highlights</h1>
+      <h1 class="text-center text-primary-lighter">Popular articles and highlights</h1>
       <div class="grid grid-2 grid-gap-responsive">
         <div class="hc-spotlights">
           <article class="hc-card hc-card-line-top hc-spotlight-card">
@@ -134,7 +130,7 @@
               <div class="hc-spotlight-card-body">
                 <small class="subheading">Learning</small>
                 <h4 class="text-primary-lighter">University</h4>
-                <p>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
+                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
               </div>
             </a>
           </article>
@@ -145,7 +141,7 @@
               <div class="hc-spotlight-card-body">
                 <small class="subheading">Learning</small>
                 <h4 class="text-primary-lighter">University</h4>
-                <p>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
+                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
               </div>
             </a>
           </article>
@@ -156,7 +152,7 @@
               <div class="hc-spotlight-card-body">
                 <small class="subheading">Learning</small>
                 <h4 class="text-primary-lighter">University</h4>
-                <p>asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
+                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
               </div>
             </a>
           </article>
@@ -169,28 +165,28 @@
               <article class="hc-list-item-summary">
                 <small class="subheading">Installing and Setup</small>
                 <span class="h4">Getting Started</span>
-                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+                <p class="mb-0">Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a href="#" class="list-group-item">
               <article class="hc-list-item-summary">
                 <small class="subheading">sadfadfsadfa</small>
                 <span class="h4">Importing a document to a matter</span>
-                <p>Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
+                <p class="mb-0">Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
               </article>
             </a>
             <a href="#" class="list-group-item">
               <article class="hc-list-item-summary">
                 <small class="subheading">sadfadfsadfa</small>
                 <span class="h4">Calculation of VAT on Invoices - Rounding of Amounts</span>
-                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+                <p class="mb-0">Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a href="#" class="list-group-item">
               <article class="hc-list-item-summary">
                 <small class="subheading">sadfadfsadfa</small>
                 <span class="h4">Recording time in Microsoft Outlook</span>
-                <p>Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
+                <p class="mb-0">Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
               </article>
             </a>
           </div>
@@ -199,27 +195,67 @@
     </div>
   </section>
 
-  <section class="hc-homepage-section hc-section-companion">
+  <section class="hc-section hc-section-companion">
     <div class="container">
-      <h1 class="">Companion Products</h1>
+      <h1 class="text-primary-lighter text-center">Companion Products</h1>
+
+      <div class="grid grid-2 grid-gap-responsive">
+        <div class="hc-homepage-tabs hc-trending-articles">
+          <div class="nav flex-column nav-pills list-group" role="tablist" aria-orientation="vertical">
+            <a class="list-group-item active" id="app1" data-toggle="tab" href="#appC1" role="tab" aria-controls="app1" aria-selected="true">
+              <article class="hc-list-item-summary">
+                <span class="h4">Getting Started</span>
+                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              </article>
+            </a>
+            <a class="list-group-item" id="app2" data-toggle="tab" href="#appC2" role="tab" aria-controls="app2" aria-selected="false">
+              <article class="hc-list-item-summary">
+                <span class="h4">Getting Started</span>
+                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              </article>
+            </a>
+            <a class="list-group-item" id="app3" data-toggle="tab" href="#appC3" role="tab" aria-controls="app3" aria-selected="false">
+              <article class="hc-list-item-summary">
+                <span class="h4">Getting Started</span>
+                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              </article>
+            </a>
+            <a class="list-group-item" id="app4" data-toggle="tab" href="#appC4" role="tab" aria-controls="app4" aria-selected="false">
+              <article class="hc-list-item-summary">
+                <span class="h4">Getting Started</span>
+                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              </article>
+            </a>
+          </div>
+        </div>
+        <div class="hc-homepage-content">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="appC1" role="tabpanel" aria-labelledby="app1">1</div>
+            <div class="tab-pane fade" id="appC2" role="tabpanel" aria-labelledby="app2">2</div>
+            <div class="tab-pane fade" id="appC3" role="tabpanel" aria-labelledby="app3">3</div>
+            <div class="tab-pane fade" id="appC4" role="tabpanel" aria-labelledby="app4">4</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
-  <section class="hc-homepage-section hc-section-community">
+  <div class="hc-community-background"></div>
+  <section class="hc-section hc-section-community">
     <div class="container">
       <div class="grid grid-2 grid-gap-responsive">
-        <div class="hc-explore">
-          <h1 class="text-light">Explore Our Community</h1>
-          <p>Officia ultrices. Nisl earum cursus blanditiis molestiae dui aspernatur non quae odit mattis laoreet. Porro blandit
-            ullamcorper pulvinar turpis vivamus dolore eveniet necessitatibus sagittis cillum metus necessitatibus, ornare eros
-            vel.</p>
+        <div class="hc-community-content-wrapper">
+          <div class="hc-community-content">
+            <h1 class="text-light">Explore Our Community</h1>
+            <p>Officia ultrices. Nisl earum cursus blanditiis molestiae dui aspernatur non quae odit mattis laoreet. Porro blandit
+              ullamcorper pulvinar turpis vivamus dolore eveniet necessitatibus sagittis cillum metus necessitatibus, ornare eros
+              vel.</p>
 
-          <button type="button" class="btn btn-outline-light btn-lg">Join Community</button>
-        </div>
-        <div class="col-6">
-          <div class="hc-explore-image">
-            <img class="img-fluid" src="/src/assets/explore-communities_@2x.png" alt="">
+            <button type="button" class="btn btn-outline-light btn-lg">Explore Community</button>
+            <button type="button" class="btn btn-primary btn-lg">Join Community</button>
           </div>
+        </div>
+        <div class="hc-community-image">
+          <img class="img-fluid" src="/src/assets/explore-communities_@2x.png" alt="">
         </div>
       </div>
     </div>
@@ -227,24 +263,35 @@
 
   <footer class="hc-global-footer grid-full">
     <div class="container">
-
       <div class="footer-top">
         <div class="grid-column">
           <div class="row">
             <div class="col twitter">
-                <div class="logo">
-                    <svg width="475" height="100" viewBox="0 0 475 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h475v100H0z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path fill="#EA8A41" mask="url(#b)" d="M131 0v100h72l-8.273-20.002h-44.41V0H131M415.838 40.07l29.236-.086c14.405 0 13.907-19.987-.35-19.987h-28.923l.037 20.073zm29.236 19.921h-29.236l-.35 40.009H396V0h48.724c40.06 0 40.556 59.991.35 59.991zM284 19.997V0h-77v100h77V79.998h-57.75V59.991h38.515V39.984h-38.514V19.997H284M42.658 42.955l-2.49 6.971-29.494 30.13 40.033-18.58 6.92-13.182-14.97-5.34zm0-.001l32.628 4.856 5.14 27.386 4.776-39.567-34.334-15.634-8.21 22.959zM0 100h100V0H0v100zM325.645 59.991L340 25.285l14.353 34.706h-28.708zM370.9 100H392L350.642 0h-21.285L288 100h21.099l8.27-20.002h45.257L370.9 100z"/></g></svg>
-                </div>
-                
-                <h3>Stay Updated</h3>
-                <p>Follow us on Twitter for<br> support updates.</p>
-                <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
-
+              <div class="logo">
+                <svg width="475" height="100" viewBox="0 0 475 100" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <path id="a" d="M0 0h475v100H0z" />
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <mask id="b" fill="#fff">
+                      <use xlink:href="#a" />
+                    </mask>
+                    <path fill="#EA8A41" mask="url(#b)"
+                      d="M131 0v100h72l-8.273-20.002h-44.41V0H131M415.838 40.07l29.236-.086c14.405 0 13.907-19.987-.35-19.987h-28.923l.037 20.073zm29.236 19.921h-29.236l-.35 40.009H396V0h48.724c40.06 0 40.556 59.991.35 59.991zM284 19.997V0h-77v100h77V79.998h-57.75V59.991h38.515V39.984h-38.514V19.997H284M42.658 42.955l-2.49 6.971-29.494 30.13 40.033-18.58 6.92-13.182-14.97-5.34zm0-.001l32.628 4.856 5.14 27.386 4.776-39.567-34.334-15.634-8.21 22.959zM0 100h100V0H0v100zM325.645 59.991L340 25.285l14.353 34.706h-28.708zM370.9 100H392L350.642 0h-21.285L288 100h21.099l8.27-20.002h45.257L370.9 100z" />
+                  </g>
+                </svg>
+              </div>
+  
+              <h3>Stay Updated</h3>
+              <p>Follow us on Twitter for<br> support updates.</p>
+              <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
+  
             </div>
-            
-
+  
+  
           </div>
-
+  
         </div>
         <div class="grid-column">
           <h5>Resources</h5>
@@ -269,7 +316,7 @@
         </div>
         <div class="grid-column">
           <h5>Technical</h5>
-          <ul  class="footer-nav-links footer-nav">
+          <ul class="footer-nav-links footer-nav">
             <li><a href>System Requirements</a></li>
             <li><a href>LEAP Conveyancer Requirements</a></li>
             <li><a href>Download System Audit</a></li>
@@ -277,28 +324,25 @@
             <li><a href>Website Services</a></li>
           </ul>
         </div>
-
+  
       </div>
-
     </div>
     <div class="hc-copyright">
-      <div class="container">
-          <div class="grid">
-              <div class="grid-column">
-                <p>Copyright © 2018 LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</p>
-              </div>
-    
-              <div class="grid-column">
-                  <p class="footer-links"> <a href>Terms</a> | <a href>Privacy Policy</a> | <a href>Security Statement</a></p>
-              </div>
-            
-          </div>
+      <div class="grid grid-2">
+        <div class="grid-column">
+          <p>Copyright © 2018 LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</p>
+        </div>
 
+        <div class="grid-column">
+          <p class="footer-links"> <a href>Terms</a> | <a href>Privacy Policy</a> | <a href>Security Statement</a></p>
+        </div>
       </div>
     </div>
-  </footer> 
+  </footer>
 
   <script src="index.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.27/dist/bootstrap-native-v4.min.js"></script> -->
+
 </body>
 </html>
 

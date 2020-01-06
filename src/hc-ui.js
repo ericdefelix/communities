@@ -1,5 +1,4 @@
 import 'bootstrap.native/dist/bootstrap-native-v4';
-
 import { CustomToggleNavbar } from './js/navbar-toggle';
 import cssVars from "css-vars-ponyfill";
 
@@ -13,7 +12,7 @@ const hcUI = {
       cssVars({});
     }
 
-    const toggleSelector = document.querySelector('[data-target="#navbar"]');
+    const toggleSelector = document.querySelector('[data-toggle="menu"]');
     CustomToggleNavbar(toggleSelector);
   }
 }

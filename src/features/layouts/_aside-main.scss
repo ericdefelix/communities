@@ -1,0 +1,19 @@
+.#{$namespace}layout-aside-main {
+  grid-template-columns: 18.75rem 1fr;
+  .#{$namespace} {
+    &aside {
+      .list-group-item {
+        padding: 0;
+      }
+      &-topics {
+
+      }
+      &-trending {
+        
+      }
+    }
+    &main {
+      
+    }
+  }
+}

@@ -28,9 +28,9 @@ $secondary: #f79239;
 
 // Body
 $body-color: v('body-text-color');
-$subheading-color: v('brand-dark-grey');
+$subheading-color: v('brand-label-grey');
 
-$link-color: v('brand-primary-lighter');
+$link-color: v('brand-primary');
 $link-hover-color: v('brand-secondary');
 
 $label: v('brand-label-grey');
@@ -43,6 +43,7 @@ $navbar-dark-active-color: v('brand-white');
 $navbar-dark-active-border-bg: v('brand-secondary');
 $navbar-dark-disabled-color: alpha(v('brand-white'), 0.25);
 $navbar-dark-toggler-border-color: alpha(v('brand-white'), 0.1);
+$navbar-text-color: #f6faff;
 
 // Cards
 $card-bg-color: v('brand-white');

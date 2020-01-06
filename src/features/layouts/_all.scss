@@ -1,0 +1,10 @@
+@import './aside-main';
+
+$hc-padding: calc(var(--text-xxl));
+
+.#{$namespace}section {
+  @extend 
+    %w-100;
+  display: flex;
+  padding: $hc-padding 0;
+}

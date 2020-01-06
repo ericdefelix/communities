@@ -8,8 +8,11 @@ $spotlight-card-thumbnail-width: 10rem;
 // Input Boxes
 // $input-height: calc(#{$input-line-height * 1rem} + #{$input-padding-y * 2} + #{$input-height-border});
 // $input-height-sm: calc(#{$input-line-height-sm * 1rem} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border});
-$input-height-lg: calc(1.5 * 1rem + (var(--space-sm) * 2) + 0.0625rem);
+$input-height-lg: calc(1.5 * 1rem + (var(--space-sm) * 2) + 0.5rem);
 
+// Navbar
+$navbar-brand-height: '';
+$nav-link-height: '';
 
 $grid-breakpoints: (
   xs: 0,
@@ -17,10 +20,17 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1300px
+  xxl: 1440px,
+  xxxl: 1600px,
+  ultra: 2560px
 );
 
 $container-max-widths: (
-  lg: 1200px,
-  xxl: 1240px
-);
+  // sm: 540px,
+  // md: 720px,
+  // lg: 960px,
+  xl: 1140px,
+  xxl: 1380px,
+  xxxl: 1560px,
+  ultra: 1800px
+)

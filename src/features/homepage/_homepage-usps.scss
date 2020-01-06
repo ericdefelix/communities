@@ -5,36 +5,62 @@
     margin-left: 0;
     padding-left: 0;
 
+    > li {
+      &:last-of-type .#{$namespace}usps-item {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
     @include media-breakpoint-down('sm') {
       grid-template-columns: 1fr;
+      grid-row-gap: v('space-lg');
     }
   }
 
   &-item {
-    grid-template-columns: 1fr 1fr;
-    // @include media-breakpoint-down('sm','md') {
-    //   grid-template-columns: 1fr;
-    // }
-    // @include media-breakpoint-between('sm','md') {
-    //   grid-template-columns: 1fr;
-    // }
+    display: flex;
+    @include media-breakpoint-down('sm') {
+      border-bottom: 1px solid v('brand-light-grey');
+      padding-bottom: var(--space-lg);
+    }
+    @include media-breakpoint-down('xl') {
+      display: block;
+    }
   }
 
   &-img {
+    @include media-breakpoint-down('xl') {
+      width: 6.25rem;
+      margin: auto;
+      margin-bottom: v('space-sm');
+    }
     img {
+      max-width: 100%;
       width: 100%;
     }
   } 
   &-content {
+    flex: 1 1 auto;
+    padding-left: v('space-md');
+
+    @include media-breakpoint-down('xl') {
+      padding-left: 0;
+      text-align: center;
+    }
     p {
 
     }
 
     a {
       display: block;
-      color: v('brand-primary');
       font-weight: $font-weight-semibold;
-      margin-top: v('space-lg')
+    }
+  }
+
+  .h1, h1 {
+    @include media-breakpoint-down('md') {
+      text-align: center;
     }
   }
 }

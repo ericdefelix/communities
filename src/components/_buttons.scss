@@ -38,6 +38,10 @@
       // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
+
+  & + & {
+    margin-left: v('space-md');
+  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
