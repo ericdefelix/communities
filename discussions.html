@@ -12,145 +12,179 @@
 </head>
 <body>
   <header class="hc-global-header">
-    <nav class="navbar navbar-expand-lg navbar-dark container">
-      <a class="navbar-brand" href="#">
-        <img class="navbar-brand-img" src="src/assets/Help Center Brand Large_@2x.png" alt="logo" />
+    <div class="navbar navbar-expand-lg navbar-dark container" role="navigation">
+      <a class="navbar-brand" href="./index.html">
+        <img class="navbar-brand-img" src="src/assets/leap-logo-small.svg" alt="logo" />
+        <span>Help Center</span>
       </a>
-
-      <div class="d-flex">
-        <div class="hc-server-status">
-          <a href="">
-            <span class="badge badge-lg badge-success">Servers are Up</span>
-          </a>
-        </div>
-      
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-          <i class="navbar-toggler-icon"></i>
+  
+      <div class="d-flex ml-auto align-items-center">
+        <a href="#" class="badge hc-server-status ok">
+          <span>Servers are Up</span>
+        </a>
+  
+        <button class="navbar-toggle hamburger hamburger--slider" tabindex="0" data-target="#navbar" data-toggle="menu"
+          aria-expanded="false">
+          <span class="hamburger-box">
+            <i class="hamburger-inner"></i>
+          </span>
         </button>
       </div>
-
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <div class="navbar-nav ml-auto flex-nowrap">
+  
+      <div class="collapse navbar-collapse" id="navbar">
+        <nav class="navbar-nav">
           <div class="nav-item">
-            <a href="#" class="nav-link active">Knowledge Base</a>
+            <a href="./category.html" class="nav-link active">Knowledge Base</a>
           </div>
           <div class="nav-item">
-            <a href="#" class="nav-link">Community</a>
+            <a href="./discussions.html" class="nav-link">Community</a>
           </div>
           <div class="nav-item">
             <a href="#" class="nav-link">Sign In</a>
           </div>
-        </div>
+          </ul>
       </div>
-
-    </nav>
+    </div>
   </header>
   
-  <div class="container">
-      <div class="row">
-          <aside class="col hc-aside">
-              <h4>Related Articles</h4>
-              <ul>
-                  <li>
-                    <a class="heading"><small>Matter Management</small><br>Customising a Matter</a>
-
-                  </li>
-                  <li>
-                      <a class="heading"><small>Matter Management</small><br>Customising a Matter</a>
-    
-                  </li>
-                  <li>
-                      <a class="heading"><small>Matter Management</small><br>Customising a Matter</a>
-    
-                  </li>
-                  <li>
-                      <a class="heading"><small>Matter Management</small><br>Customising a Matter</a>
-        
-                  </li>
-                  <li>
-                      <a class="heading"><small>Matter Management</small><br>Customising a Matter</a>
-          
-                  </li>
-              </ul>
-
-              <!--Ideas Card-->
-              
-
-
-          </aside>
-          <div class="col hc-main">
-              <h4>Question</h4>
-              <div class="hc-card hc-card-line-top hc-question-card">
-                <div class="card-body">
-                        
-                  <div class="question-label">
-                    Matters
-                  </div>
-                  <div class="question">
-                    I have a paid invoice and an unpaid invoice on a matter. I need to apply a discount to both the paid invoice and the unpaid invoice. I'm unsure of how I apply a credit note to the paid invoice which I will then credit to the unpaid invoice.
-                      
-                  </div>
-                  <div class="user-profile">
-                    <div class="user-avatar">JH</div>
-                    <div class="user-name">
-                        <h6>Justin Hiew</h6>
-                        <div class="time-stamp">6 September 2019 at 11:47 AM</div>
-                    </div>
-                        
-                  </div>
-                </div>
-              </div>
-              
-              <p>1 answer. 26 views</p><!--Cost Recoveries Lump Sum-->
-              <div class="">
-                  <h4>Top Rated Answers</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <!--Answer-->
-
-              </div>
-              <div class="">
-                  <h4>All Answers</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <!--Answer-->
-
-              </div>
-              <div class="">
-                  <!--It's not the same without you...-->
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-              </div>
-              
-
-          </div>
-      </div>
-      <div class="row">
-          <!--Still can't find what you're looking for?-->
-      </div>
-  </div>
-
-  <footer class="hc-global-footer">
-
+  <section class="">
+  </section>
+  <section class="hc-section">
     <div class="container">
+      <div class="hc-layout-aside-main grid grid-2 grid-gap-responsive">
+        <aside class="hc-aside">
+          <div class="hc-aside-related">
+            <h4 class="text-primary-lighter">Related Articles</h4>
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <article class="hc-list-item-summary">
+                  <small class="subheading">Installing and Setup</small>
+                  <span class="h5">Getting Started</span>
+                </article>
+              </a>
+              <a href="#" class="list-group-item">
+                <article class="hc-list-item-summary">
+                  <small class="subheading">sadfadfsadfa</small>
+                  <span class="h5">Importing a document to a matter</span>
+                </article>
+              </a>
+              <a href="#" class="list-group-item">
+                <article class="hc-list-item-summary">
+                  <small class="subheading">sadfadfsadfa</small>
+                  <span class="h5">Calculation of VAT on Invoices - Rounding of Amounts</span>
+                </article>
+              </a>
+              <a href="#" class="list-group-item">
+                <article class="hc-list-item-summary">
+                  <small class="subheading">sadfadfsadfa</small>
+                  <span class="h5">Recording time in Microsoft Outlook</span>
+                </article>
+              </a>
+            </div>
+          </div>
+        </aside>
+        <div class="hc-main">
+          <h4>Question</h4>
+          <div class="hc-card hc-card-line-top hc-question-card">
+            <div class="card-body">
+  
+              <div class="question-label">
+                Matters
+              </div>
+              <div class="question">
+                I have a paid invoice and an unpaid invoice on a matter. I need to apply a discount to both the paid
+                invoice and
+                the unpaid invoice. I'm unsure of how I apply a credit note to the paid invoice which I will then credit
+                to the
+                unpaid invoice.
+  
+              </div>
+              <div class="user-profile">
+                <div class="user-avatar">JH</div>
+                <div class="user-name">
+                  <h6>Justin Hiew</h6>
+                  <div class="time-stamp">6 September 2019 at 11:47 AM</div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+          <p>1 answer. 26 views</p>
+          <!--Cost Recoveries Lump Sum-->
+          <div class="">
+            <h4>Top Rated Answers</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur
+              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!--Answer-->
+  
+          </div>
+          <div class="">
+            <h4>All Answers</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur
+              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!--Answer-->
+  
+          </div>
+          <div class="">
+            <!--It's not the same without you...-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur
+              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="row footer-top">
-        <div class="col-3">
+  <footer class="hc-global-footer grid-full">
+    <div class="container">
+      <div class="footer-top">
+        <div class="grid-column">
           <div class="row">
             <div class="col twitter">
-                <div class="logo">
-                    <svg width="475" height="100" viewBox="0 0 475 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h475v100H0z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path fill="#EA8A41" mask="url(#b)" d="M131 0v100h72l-8.273-20.002h-44.41V0H131M415.838 40.07l29.236-.086c14.405 0 13.907-19.987-.35-19.987h-28.923l.037 20.073zm29.236 19.921h-29.236l-.35 40.009H396V0h48.724c40.06 0 40.556 59.991.35 59.991zM284 19.997V0h-77v100h77V79.998h-57.75V59.991h38.515V39.984h-38.514V19.997H284M42.658 42.955l-2.49 6.971-29.494 30.13 40.033-18.58 6.92-13.182-14.97-5.34zm0-.001l32.628 4.856 5.14 27.386 4.776-39.567-34.334-15.634-8.21 22.959zM0 100h100V0H0v100zM325.645 59.991L340 25.285l14.353 34.706h-28.708zM370.9 100H392L350.642 0h-21.285L288 100h21.099l8.27-20.002h45.257L370.9 100z"/></g></svg>
-                </div>
-                
-                <h3>Stay Updated</h3>
-                <p>Follow us on Twitter for support updates.</p>
-                <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
-
+              <div class="logo">
+                <svg width="475" height="100" viewBox="0 0 475 100" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <path id="a" d="M0 0h475v100H0z" />
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <mask id="b" fill="#fff">
+                      <use xlink:href="#a" />
+                    </mask>
+                    <path fill="#EA8A41" mask="url(#b)"
+                      d="M131 0v100h72l-8.273-20.002h-44.41V0H131M415.838 40.07l29.236-.086c14.405 0 13.907-19.987-.35-19.987h-28.923l.037 20.073zm29.236 19.921h-29.236l-.35 40.009H396V0h48.724c40.06 0 40.556 59.991.35 59.991zM284 19.997V0h-77v100h77V79.998h-57.75V59.991h38.515V39.984h-38.514V19.997H284M42.658 42.955l-2.49 6.971-29.494 30.13 40.033-18.58 6.92-13.182-14.97-5.34zm0-.001l32.628 4.856 5.14 27.386 4.776-39.567-34.334-15.634-8.21 22.959zM0 100h100V0H0v100zM325.645 59.991L340 25.285l14.353 34.706h-28.708zM370.9 100H392L350.642 0h-21.285L288 100h21.099l8.27-20.002h45.257L370.9 100z" />
+                  </g>
+                </svg>
+              </div>
+  
+              <h3>Stay Updated</h3>
+              <p>Follow us on Twitter for<br> support updates.</p>
+              <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
+  
             </div>
-            
-
+  
+  
           </div>
-
+  
         </div>
-        <div class="col-3">
+        <div class="grid-column">
           <h5>Resources</h5>
           <ul class="footer-nav-links footer-nav">
             <li><a href>Knowledge Base</a></li>
@@ -162,7 +196,7 @@
             <li><a href>Webinars</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="grid-column">
           <h5>Community & Support</h5>
           <ul class="footer-nav-links footer-nav">
             <li><a href>Discussions</a></li>
@@ -171,9 +205,9 @@
             <li><a href>Live Chat</a></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="grid-column">
           <h5>Technical</h5>
-          <ul  class="footer-nav-links footer-nav">
+          <ul class="footer-nav-links footer-nav">
             <li><a href>System Requirements</a></li>
             <li><a href>LEAP Conveyancer Requirements</a></li>
             <li><a href>Download System Audit</a></li>
@@ -181,28 +215,23 @@
             <li><a href>Website Services</a></li>
           </ul>
         </div>
-
+  
       </div>
-
-      
-    
     </div>
     <div class="hc-copyright">
       <div class="container">
-          <div class="row">
-              <div class="col text-left">
-                <p>Copyright © 2018 LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</p>
-              </div>
-    
-              <div class="col text-right">
-                  <p class="footer-nav-links"> <a href>Terms</a> | <a href>Privacy Policy</a> | <a href>Security Statement</a></p>
-              </div>
-            
+        <div class="grid grid-2">
+          <div class="grid-column">
+            <p>Copyright © 2018 LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</p>
           </div>
+  
+          <div class="grid-column">
+            <p class="footer-links"> <a href>Terms</a> | <a href>Privacy Policy</a> | <a href>Security Statement</a></p>
+          </div>
+        </div>
       </div>
-      
     </div>
-  </footer> 
+  </footer>
 
 
   <script src="index.js"></script>

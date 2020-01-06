@@ -1,3 +1,4 @@
+@import './homepage-abstract-bg';
 @import './homepage-hero';
 @import './homepage-usps';
 @import './homepage-trending';
@@ -15,6 +16,7 @@
 //     }
 //   }
 // }
+
 
 .grid-3-col-responsive {
   grid-template-columns: 1fr;

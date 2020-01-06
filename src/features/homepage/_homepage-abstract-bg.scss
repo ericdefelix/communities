@@ -1,0 +1,30 @@
+$height-abstract-bg: 15rem;
+
+.hc-homepage-abstract-img {
+  pointer-events: none;
+  display: block;
+  width: auto;
+  height: $height-abstract-bg;
+  position: absolute;
+  z-index: 0;
+  top: -8.5rem;
+  opacity: 0.5;
+  left: -4rem;
+
+  > img {
+    height: 100%;
+  }
+
+  ~ * {
+    z-index: 1;
+    position: relative;
+  }
+
+  ~ .grid {
+    margin-top: v('space-xxl');
+  }
+}
+
+.hc-usps-group {
+  margin-bottom: $height-abstract-bg / 4;
+}

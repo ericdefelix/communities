@@ -7,4 +7,5 @@ $hc-padding: calc(var(--text-xxl));
     %w-100;
   display: flex;
   padding: $hc-padding 0;
+  position: relative;
 }
