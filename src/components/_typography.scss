@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6,
 
 @each $text-size, $headingNumber in $text-sizes {
   h#{$headingNumber}, .h#{$headingNumber} {
-    font-size: v('text-#{$text-size}');
+    // font-size: v('text-#{$text-size}');
     @if $headingNumber < 5 {
       font-size: v('text-#{$text-size}');
     }
@@ -51,9 +51,8 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-h1 {
+h1, .h1 {
   font-weight: $font-weight-light;
-  
 }
 
 @include media-breakpoint-down('md') {

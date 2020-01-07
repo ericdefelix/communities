@@ -1,0 +1,30 @@
+.hc-article-item {
+  &-heading {
+     margin-bottom: 0;
+  }
+  &-subheading {
+    //  
+  }
+  &-short-desc {
+    //  
+
+  }
+  &-clipped-desc {
+    //  
+  }
+
+
+  .hc-article-item-heading {
+    margin-bottom: 0;
+  } 
+}
+
+.list-group {
+  .list-group-item {
+    margin-bottom: v('space-md');
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
