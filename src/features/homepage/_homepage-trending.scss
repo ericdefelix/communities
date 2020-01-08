@@ -9,28 +9,34 @@ $hc-pinned-m-bottom: v('font-size-base');
 .#{$namespace}section-articles {
   background-color: $hc-section-articles-bg;
 
-  .#{$namespace}spotlights {
-    .#{$namespace}spotlight-card-title {
-
-    }
-  }
-
-  .#{$namespace}trending-pinned {
-    background-color: $hc-pinned-bg;
-    margin-bottom: $hc-pinned-m-bottom;
-  }
-
   .grid {
-    grid-template-columns: 1fr;
-    grid-row-gap: v('space-lg');
+    @include media-breakpoint-down('md') {
+      grid-template-columns: 1fr;
+    }
     @include media-breakpoint-up('md') {
-      grid-template-columns: 30rem 1fr;
+      grid-template-columns: repeat(24,1fr);
+      > .#{$namespace}spotlights {
+        grid-column: span 12;
+      }
+      > .#{$namespace}trending-articles {
+        // grid-column: span 5;
+      }
     }
     @include media-breakpoint-up('lg') {
-      grid-template-columns: 30% 1fr;
+      > .#{$namespace}spotlights {
+        grid-column: span 9;
+      }
+      > .#{$namespace}trending-articles {
+        grid-column: span 15;
+      }
     }
-    @include media-breakpoint-up('xlg') {
-      grid-template-columns: 40% 1fr;
+    @include media-breakpoint-up('xxl') {
+      > .#{$namespace}spotlights {
+        grid-column: span 8;
+      }
+      > .#{$namespace}trending-articles {
+        grid-column: span 16;
+      }
     }
   }
 }

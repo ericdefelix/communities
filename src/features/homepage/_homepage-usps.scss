@@ -4,6 +4,7 @@
     list-style: none;
     margin-left: 0;
     padding-left: 0;
+    grid-template-columns: repeat(3, 1fr);
 
     > li {
       &:last-of-type .#{$namespace}usps-item {
@@ -12,9 +13,10 @@
       }
     }
 
+
     @include media-breakpoint-down('sm') {
       grid-template-columns: 1fr;
-      grid-row-gap: v('space-lg');
+      grid-row-gap: v('grid-gap');
     }
   }
 
@@ -48,9 +50,6 @@
     @include media-breakpoint-down('xl') {
       padding-left: 0;
       text-align: center;
-    }
-    p {
-
     }
 
     a {

@@ -1,16 +1,17 @@
-@mixin grid-columns-classes() {
-  @for $i from 1 through $columns {
-    .grid-#{$i} {
-      $template-columns: ();
-      @for $t from 1 through $i {
-        $template-columns: append($template-columns, 1fr, space);
-      }
+// @mixin grid-columns-classes() {
+//   // @for $i from 1 through $columns {
+//   //   .grid-#{$i} {
+//   //     $template-columns: ();
 
-      grid-template-columns: $template-columns;
-      -ms-grid-template-columns: $template-columns;
-    }
-  }
-}
+//   //     @for $t from 1 through $i {
+//   //       $template-columns: append($template-columns, 1fr, space);
+//   //     }
+
+//   //     grid-template-columns: $template-columns;
+//   //     -ms-grid-template-columns: $template-columns;
+//   //   }
+//   // }
+// }
 
 @mixin create-container() {
   width: 100%;

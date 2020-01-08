@@ -3,33 +3,33 @@
   
   // Spacing
   --baseline: 1rem;
-  --space-sm: calc(var(--baseline) / 1rem);
-  --space-md: var(--baseline);
-  --space-lg: calc(var(--baseline) * 2);
-  --space-xl: calc(var(--baseline) * 3);
-  --space-xxl: calc(var(--baseline) * 4);
-  --space-xxxl: calc(var(--baseline) * 5);
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 4rem;
 
   --component-padding: var(--space-md);
 
-  --grid-gap: var(--space-md);
+  --grid-gap: var(--space-xl);
   --list-margin-bottom: var(--space-md);
   --grid-gap-responsive: var(--grid-gap);
   --container-padding: var(--space-md);
   --card-padding: 1.5rem 2.25rem;
 
-  @include media-breakpoint-up('md') {
-    --grid-gap: var(--space-md);
-  }
-  @include media-breakpoint-up('lg') {
-    --grid-gap: var(--space-lg);
-  }
-  @include media-breakpoint-up('xl') {
-    --grid-gap: var(--space-xl);
-  }
-  @include media-breakpoint-up('xxl') {
-    --grid-gap: var(--space-xxl);
-  }
+  // @include media-breakpoint-up('md') {
+  //   --grid-gap: var(--space-md);
+  // }
+  // @include media-breakpoint-up('lg') {
+  //   --grid-gap: var(--space-lg);
+  // }
+  // @include media-breakpoint-up('xl') {
+  //   --grid-gap: var(--space-xl);
+  // }
+  // @include media-breakpoint-up('xxl') {
+  //   --grid-gap: var(--space-xxl);
+  // }
 }
 
 

@@ -18,14 +18,14 @@ $text-sizes: (
     "Segoe UI Emoji", "Segoe UI Symbol";
 
   // Body Font Size
-  --font-size-base: 1rem;
+  --font-size-base: 0.875rem;
 
   // Line Height
   --line-height-base: 1.4;
   --line-height-heading: 1.4;
 
   // Type Scale
-  --text-scale-ratio: 1.125;
+  --text-scale-ratio: 1.25;
   --text-scale-ratio-xs: 1.333;
   --text-xxs: calc(var(--font-size-base) / var(--text-scale-ratio-xs));
   --text-xs: calc(var(--font-size-base) / var(--text-scale-ratio-xs) - 0.2);
@@ -38,17 +38,32 @@ $text-sizes: (
 
   --navlink-text-size: 0.875rem;
 
-  @include media-breakpoint-up('md') {
-    --text-scale-ratio: 1.25;
-  }
 
-  @include media-breakpoint-up('ultra') {
+}
+
+@include media-breakpoint-up('lg') {
+  :root {
+  --font-size-base: 1rem;
+  // --text-scale-ratio: 1.25;
+  }
+}
+
+// @include media-breakpoint-up('xl') {
+//   :root {
+//   --font-size-base: 1rem;
+//   --text-scale-ratio: 1.25;
+//   }
+// }
+
+
+@include media-breakpoint-up('ultra') {
+  :root {
     --text-scale-ratio: 1.333;
   }
 }
 
 // SASS
-$line-height-base: 1.5;
+$line-height-base: 1.4;
 $font-family-sans-serif: var(--font-family);
 $font-family-base: $font-family-sans-serif;
 $font-size-base: var(--font-size-base);
@@ -63,7 +78,7 @@ $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-base: $font-weight-normal;
-$headings-font-weight: $font-weight-semibold;
+$headings-font-weight: $font-weight-normal;
 $btn-font-weight: 600;
 
 $h1-font-size: '';

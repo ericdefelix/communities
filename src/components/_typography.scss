@@ -18,26 +18,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 @each $text-size, $headingNumber in $text-sizes {
-  @if $headingNumber < 0 {
-    @if $headingNumber == -1 {
-      .#{$namespace}article-text {
-        font-size: v('text-#{$text-size}');
-        color: v('brand-label-grey');
-        margin-bottom: 0;
-      }
-    }
-    @else {
-      .#{$namespace}article-subheading {
-        display: block;
-        font-size: v('text-#{$text-size}');
-        font-weight: $font-weight-semibold;
-        text-transform: uppercase;
-        color: $subheading-color;
-        // letter-spacing: 0.0625rem;
-      }
-    }
-  }
-  @else {
+  @if $headingNumber > 0 {
     h#{$headingNumber}, .h#{$headingNumber} {
       font-size: v('text-#{$text-size}');
       line-height: calc(var(--text-#{$text-size}) * 1.4);
@@ -46,6 +27,10 @@ h1, h2, h3, h4, h5, h6,
 
       @if $headingNumber < 4 {
         font-weight: $font-weight-light;
+      }
+
+      @if $headingNumber > 4 {
+        font-weight: $font-weight-semibold;
       }
 
       @include media-breakpoint-down('md') {

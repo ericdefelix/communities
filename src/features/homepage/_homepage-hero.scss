@@ -18,7 +18,7 @@ $hc-wave-bg-height: 10rem;
     width: 100%;
     .hc-hero-lead {
       margin-bottom: v('space-md');
-      @include media-breakpoint-down('lg') {
+      @include media-breakpoint-up('lg') {
         white-space: nowrap;
       }
       @include media-breakpoint-down('md') {
@@ -109,10 +109,12 @@ $hc-wave-bg-height: 10rem;
     }
   }
 
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
   @include media-breakpoint-down('md') {
-    .grid {
-      grid-template-columns: 1fr;
-    }
+
 
     &-image {
       display: none;
@@ -123,9 +125,9 @@ $hc-wave-bg-height: 10rem;
     }
   }
 
-  @include media-breakpoint-up('md') {
-    .grid { grid-template-columns: 60% 1fr; }
-  }
+  // @include media-breakpoint-up('md') {
+  //   .grid { grid-template-columns: 60% 1fr; }
+  // }
 
   @include media-breakpoint-up('lg') {
     .grid { grid-template-columns: 1fr 1fr; }

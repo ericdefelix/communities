@@ -1,21 +1,15 @@
 .#{$namespace}article {
   &-heading {
-     margin-bottom: 0;
+    margin-bottom: 0;
   }
   &-subheading {
-    //  
+    display: block;
+    font-size: v('text-xs');
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    color: $subheading-color;
   }
   &-text {
-
-  }
-}
-
-.list-group {
-  .list-group-item {
-    margin-bottom: $list-group-item-margin-bottom;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 }
