@@ -2,22 +2,13 @@
 //
 // Font, line-height, headings, and more.
 $text-scale-ratios: (
-  "0": 1.067,
-  // minor-second
-    "1": 1.125,
-  // major-second
-    "2": 1.2,
-  // minor-third
-    "3": 1.25,
-  // major-third
-    "4": 1.333,
-  // perfect-fourth
-    "5": 1.414,
-  // augmented-fourth
-    "6": 1.5,
-  // perfect-fifth
-    "7": 1.618 // golden-ratio
+  "0": 1.067, "1": 1.125, "2": 1.2, "3": 1.25, "4": 1.333, "5": 1.414, "6": 1.5, "7": 1.618
 );
+
+$text-sizes: (
+  'xxxl': 1,  'xxl': 2, 'xl': 3, 'lg': 4, 'md': 5,  'sm': 6, 'xs': -1, 'xxs': -2
+);
+
 
 :root,
 [data-theme="leap"] {
@@ -34,30 +25,30 @@ $text-scale-ratios: (
   --line-height-heading: 1.4;
 
   // Type Scale
-  --text-scale-ratio: 1.25;
-  --text-xs: calc((var(--font-size-base) / var(--text-scale-ratio)) / var(--text-scale-ratio));
-  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-scale-ratio: 1.125;
+  --text-scale-ratio-xs: 1.333;
+  --text-xxs: calc(var(--font-size-base) / var(--text-scale-ratio-xs));
+  --text-xs: calc(var(--font-size-base) / var(--text-scale-ratio-xs) - 0.2);
+  --text-sm: calc(var(--font-size-base) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio));
   --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
   --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
 
   --navlink-text-size: 0.875rem;
+
+  @include media-breakpoint-up('md') {
+    --text-scale-ratio: 1.25;
+  }
+
+  @include media-breakpoint-up('ultra') {
+    --text-scale-ratio: 1.333;
+  }
 }
-
-
-@include media-breakpoint-up('md') {
-  :root, [data-theme="leap"] { --text-scale-ratio: 1.333; }
-}
-
-@include media-breakpoint-up('ultra') {
-  :root, [data-theme="leap"] { --text-scale-ratio: 1.414; }
-}
-
 
 // SASS
-$line-height-base: 1.4;
+$line-height-base: 1.5;
 $font-family-sans-serif: var(--font-family);
 $font-family-base: $font-family-sans-serif;
 $font-size-base: var(--font-size-base);
@@ -82,8 +73,8 @@ $h4-font-size: '';
 $h5-font-size: '';
 $h6-font-size: '';
 
-$subheading-font-size: v("text-sm");
-$lead-font-size: calc(v("font-size-base") * 1.25);
+$subheading-font-size: '';
+$lead-font-size: '';
 
 $btn-font-size-lg: 1rem;
 

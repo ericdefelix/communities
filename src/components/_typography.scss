@@ -1,22 +1,6 @@
 //
 // Headings
 //
-%headings {
-  display: block;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: v('line-height-heading');
-  color: $headings-color;
-}
-
-$text-sizes: (
-  'xxl': 1, 
-  'xl': 2,
-  'lg': 3,
-  'md': 4,
-  'sm': 5, 
-  'xs': 6
-);
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -32,52 +16,47 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+
 @each $text-size, $headingNumber in $text-sizes {
-  h#{$headingNumber}, .h#{$headingNumber} {
-    // font-size: v('text-#{$text-size}');
-    @if $headingNumber < 5 {
-      font-size: v('text-#{$text-size}');
+  @if $headingNumber < 0 {
+    @if $headingNumber == -1 {
+      .#{$namespace}article-text {
+        font-size: v('text-#{$text-size}');
+        color: v('brand-label-grey');
+        margin-bottom: 0;
+      }
     }
     @else {
-      @if $headingNumber == 5 {
-        font-size: v('font-size-base');
-      }
-      @else {
-        font-size: 0.875rem;
+      .#{$namespace}article-subheading {
+        display: block;
+        font-size: v('text-#{$text-size}');
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        color: $subheading-color;
+        // letter-spacing: 0.0625rem;
       }
     }
-
-    margin-bottom: getMarginBottom($headingNumber);
   }
-}
-
-h1, .h1 {
-  font-weight: $font-weight-light;
-}
-
-@include media-breakpoint-down('md') {
-  @each $text-size, $headingNumber in $text-sizes {
+  @else {
     h#{$headingNumber}, .h#{$headingNumber} {
-      @if $headingNumber < 3 {
-        margin-bottom: getMarginBottom($headingNumber + 2);
+      font-size: v('text-#{$text-size}');
+      line-height: calc(var(--text-#{$text-size}) * 1.4);
+      margin-bottom: getMarginBottom($headingNumber);
+      // margin-bottom: 1rem;
+
+      @if $headingNumber < 4 {
+        font-weight: $font-weight-light;
+      }
+
+      @include media-breakpoint-down('md') {
+        @if $headingNumber < 3 {
+          // margin-bottom: 1rem;
+          margin-bottom: getMarginBottom($headingNumber + 2);
+        }
       }
     }
   }
 }
-
-.subheading {
-  display: block;
-  font-size: $subheading-font-size;
-  font-weight: $font-weight-semibold;
-  text-transform: uppercase;
-  color: $subheading-color;
-  letter-spacing: 0.0625rem;
-}
-
-.lead {
-
-}
-
 
 .list-unstyled {
   @include list-unstyled;
@@ -85,6 +64,10 @@ h1, .h1 {
 
 .text-primary-lighter {
  color: $text-primary-lighter;
+}
+
+.text-muted {
+
 }
 
 .text-secondary {

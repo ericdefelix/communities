@@ -52,13 +52,13 @@
 
         <div class="hc-hero-container">
           <div class="hc-hero-row">
-            <h1 class="text-light">Hi, how can we help?</h1>
+            <h1 class="hc-hero-lead text-light">Hi, how can we help?</h1>
             <div class="hc-search-input">
-              <i class="icon-search"></i>
-              <input type="text" class="form-control form-control-lg" placeholder="Search for help articles, community posts, ideas...">
+              <i class="hc-ico-search"></i>
+              <input type="text" class="form-control" placeholder="Search for help articles, community posts, ideas...">
             </div>
             
-            <h5 class="hc-news-heading">News and Announcements</h5>
+            <h6 class="hc-news-heading">News and Announcements</h6>
             <ul class="hc-news-content list-unstyled text-light">
               <li><a href="http://">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
               <li><a href="http://">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
@@ -77,16 +77,14 @@
 
   <section class="hc-section hc-usps">
     <div class="container">
-      <h1 class="text-secondary">Let's learn our products...</h1>
+      <h2 class="text-secondary">Let's learn our products...</h2>
       <ul class="hc-usps-group grid grid-3 grid-gap-responsive">
         <li>
           <article class="hc-usps-item">
             <div class="hc-usps-img"><img src="/src/assets/picture.svg" alt="Image"/></div>
             <div class="hc-usps-content">
-              <div class="hc-list-item-summary">
-                <h3 class="text-primary-lighter">Knowledge Base</h3>
-                <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
-              </div>
+              <h4 class="text-primary-lighter">Knowledge Base</h4>
+              <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
               <a href="http://">Browse articles</a>
             </div>
           </article>
@@ -95,10 +93,8 @@
           <article class="hc-usps-item">
             <div class="hc-usps-img"><img src="/src/assets/picture.svg" alt="Image"/></div>
             <div class="hc-usps-content">
-              <div class="hc-list-item-summary">
-                <h3 class="text-primary-lighter">Community</h3>
-                <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
-              </div>
+              <h4 class="text-primary-lighter">Community</h4>
+              <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
               <a href="http://">Join the Community</a>
             </div>
           </article>
@@ -108,7 +104,7 @@
             <div class="hc-usps-img"><img src="/src/assets/picture.svg" alt="Image"/></div>
             <div class="hc-usps-content">
               <div class="hc-list-item-summary">
-                <h3 class="text-primary-lighter">What's New</h3>
+                <h4 class="text-primary-lighter">What's New</h4>
                 <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
               </div>
               <a href="http://">Learn about new features</a>
@@ -122,72 +118,73 @@
   <section class="hc-section hc-section-articles">
     <div class="container">
       <div class="hc-homepage-abstract-img"><img src="/src/assets/abstract.svg" alt=""></div>
-      <h1 class="text-center text-primary-lighter">Popular articles and highlights</h1>
+      <h2 class="text-center text-primary-lighter">Popular articles and highlights</h2>
       <div class="grid grid-2 grid-gap-responsive">
         <div class="hc-spotlights">
-          <article class="hc-card hc-card-line-top hc-spotlight-card">
-            <a href="">
-              <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample1.jpg')"></div>
-              <div class="hc-spotlight-card-body">
-                <small class="subheading">Learning</small>
-                <h4 class="text-primary-lighter">University</h4>
-                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
-              </div>
-            </a>
-          </article>
 
-          <article class="hc-card hc-card-line-top hc-spotlight-card">
-            <a href="">
+          <a href="" class="hc-card hc-card-line-top hc-spotlight-card">  
+            <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample1.jpg')"></div>
+            <div class="hc-spotlight-card-body">
+              <article class="hc-article">
+                <small class="hc-article-subheading">Learning</small>
+                <h5 class="text-primary-lighter">University</h5>
+                <p class="hc-article-text">We’ve curated learning paths and courses for every LEAP user, from beginner to expert and between.</p>
+              </article>
+            </div>
+          </a>
+
+          <a href="" class="hc-card hc-card-line-top hc-spotlight-card">
               <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample2.jpg')"></div>
               <div class="hc-spotlight-card-body">
-                <small class="subheading">Learning</small>
-                <h4 class="text-primary-lighter">University</h4>
-                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
+                <article class="hc-article">
+                  <small class="hc-article-subheading">Community</small>
+                  <h5 class="text-primary-lighter">Ideas Hub</h5>
+                  <p class="hc-article-text">Suggest new features, vote on new features, collaborate with colleagues and our product team.</p>
+                </article>
               </div>
-            </a>
-          </article>
+          </a>
 
-          <article class="hc-card hc-card-line-top hc-spotlight-card">
-            <a href="">
-              <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample3.jpg')"></div>
-              <div class="hc-spotlight-card-body">
-                <small class="subheading">Learning</small>
-                <h4 class="text-primary-lighter">University</h4>
-                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
-              </div>
-            </a>
-          </article>
+          <a href="" class="hc-card hc-card-line-top hc-spotlight-card">
+            <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample3.jpg')"></div>
+            <div class="hc-spotlight-card-body">
+              <article class="hc-article">
+                <small class="hc-article-subheading">Events</small>
+                <h5 class="text-primary-lighter">Summit 2020</h5>
+                <p class="hc-article-text">The Overcoming the Skills Shortage summit explores a once-in-a-generation threat to law firms.</p>
+              </article>
+            </div>
+          </a>
         </div>
 
         <div class="hc-trending-articles">
-          <h3 class="text-primary-lighter">Trending Articles</h3>
+          <h5 class="text-primary-lighter">Trending Articles</h5>
           <div class="list-group">
             <a href="#" class="list-group-item hc-trending-pinned">
-              <article class="hc-list-item-summary">
-                <small class="subheading">Installing and Setup</small>
-                <span class="h4">Getting Started</span>
-                <p class="mb-0">Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              <article class="hc-article-link">
+                <small class="hc-article-subheading">Installing and Setup</small>
+                <h6 class="hc-article-heading">Getting Started</h6>
+                <p class="hc-article-text">Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a href="#" class="list-group-item">
-              <article class="hc-list-item-summary">
-                <small class="subheading">sadfadfsadfa</small>
-                <span class="h4">Importing a document to a matter</span>
-                <p class="mb-0">Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
+              <article class="hc-article">
+                <small class="hc-article-subheading">sadfadfsadfa</small>
+                <h6 class="hc-article-heading">Importing a document to a matter</h6>
+                <p class="hc-article-text">Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
               </article>
             </a>
             <a href="#" class="list-group-item">
-              <article class="hc-list-item-summary">
-                <small class="subheading">sadfadfsadfa</small>
-                <span class="h4">Calculation of VAT on Invoices - Rounding of Amounts</span>
-                <p class="mb-0">Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
+              <article class="hc-article-link">
+                <small class="hc-article-subheading">sadfadfsadfa</small>
+                <h6 class="hc-article-heading">Calculation of VAT on Invoices - Rounding of Amounts</h6>
+                <p class="hc-article-text">Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a href="#" class="list-group-item">
-              <article class="hc-list-item-summary">
-                <small class="subheading">sadfadfsadfa</small>
-                <span class="h4">Recording time in Microsoft Outlook</span>
-                <p class="mb-0">Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
+              <article class="hc-article-link">
+                <small class="hc-article-subheading">sadfadfsadfa</small>
+                <h6 class="hc-article-heading">Recording time in Microsoft Outlook</h6>
+                <p class="hc-article-text">Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos</p>
               </article>
             </a>
           </div>
@@ -198,32 +195,32 @@
 
   <section class="hc-section hc-section-companion">
     <div class="container">
-      <h1 class="text-primary-lighter text-center">Companion Products</h1>
+      <h2 class="text-primary-lighter text-center">Companion Products</h2>
 
       <div class="grid grid-2 grid-gap-responsive">
         <div class="hc-homepage-tabs hc-trending-articles">
           <div class="nav flex-column nav-pills list-group" role="tablist" aria-orientation="vertical">
             <a class="list-group-item active" id="app1" data-toggle="tab" href="#appC1" role="tab" aria-controls="app1" aria-selected="true">
               <article class="hc-article-item">
-                <span class="hc-article-item-heading h4">By Lawyers</span>
+                <h5 class="hc-article-item-heading">By Lawyers</h5>
                 <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a class="list-group-item" id="app2" data-toggle="tab" href="#appC2" role="tab" aria-controls="app2" aria-selected="false">
               <article class="hc-list-item-summary">
-                <span class="h4">Info Track</span>
+                <h5>Info Track</h5>
                 <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a class="list-group-item" id="app3" data-toggle="tab" href="#appC3" role="tab" aria-controls="app3" aria-selected="false">
               <article class="hc-list-item-summary">
-                <span class="h4">RapidPay</span>
+                <h5>RapidPay</h5>
                 <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
             <a class="list-group-item" id="app4" data-toggle="tab" href="#appC4" role="tab" aria-controls="app4" aria-selected="false">
               <article class="hc-list-item-summary">
-                <span class="h4">LawConnect</span>
+                <h5>LawConnect</h5>
                 <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
               </article>
             </a>
@@ -248,7 +245,7 @@
       <div class="grid grid-2 grid-gap-responsive">
         <div class="hc-community-content-wrapper">
           <div class="hc-community-content">
-            <h1 class="text-light">Explore Our Community</h1>
+            <h2 class="text-light">Explore Our Community</h2>
             <p>Officia ultrices. Nisl earum cursus blanditiis molestiae dui aspernatur non quae odit mattis laoreet. Porro blandit
               ullamcorper pulvinar turpis vivamus dolore eveniet necessitatibus sagittis cillum metus necessitatibus, ornare eros
               vel.</p>

@@ -22,11 +22,15 @@ $hc-pinned-m-bottom: v('font-size-base');
 
   .grid {
     grid-template-columns: 1fr;
-    @include media-breakpoint-between('md', 'xlg',$grid-breakpoints) {
-      grid-template-columns: 1fr 1fr;
-    }
-    @include media-breakpoint-up('lg',$grid-breakpoints) {
+    grid-row-gap: v('space-lg');
+    @include media-breakpoint-up('md') {
       grid-template-columns: 30rem 1fr;
+    }
+    @include media-breakpoint-up('lg') {
+      grid-template-columns: 30% 1fr;
+    }
+    @include media-breakpoint-up('xlg') {
+      grid-template-columns: 40% 1fr;
     }
   }
 }

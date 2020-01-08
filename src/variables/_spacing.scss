@@ -3,7 +3,7 @@
   
   // Spacing
   --baseline: 1rem;
-  --space-sm: calc(var(--baseline) / 2);
+  --space-sm: calc(var(--baseline) / 1rem);
   --space-md: var(--baseline);
   --space-lg: calc(var(--baseline) * 2);
   --space-xl: calc(var(--baseline) * 3);
@@ -53,22 +53,22 @@ $spacer: 1rem;
 $spacer-lg: var(--spacer-lg);
 
 // Cards
-$spotlight-card-padding: var(--space-lg) var(--space-md);
+$spotlight-card-padding: v('space-lg');
 $card-padding: var(--card-padding);
+$list-group-item-margin-bottom: v('space-md');
 
 // Homepage Sections
 $homepage-hero-img-offset: 0;
-$homepage-sections-padding: v("space-xl") 0;
-$homepage-section-title-mbottom: v("space-lg");
-// $homepage-section-title-mtop: v('space-xxl');
+$homepage-sections-padding: v('space-xl') 0;
+$homepage-section-title-mbottom: v('space-lg');
 
 //Navbar
-$navbar-toggler-padding-x: v("space-md");
+$navbar-toggler-padding-x: v('space-md');
 $navbar-toggler-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));
 
 // Navbar
 $navbar-brand-padding-y: 0;
-$navbar-padding-x: v("space-sm"); 
+$navbar-padding-x: v('space-sm'); 
 $navbar-padding-y: 0;
-$navbar-nav-link-padding-x: v("space-md");
+$navbar-nav-link-padding-x: v('space-md');
 $navbar-nav-link-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));

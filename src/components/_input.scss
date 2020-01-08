@@ -1,3 +1,47 @@
-.form-control-lg {
-  margin-bottom: v('space-lg');
+
+.#{$namespace}ico-search {
+  display: inline-block;
+  line-height: 1;
+  font-size: v('text-md');
+  &::before, &::after {
+    display: block;
+    content: '';
+  }
+
+  &::before {
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 100%;
+    @include box-shadow(0 0 0 0.115em v('brand-primary-lighter') inset);
+  }
+
+  &::after {
+    // background-color: 
+  }
+}
+
+.#{$namespace}search-input {
+  position: relative;
+  .form-control {
+    margin-bottom: v('space-lg');
+    padding: 0.75rem 2rem;
+    font-size: v('text-sm');
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &:focus {
+      border-color: v('brand-primary-lighter');
+      @include box-shadow(0 0 0 0.125rem v('brand-primary-lighter'));
+    }
+  }
+
+  .#{$namespace}ico-search {
+    position: absolute;
+    z-index: 1;
+
+    top: calc(50% - 1rem);
+    left: v('space-md');
+  }
 }

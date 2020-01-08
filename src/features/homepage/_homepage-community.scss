@@ -48,9 +48,6 @@ $hc-inverted-wave-bg-height: 6rem;
   }
 
   &-content {
-    h1 {
-      white-space: nowrap;
-    }
     p {
       margin-bottom: v('space-lg');
     }
@@ -64,6 +61,12 @@ $hc-inverted-wave-bg-height: 6rem;
         width: 100%;
         margin-left: 0 !important;
         margin-bottom: v('space-md');
+      }
+    }
+
+    @include media-breakpoint-up('md') {
+      h1 {
+        white-space: nowrap;
       }
     }
   }

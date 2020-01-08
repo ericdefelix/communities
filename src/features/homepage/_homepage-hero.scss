@@ -16,23 +16,14 @@ $hc-wave-bg-height: 10rem;
 
   &-row {
     width: 100%;
-    h1 {
-      font-weight: $font-weight-light;
-      margin-top: 0;
-
+    .hc-hero-lead {
+      margin-bottom: v('space-md');
       @include media-breakpoint-down('lg') {
         white-space: nowrap;
       }
       @include media-breakpoint-down('md') {
         margin-bottom: v('space-md');
         text-align: center;
-      }
-    }
-
-    .#{$namespace}search-input .form-control {
-      &:focus {
-        border-color: v('brand-primary-lighter');
-        @include box-shadow(0 0 0 0.125rem v('brand-primary-lighter'));
       }
     }
   }

@@ -19,17 +19,15 @@
 .#{$namespace}spotlight-card {
   overflow: hidden;
   border-radius: 0.0625rem;
+  display: flex;
+  flex-wrap: wrap;
+  color: inherit;
 
   &:hover {
     @include box-shadow($card-box-shadow-darker);
     > * {
       text-decoration: none;
     }
-  }
-  > a {
-    display: flex;
-    flex-wrap: wrap;
-    color: inherit;
   }
 
   #{&}-thumbnail {
@@ -67,7 +65,6 @@
     margin-bottom: 0;
   }
   .time-stamp {
-    
     font-size: $subheading-font-size;
   }
   .user-avatar {

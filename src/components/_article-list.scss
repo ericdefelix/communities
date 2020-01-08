@@ -1,27 +1,18 @@
-.hc-article-item {
+.#{$namespace}article {
   &-heading {
      margin-bottom: 0;
   }
   &-subheading {
     //  
   }
-  &-short-desc {
-    //  
+  &-text {
 
   }
-  &-clipped-desc {
-    //  
-  }
-
-
-  .hc-article-item-heading {
-    margin-bottom: 0;
-  } 
 }
 
 .list-group {
   .list-group-item {
-    margin-bottom: v('space-md');
+    margin-bottom: $list-group-item-margin-bottom;
 
     &:last-of-type {
       margin-bottom: 0;

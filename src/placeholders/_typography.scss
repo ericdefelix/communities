@@ -70,3 +70,12 @@
 // Reset
 
 %text-reset { color: inherit; }
+
+
+%headings {
+  display: block;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: v('line-height-heading');
+  color: $headings-color;
+}

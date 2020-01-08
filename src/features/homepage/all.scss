@@ -5,19 +5,6 @@
 @import './homepage-companion-apps';
 @import './homepage-community';
 
-// .#{$namespace}trending-articles {
-//   .#{$namespace}list-item-summary {
-//     h4 {
-//       color: $hc-heading-color;
-//     }
-//     p {
-//       color: $hc-text-color;
-//       margin-bottom: 0;
-//     }
-//   }
-// }
-
-
 .grid-3-col-responsive {
   grid-template-columns: 1fr;
   grid-gap: var(--grid-gap);
