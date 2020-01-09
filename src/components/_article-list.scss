@@ -1,6 +1,7 @@
 .#{$namespace}article {
   &-heading {
     color: v('brand-black');
+    margin-bottom: v('space-xs');
   }
   &-subheading {
     display: block;
@@ -12,6 +13,18 @@
   &-text {
     margin-bottom: 0;
     color: $body-color;
+  }
+
+  &-item {
+    // &:not(:last-child) {
+      margin-bottom: v('space-md');
+    // }
+  }
+
+  &-link {
+    > article {
+      display: inline-block;
+    }
   }
 }
 
@@ -41,3 +54,4 @@
     }
   }
 }
+
