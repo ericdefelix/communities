@@ -9,7 +9,7 @@
 // Settings
 // ==================================================
 $hamburger-padding-x           : $navbar-toggler-padding-x;
-$hamburger-padding-y           : calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2) - 2px);
+$hamburger-padding-y           : $navbar-toggler-padding-y;
 $hamburger-layer-width         : 26px;
 $hamburger-layer-height        : 2px;
 $hamburger-layer-spacing       : 6px;

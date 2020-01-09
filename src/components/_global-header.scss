@@ -10,7 +10,8 @@
   z-index: $zindex-fixed;
 
   .navbar {
-    @include media-breakpoint-down('lg') {
+    // height: v('navbar-header-height');
+    @include media-breakpoint-down('md') {
       padding-right: 0;
     }
     @include media-breakpoint-up('lg') {
@@ -70,12 +71,12 @@
     display: flex;
     align-items: center;
     margin-right: 0;
-    height: v('navbar-brand-height');
+    height: 100%;
   }
 
   .navbar-brand-img {
     width: auto;
-    height: 100%;
+    height: v('navbar-brand-height');
 
     // Help Center text
     + span {
@@ -112,18 +113,18 @@
     outline: none;
     position: relative;
     line-height: 1;
-    display: inline-flex;
+    display: none;
 
     &:active {
       background-color: v('brand-primary-darker');
     }
 
-    @include media-breakpoint-up('lg') {
-      display: none;
+    @include media-breakpoint-down('md') {
+      display: inline-flex;
     }
   }
 
-  @include media-breakpoint-down('lg') {
+  @include media-breakpoint-down('md') {
     .navbar-collapse.expanded {
       display: flex;
       background-color: v('brand-primary');
@@ -140,9 +141,5 @@
       position: fixed;
       overflow-y: scroll;
     }
-  }
-
-  @include media-breakpoint-up('lg') {
-    .navbar-toggle { display: none; }
   }
 }

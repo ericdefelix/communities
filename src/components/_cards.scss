@@ -1,18 +1,38 @@
-// 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+figure {
+  margin-bottom: 0;
+}
+
 .#{$namespace}card {
   background-color: $card-bg-color;
-  margin-bottom: v('space-md');
 
+  &:not(:last-child) {
+    margin-bottom: v('space-md');
+  }
   @include box-shadow($card-box-shadow);
 }
 
 .#{$namespace}card-line-top {
-  &::before {
+  position: relative;
+  &::before, &::after {
     content: '';
     display: block;
-    background-color: $card-border-top-color;
-    width: 100%;
     height: $card-border-top;
+    background-color: $card-border-top-color;
+    z-index: 1;
+  }
+
+  &::before {
+    width: 100%;
+    margin-left: $spotlight-card-thumbnail-width;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $spotlight-card-thumbnail-width;
+    opacity: 0.6;
   }
 }
 

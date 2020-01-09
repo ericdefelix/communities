@@ -15,12 +15,12 @@
   --grid-gap: var(--space-xl);
   --list-margin-bottom: var(--space-md);
   --grid-gap-responsive: var(--grid-gap);
-  --container-padding: var(--space-md);
+  --container-padding: var(--grid-gap);
   --card-padding: 1.5rem 2.25rem;
 
-  // @include media-breakpoint-up('md') {
-  //   --grid-gap: var(--space-md);
-  // }
+  @include media-breakpoint-down('md') {
+    --grid-gap: var(--space-md);
+  }
   // @include media-breakpoint-up('lg') {
   //   --grid-gap: var(--space-lg);
   // }
@@ -63,12 +63,12 @@ $homepage-sections-padding: v('space-xl') 0;
 $homepage-section-title-mbottom: v('space-lg');
 
 //Navbar
-$navbar-toggler-padding-x: v('space-md');
-$navbar-toggler-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));
+$navbar-toggler-padding-x: v('grid-gap');
+$navbar-toggler-padding-y: v('grid-gap');
 
 // Navbar
 $navbar-brand-padding-y: 0;
 $navbar-padding-x: v('space-sm'); 
 $navbar-padding-y: 0;
 $navbar-nav-link-padding-x: v('space-md');
-$navbar-nav-link-padding-y: calc(var(--navbar-brand-height) - (var(--navlink-text-size) / 2));
+$navbar-nav-link-padding-y: 1.4rem;

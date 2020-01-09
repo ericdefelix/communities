@@ -10,33 +10,35 @@ $hc-pinned-m-bottom: v('font-size-base');
   background-color: $hc-section-articles-bg;
 
   .grid {
-    @include media-breakpoint-down('md') {
+    @include media-breakpoint-up('md') {
+      grid-template-columns: 1fr 1fr;
+      // > .#{$namespace}spotlights {
+      //   grid-column: span 12;
+      // }
+      // > .#{$namespace}trending-articles {
+      //   // grid-column: span 5;
+      // }
+    }
+    @include media-breakpoint-between('xs', 'md') {
       grid-template-columns: 1fr;
     }
-    @include media-breakpoint-up('md') {
-      grid-template-columns: repeat(24,1fr);
-      > .#{$namespace}spotlights {
-        grid-column: span 12;
-      }
-      > .#{$namespace}trending-articles {
-        // grid-column: span 5;
-      }
-    }
+
     @include media-breakpoint-up('lg') {
-      > .#{$namespace}spotlights {
-        grid-column: span 9;
-      }
-      > .#{$namespace}trending-articles {
-        grid-column: span 15;
-      }
+      grid-template-columns: 30rem 1fr;
+      // > .#{$namespace}spotlights {
+      //   grid-column: span 9;
+      // }
+      // > .#{$namespace}trending-articles {
+      //   grid-column: span 15;
+      // }
     }
     @include media-breakpoint-up('xxl') {
-      > .#{$namespace}spotlights {
-        grid-column: span 8;
-      }
-      > .#{$namespace}trending-articles {
-        grid-column: span 16;
-      }
+      // > .#{$namespace}spotlights {
+      //   grid-column: span 8;
+      // }
+      // > .#{$namespace}trending-articles {
+      //   grid-column: span 16;
+      // }
     }
   }
 }

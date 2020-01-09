@@ -29,7 +29,7 @@ $input-border-width: 0;
 $input-border-radius: var(--text-input-radius);
 
 //Cards
-$card-border-top: 3px;
+$card-border-top: 0.3125rem;
 $card-box-shadow: 0 0 0.8125rem 0 rgba(30, 54, 94, 0.1);
 $card-box-shadow-darker: 0 0 1rem 0 rgba(30, 54, 94, 0.3);
 
@@ -41,6 +41,10 @@ $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 // List Group
 $list-group-border-width: 0;
 $list-group-border-radius: 0;
+
+// Icon
+$search-stroke-width: 0.115em;
+$search-dimension: 0.75em;
 
 // Homepage Hero
 $hero-shape-bg: str-replace(
@@ -55,11 +59,11 @@ $wave-shape-bg-white: str-replace(
   "%23"  
 );
 
-// $abstract-bg: str-replace(
-//   url(),
-//   "#",
-//   "%23"  
-// );
+$bullet-bg: str-replace(
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23F69139' d='M8 4L0 8V0z' fill-rule='evenodd'/%3E%3C/svg%3E"),
+  "#",
+  "%23"  
+);
 
 // Discussions
 $question-card-bg: str-replace(

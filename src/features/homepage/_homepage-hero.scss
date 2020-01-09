@@ -12,16 +12,15 @@ $hc-wave-bg-height: 10rem;
     @extend 
       %d-flex,
       %align-items-center;
+    position: relative;
+    z-index: 2;
   }
 
   &-row {
     width: 100%;
     .hc-hero-lead {
       margin-bottom: v('space-md');
-      @include media-breakpoint-up('lg') {
-        white-space: nowrap;
-      }
-      @include media-breakpoint-down('md') {
+      @include media-breakpoint-down('sm') {
         margin-bottom: v('space-md');
         text-align: center;
       }
@@ -64,9 +63,18 @@ $hc-wave-bg-height: 10rem;
     margin-top: -1rem;
     margin-bottom: -($hc-wave-bg-height - 2);
     text-align: center;
+    display: none;
 
-    @include media-breakpoint-up('xl') {
-      text-align: left;
+
+    @include media-breakpoint-up('md') {
+      display: block;
+      z-index: 2;
+    }
+
+    @include media-breakpoint-between('sm', 'lg') {
+      position: absolute;
+      right: 0;
+      z-index: 1;
     }
 
     > img {
@@ -82,11 +90,6 @@ $hc-wave-bg-height: 10rem;
         max-width: 36rem;
       }
     }
-  }
-  
-  > * {
-    z-index: 1;
-    position: relative;
   }
 
   &::after {
@@ -111,30 +114,14 @@ $hc-wave-bg-height: 10rem;
 
   .grid {
     grid-template-columns: 1fr;
-  }
 
-  @include media-breakpoint-down('md') {
-
-
-    &-image {
-      display: none;
+    @include media-breakpoint-up('sm') {
+      grid-template-columns: 1fr 30%;
     }
 
-    &-background {
-      display: none;
+    @include media-breakpoint-up('xl') {
+      grid-template-columns: 60% 1fr;
     }
-  }
-
-  // @include media-breakpoint-up('md') {
-  //   .grid { grid-template-columns: 60% 1fr; }
-  // }
-
-  @include media-breakpoint-up('lg') {
-    .grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  @include media-breakpoint-up('xl') {
-    .grid { grid-template-columns: 60% 1fr; }
   }
 }
 
@@ -142,6 +129,7 @@ $hc-wave-bg-height: 10rem;
 .#{$namespace}news-heading {
   color: $hc-news-heading-color;
   text-transform: uppercase;
+  font-size: v('text-xs');
 }
 
 .#{$namespace}news-content {
@@ -149,6 +137,10 @@ $hc-wave-bg-height: 10rem;
     margin-bottom: v('space-sm');
   }
   a {
-    color: white;
+    color: lighten($primary, 70%);
+    display: inline-block;
+    &:hover {
+      @include box-shadow(0 1px 0 0 lighten($primary, 70%));
+    }
   }
 }
