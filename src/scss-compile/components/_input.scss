@@ -1,0 +1,77 @@
+
+
+
+.#{$namespace}ico-search {
+  display: block;
+  line-height: 1;
+  font-size: 150%;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 1.25rem;
+  @include transform(rotate(-45deg));
+
+  &::before, &::after {
+    display: block;
+    content: '';
+    @include transition(all, $easing);
+  }
+
+  &::before {
+    width: $search-dimension;
+    height: $search-dimension;
+    border-radius: 100%;
+    @include box-shadow(0 0 0 $search-stroke-width v('brand-primary-lighter') inset);
+  }
+
+  &::after {
+    display: block;
+    background-color: v('brand-primary-lighter');
+    width: $search-stroke-width + 0.01;
+    height: 0.35em;
+    margin: auto;
+    margin-top: -1px;
+  }
+}
+
+.#{$namespace}search-input {
+  position: relative;
+
+  // @include media-breakpoint-between('sm', 'md') {
+  //   max-width: 75%;
+  //   margin: auto;
+  // }
+
+  .form-control {
+    font-size: 1rem;
+    margin-bottom: v('space-xl');
+    height: v('text-xxl');
+    padding: 0.75rem 2rem;
+    padding-left: 3.25rem;
+    @include box-shadow(0 0 0 0 transparent);
+    @include transition(all, $easing);
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &:focus {
+      @include transition(all, $easing);
+      border-color: #789bca;
+      @include box-shadow(0 0 0 0.125rem #789bca);
+    }
+
+    &:hover {
+      & +.#{$namespace}ico-search {
+        &::before {
+          @include transition(all, $easing);
+          @include box-shadow(0 0 0 $search-stroke-width v('brand-primary') inset);
+        }
+        &::after {
+          @include transition(all, $easing);
+          background-color: v('brand-primary');
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @extend %headings;
+}
+
+@function getMarginBottom($headingNumber) {
+  @if $headingNumber < 3 {
+    @return v('space-xl');
+  }
+  @else {
+    @return v('space-md');
+  }
+}
+
+
+@each $text-size, $headingNumber in $text-sizes {
+  @if $headingNumber > 0 {
+    h#{$headingNumber}, .h#{$headingNumber} {
+      font-size: v('text-#{$text-size}');
+      // line-height: calc(var(--text-#{$text-size}) * 1.4);
+      line-height: 1.4;
+      margin-bottom: getMarginBottom($headingNumber);
+      // margin-bottom: 1rem;
+
+      @if $headingNumber < 4 {
+        font-weight: $font-weight-light;
+      }
+
+      @if $headingNumber > 4 {
+        font-weight: $font-weight-semibold;
+      }
+
+      @include media-breakpoint-down('md') {
+        @if $headingNumber < 4 {
+          // margin-bottom: 1rem;
+          margin-bottom: getMarginBottom($headingNumber + 2);
+        }
+      }
+    }
+  }
+}
+
+.small {
+  font-size: v('text-xs');
+}
+
+.list-unstyled {
+  @include list-unstyled;
+}
+
+.text-primary-lighter {
+ color: $text-primary-lighter;
+}
+
+.text-muted {
+
+}
+
+.text-secondary {
+  color: $text-secondary; 
+}

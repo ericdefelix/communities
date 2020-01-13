@@ -1,0 +1,89 @@
+.#{$namespace}article {
+  &-heading {
+    color: v('brand-black');
+  }
+  &-subheading {
+    display: block;
+    font-size: v('text-xxs');
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    color: $subheading-color;
+  }
+  &-text {
+    margin-bottom: 0;
+    color: $body-color;
+  }
+
+  &-item {
+    margin-bottom: v('space-md');
+  }
+
+  &-list {
+    &-item {
+      display: block;
+    }
+  }
+}
+
+.#{$namespace}article-card {
+  background-color: v('brand-white');
+  border-radius: $border-radius-xs;
+  overflow: hidden;
+
+  > .#{$namespace}article-link {
+    padding: v('component-padding');
+
+    &:not(:last-child) {
+      border-bottom: 0.0625rem solid $border-bottom-color;
+    }
+  }
+}
+
+.#{$namespace}article-list {
+  .#{$namespace}article-heading {
+    margin-bottom: v('space-xs');
+    font-weight: 400;
+  }
+
+  &:not(.#{$namespace}article-list-lg) {
+    .#{$namespace}article-heading {
+      font-size: v('font-size-base');
+    }
+  }
+}
+
+.#{$namespace}article-link {
+  display: block;
+  cursor: pointer;
+  margin-bottom: v('space-md');
+
+  &:hover .#{$namespace}article-heading {
+    color: v('brand-secondary');
+  }
+}
+
+.#{$namespace}article-condensed {
+  > .#{$namespace}article-heading {
+    margin-bottom: v('space-xs');
+  }
+}
+
+.#{$namespace}article-bullet-list {
+  > * {
+    &::before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin: 0 v('space-sm') 0 0.0625rem;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: none;
+      top: -0.0625rem;
+      vertical-align: middle;
+      background-image: $bullet-bg;
+    }
+  }
+}
+

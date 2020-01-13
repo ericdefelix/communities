@@ -1,0 +1,24 @@
+.#{$namespace}section-companion {
+
+  .list-group-item {
+    color: v('brand-primary');
+    &.active {
+      background-color: v('brand-white');
+      @include box-shadow($card-box-shadow);
+
+      &:hover {
+        @include box-shadow($card-box-shadow-darker);
+      }
+    }
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    @include media-breakpoint-between('md', 'xlg',$grid-breakpoints) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media-breakpoint-up('lg',$grid-breakpoints) {
+      grid-template-columns: $homepage-fixed-width-lg 1fr;
+    }
+  }
+}

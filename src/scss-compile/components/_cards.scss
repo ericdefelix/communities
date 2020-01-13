@@ -1,0 +1,124 @@
+
+figure {
+  margin-bottom: 0;
+}
+
+.#{$namespace}card {
+  background-color: $card-bg-color;
+  @include box-shadow($card-box-shadow);
+}
+
+.#{$namespace}card-line-top {
+  position: relative;
+  &::before, &::after {
+    content: '';
+    display: block;
+    height: $card-border-top;
+    background-color: $card-border-top-color;
+    z-index: 1;
+  }
+
+  &::before {
+    width: 100%;
+    margin-left: $spotlight-card-thumbnail-width;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $spotlight-card-thumbnail-width;
+    opacity: 0.6;
+  }
+}
+
+.#{$namespace}spotlight-card {
+  overflow: hidden;
+  border-radius: 0.0625rem;
+  display: flex;
+  flex-wrap: wrap;
+  color: inherit;
+
+  &:hover {
+    @include box-shadow($card-box-shadow-darker);
+    > * {
+      text-decoration: none;
+    }
+  }
+
+  #{&}-thumbnail {
+    width: $spotlight-card-thumbnail-width;
+    height: auto;
+    min-height: $spotlight-card-thumbnail-width;
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--brand-grey);
+    margin-top: -$card-border-top;
+  }
+
+  #{&}-title {
+
+  }
+
+  #{&}-body {
+    width: calc(100% - #{$spotlight-card-thumbnail-width});
+    flex-grow: 1;
+    padding: $spotlight-card-padding;
+
+    > * {
+      white-space: normal;
+      word-break: break-word;
+    }
+  }
+}
+
+.#{$namespace}question-card {
+  background-image: $question-card-bg;
+  background-repeat: no-repeat;
+  background-position: 95% 0%;
+  
+  h6 {
+    color: var(--brand-primary-lighter);
+    margin-bottom: 0;
+  }
+  .time-stamp {
+    font-size: $subheading-font-size;
+  }
+  .user-avatar {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    font-size: $h6-font-size;
+    color: var(--brand-white);
+    line-height: 1.875rem;
+    text-align: center;
+    background: var(--brand-secondary);
+
+  }
+  .question-label {
+    font-size: $h6-font-size;
+    color: $label;
+    text-transform: uppercase;
+
+  }
+  .question {
+    font-size: $h4-font-size;
+    color: var(--brand-primary);
+    font-weight: $font-weight-semibold;
+    margin: 1rem 0;
+    
+  }
+  .user-profile {
+    display: flex;
+
+  }
+  .user-name {
+    margin-left: 1.25rem;
+    
+
+  }
+  .card-body{
+    padding: $card-padding;
+
+  }
+}

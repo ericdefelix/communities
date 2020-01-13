@@ -1,0 +1,44 @@
+:root,
+[data-theme="leap"] {
+  --navbar-header-height: 3.6rem;
+  --navbar-brand-height: 1.6rem;
+}
+
+$spotlight-card-thumbnail-width: 10rem;
+
+// Input Boxes
+$input-height: 1rem;
+$input-height-lg: 4rem;
+
+// Navbar
+$navbar-brand-height: '';
+$nav-link-height: '';
+$homepage-fixed-width-lg: 32rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px,
+  ultra: 2560px
+);
+
+$container-max-widths: (
+  // sm: 540px,
+  // md: 720px,
+  // lg: 960px,
+  xl: 1140px,
+  xxl: 1380px,
+  xxxl: 1560px,
+  ultra: 1800px
+);
+
+@include media-breakpoint-up('ultra') {
+  :root {
+    --navbar-header-height: 3.8rem;
+    --navbar-brand-height: 1.8rem;
+  }
+}

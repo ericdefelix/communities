@@ -1,0 +1,11 @@
+.#{$namespace}article-link-group {
+  width: 100%;
+  column-count: 2;
+  column-gap: 2rem;
+  &-item {
+    // height: 400px;
+    min-height: 12.5rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

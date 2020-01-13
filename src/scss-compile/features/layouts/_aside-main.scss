@@ -1,0 +1,11 @@
+.#{$namespace}layout-aside-main {
+  grid-template-columns: 24% 1fr;
+  .#{$namespace} {
+    &aside {
+
+    }
+    &main {
+      
+    }
+  }
+}
