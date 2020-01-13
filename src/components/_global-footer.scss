@@ -4,9 +4,14 @@
   background-color: v('brand-grey-dark');
   color: v('footer-link-color');
 
+  a:not(:hover) {
+    color: v('footer-link-color');
+  }
+
   &-top {
     padding: calc(var(--text-xxl)) 0;
     .grid {
+      grid-row-gap: v('space-lg');
       @include media-breakpoint-up('md') {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -34,10 +39,6 @@
     }
   }
 
-  a:not(:hover) {
-    color: v('footer-link-color');
-  }
-
   .#{$namespace}social-col {
     margin-top: v('space-xl');
   }
@@ -61,13 +62,8 @@
     }
   }
 
-  p {
-    font-size: 0.875rem;
-  }
-
-
   .#{$namespace}footer-logo {
-    width: 9rem;
+    width: 8rem;
     height: auto;
     img {
       max-width: 100%;

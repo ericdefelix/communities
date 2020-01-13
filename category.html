@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./src/hc-leap.scss" />
 
   <title>LEAP Help Center</title>
 </head>
@@ -15,7 +14,7 @@
 <body>
   <header class="hc-global-header">
     <div class="navbar navbar-expand-lg navbar-dark container" role="navigation">
-      <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href=index>
         <img class="navbar-brand-img" src="src/assets/leap-logo-small.svg" alt="logo" />
         <span>Help Center</span>
       </a>
@@ -25,8 +24,7 @@
           <span>Servers are Up</span>
         </a>
 
-        <button class="navbar-toggle hamburger hamburger--slider" tabindex="0" data-target="#navbar" data-toggle="menu"
-          aria-expanded="false">
+        <button class="navbar-toggle hamburger hamburger--slider" tabindex="0" data-target="#navbar" data-toggle="menu" aria-expanded="false">
           <span class="hamburger-box">
             <i class="hamburger-inner"></i>
           </span>
@@ -36,10 +34,10 @@
       <div class="collapse navbar-collapse" id="navbar">
         <nav class="navbar-nav">
           <div class="nav-item">
-            <a href="./category.html" class="nav-link active">Knowledge Base</a>
+            <a href=category class="nav-link active">Knowledge Base</a>
           </div>
           <div class="nav-item">
-            <a href="./discussions.html" class="nav-link">Community</a>
+            <a href=discussions class="nav-link">Community</a>
           </div>
           <div class="nav-item">
             <a href="#" class="nav-link">Sign In</a>
@@ -48,6 +46,7 @@
       </div>
     </div>
   </header>
+
   <section class="">
 
   </section>
@@ -136,76 +135,85 @@
     </div>
   </section>
 
-  <footer class="hc-global-footer grid-full">
-    <div class="container">
-      <div class="footer-top">
-        <div class="grid-column">
-          <div class="row">
-            <div class="col twitter">
-              <div class="logo">
-                <img src="src/assets/leap-logo-small.svg" alt="logo" />
-              </div>
-  
-              <h3>Stay Updated</h3>
-              <p>Follow us on Twitter for<br> support updates.</p>
-              <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
-  
+  <footer class="hc-global-footer">
+    <div class="hc-global-footer-top">
+      <div class="container">
+        <div class="grid">
+          <div class="hc-global-footer-col">
+            <div class="hc-footer-logo">
+              <img src="src/assets/leap-logo-small.svg" alt="logo" />
             </div>
-  
-  
+            <div class="hc-social-col mb-4">
+              <h5 class="hc-social-col-heading">Stay Updated</h5>
+              <p class="hc-social-col-text">Follow us on Twitter for support updates.</p>
+            </div>
+            <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
           </div>
-  
+          <div class="hc-global-footer-col">
+            <h6 class="small hc-footer-nav-heading">Resources</h6>
+            <ul class="hc-top-footer-nav-links">
+              <li><a href>Knowledge Base</a></li>
+              <li><a href>Companion Products</a></li>
+              <li><a href>Content Blog</a></li>
+              <li><a href>News & Announcements</a></li>
+              <li><a href>Face-to-Face Training</a></li>
+              <li><a href>Training Videos</a></li>
+              <li><a href>Webinars</a></li>
+            </ul>
+          </div>
+          <div class="hc-global-footer-col">
+            <h6 class="small hc-footer-nav-heading">Community & Support</h6>
+            <ul class="hc-top-footer-nav-links">
+              <li><a href>Discussions</a></li>
+              <li><a href>Referrals</a></li>
+              <li><a href>Ideas Hub</a></li>
+              <li><a href>Live Chat</a></li>
+            </ul>
+          </div>
+          <div class="hc-global-footer-col">
+            <h6 class="small hc-footer-nav-heading">Technical</h6>
+            <ul class="hc-top-footer-nav-links">
+              <li><a href>System Requirements</a></li>
+              <li><a href>LEAP Conveyancer Requirements</a></li>
+              <li><a href>Download System Audit</a></li>
+              <li><a href>System Status</a></li>
+              <li><a href>Website Services</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="grid-column">
-          <h5>Resources</h5>
-          <ul class="footer-nav-links footer-nav">
-            <li><a href>Knowledge Base</a></li>
-            <li><a href>Companion Products</a></li>
-            <li><a href>Content Blog</a></li>
-            <li><a href>News & Announcements</a></li>
-            <li><a href>Face-to-Face Training</a></li>
-            <li><a href>Training Videos</a></li>
-            <li><a href>Webinars</a></li>
-          </ul>
-        </div>
-        <div class="grid-column">
-          <h5>Community & Support</h5>
-          <ul class="footer-nav-links footer-nav">
-            <li><a href>Discussions</a></li>
-            <li><a href>Referrals</a></li>
-            <li><a href>Ideas Hub</a></li>
-            <li><a href>Live Chat</a></li>
-          </ul>
-        </div>
-        <div class="grid-column">
-          <h5>Technical</h5>
-          <ul class="footer-nav-links footer-nav">
-            <li><a href>System Requirements</a></li>
-            <li><a href>LEAP Conveyancer Requirements</a></li>
-            <li><a href>Download System Audit</a></li>
-            <li><a href>System Status</a></li>
-            <li><a href>Website Services</a></li>
-          </ul>
-        </div>
-  
       </div>
     </div>
-    <div class="hc-copyright">
+
+    <div class="hc-global-footer-bottom">
       <div class="container">
-        <div class="grid grid-2">
-          <div class="grid-column">
-            <p>Copyright © 2018 LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</p>
+        <div class="d-lg-flex">
+          <div rel="license">
+            <small>Copyright &copy; <span>2018</span> LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</small>
           </div>
-  
-          <div class="grid-column">
-            <p class="footer-links"> <a href>Terms</a> | <a href>Privacy Policy</a> | <a href>Security Statement</a></p>
+      
+          <div class="d-flex align-items-center ml-auto">
+            <small class="hc-footer-bottom-links">
+              <a href="#">Terms</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Security Statement</a>
+            </small>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
+
   <script src="index.js"></script>
+
+  <!-- for dev only -->
+  <script>
+    document.querySelectorAll('.nav-item a').forEach(link => {
+      link.href = `${link.getAttribute('href')}.html`;
+    });
+
+    document.querySelector('.navbar-brand').href = 'index.html';
+  </script>
 
 </body>
 </html>
