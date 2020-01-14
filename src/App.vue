@@ -1,9 +1,10 @@
+/* eslint-disable no-unneeded-ternary */
 <template>
   <div id="app">
-    <header class="hc-global-header">
+    <header class="hc-global-header hc-header-sticky" v-bind:class="{ 'hc-header-sticky' : isSticky }">
       <div class="navbar navbar-expand-lg navbar-dark container" role="navigation">
         <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/">
-          <a class="navbar-brand" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">
+          <a href="#" class="navbar-brand" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">
             <img class="navbar-brand-img" src="@/assets/leap-logo-small.svg" alt="logo" />
             <span>Help Center</span>
           </a>
@@ -24,15 +25,15 @@
           <nav class="navbar-nav" id="nav">
             <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/category">
               <div class="nav-item">
-                <a href=category class="nav-link" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Knowledge Base</a>
+                <a href="#" class="nav-link" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Knowledge Base</a>
               </div>
             </router-link>
             <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/discussions">
               <div class="nav-item">
-                <a href=discussions class="nav-link" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Community</a>
+                <a href="#" class="nav-link" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Community</a>
               </div>
             </router-link>
-            <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/">
+            <router-link to="/">
               <div class="nav-item">
                 <a href="#" class="nav-link">Sign In</a>
               </div>
@@ -50,8 +51,29 @@
 
 <script>
 import Footer from '@/components/Footer'
+// import hcUI from '@/scss-compile/hc-ui'
+
 export default {
-  components: { Footer }
+  components: { Footer },
+  props: {
+    headerSticky: Boolean
+  },
+  data: () => {
+    return {
+      isSticky: false
+    }
+  },
+  watch: {
+    $route: function () {
+      if (this.$route.path === '/') {
+        this.isSticky = true
+      } else {
+        this.isSticky = false
+      }
+    }
+  },
+  mounted: () => {
+  }
 }
 </script>
 

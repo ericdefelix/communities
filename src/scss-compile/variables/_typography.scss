@@ -81,7 +81,7 @@ $h6-font-size: '';
 $subheading-font-size: '';
 $lead-font-size: '';
 
-$btn-font-size-lg: 1rem;
+$btn-font-size-lg: v('font-size-base');
 
 $blockquote-font-size: calc(v("font-size-base") * 0.25);
 

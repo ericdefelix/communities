@@ -71,3 +71,5 @@ $question-card-bg: str-replace(
   "#",
   "%23"
 );
+
+$search-icon: str-replace(url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23F7F5F6' d='M-1251-28H669v70h-1920z'/%3E%3Cg transform='translate(-11 -9)'%3E%3Crect stroke='%23CCC' fill='%23FFF' x='-.5' y='-.5' width='367.667' height='33' rx='16'/%3E%3Cpath d='M18.94 18.667L20 17.606l3.56 3.56-1.06 1.061-3.56-3.56zm-2.44 1.75a5.25 5.25 0 110-10.5 5.25 5.25 0 010 10.5zm0-1.5a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z' stroke='%235A5B5D' stroke-width='.5' fill='%235A5B5D' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), "#", "%23");

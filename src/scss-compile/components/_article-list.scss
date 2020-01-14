@@ -5,8 +5,9 @@
   &-subheading {
     display: block;
     font-size: v('text-xxs');
-    font-weight: $font-weight-semibold;
+    // font-weight: $font-weight-semibold;
     text-transform: uppercase;
+    letter-spacing: 0.0625rem;
     color: $subheading-color;
   }
   &-text {
@@ -23,6 +24,19 @@
       display: block;
     }
   }
+
+  &-pinned > * {
+    &:first-child {
+      background-color: v('brand-white');
+      padding: v('component-padding');
+      grid-column: span 2;
+    }
+
+    &:not(:first-child) {
+      padding-left: v('component-padding');
+      padding-right: v('component-padding');
+    }
+  }
 }
 
 .#{$namespace}article-card {
@@ -32,7 +46,6 @@
 
   > .#{$namespace}article-link {
     padding: v('component-padding');
-
     &:not(:last-child) {
       border-bottom: 0.0625rem solid $border-bottom-color;
     }

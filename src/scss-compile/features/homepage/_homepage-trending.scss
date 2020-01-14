@@ -23,7 +23,12 @@
       }
 
       .#{$namespace}article-list {
-        max-width: 40rem;
+        &.#{$namespace}article-pinned > *:first-child {
+          .#{$namespace}article-heading {
+            font-size: v('text-md');
+            font-weight: 600;
+          }
+        }
 
         .#{$namespace}article-link {
           margin-bottom: v('space-lg');
@@ -31,9 +36,12 @@
 
         .#{$namespace}article-heading {
           font-size: v('text-sm');
-          font-weight: 600;
         }
       }
+    }
+
+    .#{$namespace}article-pinned *:first-child {
+      // grid-column: span 2;
     }
   }
 }

@@ -1,11 +1,8 @@
 .#{$namespace}article-link-group {
-  width: 100%;
-  column-count: 2;
-  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   &-item {
-    // height: 400px;
-    min-height: 12.5rem;
-    break-inside: avoid;
-    page-break-inside: avoid;
+    padding: v('component-padding');
+    margin-bottom: v('space-md');
   }
 }

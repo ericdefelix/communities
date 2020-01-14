@@ -1,6 +1,4 @@
 
-
-
 .#{$namespace}ico-search {
   display: block;
   line-height: 1;
@@ -46,12 +44,14 @@
     font-size: 1rem;
     margin-bottom: v('space-xl');
     height: v('text-xxl');
-    padding: 0.75rem 2rem;
+    // padding: 0.75rem 2rem;
     padding-left: 3.25rem;
+    padding-right: 2rem;
     @include box-shadow(0 0 0 0 transparent);
     @include transition(all, $easing);
 
     &::placeholder {
+      font-size: v('font-size-base');
       color: $input-placeholder-color;
     }
 

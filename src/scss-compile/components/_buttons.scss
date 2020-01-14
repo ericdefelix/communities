@@ -59,7 +59,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-default {
-  // @include button-variant('default');
+  @include custom-button-variant(secondary,white);
 }
 
 //

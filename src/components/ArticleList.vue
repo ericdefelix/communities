@@ -1,7 +1,7 @@
 <template>
-  <div class="hc-article-list">
+  <div class="hc-article-list" :class="{ 'hc-article-pinned': hasPin }">
     <a href="#" class="hc-article-link" v-for="content in articles" v-bind:key="content.id">
-      <ArticleItem v-bind:content="content" v-bind:isLarge="articles.isLarge" />
+      <ArticleItem v-bind:content="content" v-bind:isLarge="articles.isLarge"/>
     </a>
   </div>
 </template>
@@ -14,7 +14,11 @@ export default {
     ArticleItem
   },
   props: {
-    articles: Array
+    articles: Array,
+    hasPin: Boolean
+  },
+  data: () => {
+    return this.hasPin
   }
 }
 </script>

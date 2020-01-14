@@ -5,7 +5,7 @@
       <ul class="hc-usps-group grid grid-3 grid-gap-responsive">
         <li>
           <article class="hc-usps-item">
-            <figure class="hc-usps-img" style="background-image: url(@/assets/homepage_knowledge-base.svg)"></figure>
+            <figure class="hc-usps-img" v-bind:style="{ backgroundImage: `url(/img/homepage-knowledge-base.svg)` }"></figure>
             <div class="hc-usps-content">
               <h4 class="text-primary-lighter">Knowledge Base</h4>
               <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>

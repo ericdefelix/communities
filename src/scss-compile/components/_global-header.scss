@@ -4,8 +4,6 @@
   @extend 
     %w-100;
   background-color: var(--brand-primary);
-  position: sticky;
-  position: -webkit-sticky;
   top: 0;
   z-index: $zindex-fixed;
 
@@ -122,6 +120,11 @@
     @include media-breakpoint-down('md') {
       display: inline-flex;
     }
+  }
+
+  &.#{$namespace}header-sticky {
+    position: sticky;
+    position: -webkit-sticky;
   }
 
   @include media-breakpoint-down('md') {

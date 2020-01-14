@@ -1,17 +1,17 @@
 <template>
 <div>
 <!-- Container -->
-  <section class=""></section>
+  <Breadcrumbs/>
   <section class="hc-section">
     <div class="container">
       <div class="hc-layout-aside-main grid grid-2 grid-gap-responsive">
         <aside class="hc-aside">
           <div class="hc-aside-topics mb-5">
-            <h5 class="text-primary-lighter">Topics</h5>
+
             <ArticleList v-bind:articles="topics"/>
           </div>
           <div class="hc-aside-trending mb-5">
-            <h5 class="text-primary-lighter">Trending Articles</h5>
+            <h6 class="text-secondary text-uppercase small">Trending Articles</h6>
             <ArticleList v-bind:articles="articles"/>
           </div>
 
@@ -19,9 +19,8 @@
         </aside>
 
         <div class="hc-main">
-          <h1 class="text-primary-lighter mb-3">Knowledge Base</h1>
+          <h2 class="text-primary-lighter mb-3">Knowledge Base</h2>
           <p class="mb-5">Browse our topics & articles to learn how to use LEAP to its full potential.</p>
-
           <ul class="nav nav-tabs" role="tablist" aria-orientation="horizontal">
             <li class="nav-item">
               <a class="nav-link active" id="productCategoryAppTab" data-toggle="tab" href="#productCategoryApp" role="tab" aria-controls="productCategoryApp" aria-selected="true">Application</a>
@@ -55,11 +54,12 @@
 <script>
 import SpotlightCard from '@/components/SpotlightCard'
 import ArticleList from '@/components/ArticleList'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default {
   name: 'productCategoryPage',
   components: {
-    SpotlightCard, ArticleList
+    SpotlightCard, ArticleList, Breadcrumbs
   },
   data: function () {
     return {
