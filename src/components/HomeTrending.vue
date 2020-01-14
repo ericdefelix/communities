@@ -14,7 +14,7 @@
 
         <div class="hc-trending-articles">
           <h5 class="text-primary-lighter">Trending Articles</h5>
-          <ArticleList v-bind:articles="articles" v-bind:hasPin="true"/>
+          <ArticleList v-bind:articles="articles" v-bind:hasPin="hasPin"/>
         </div>
       </div>
     </div>
@@ -32,6 +32,7 @@ export default {
   },
   data: function () {
     return {
+      hasPin: true,
       spotlights: [
         { heading: 'Heading', subheading: 'Subheading', content: 'Content' },
         { heading: 'Heading', subheading: 'Subheading', content: 'Content' },

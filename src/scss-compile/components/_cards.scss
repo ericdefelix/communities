@@ -5,7 +5,6 @@ figure {
 
 .#{$namespace}card {
   background-color: $card-bg-color;
-  @include box-shadow($card-box-shadow);
 }
 
 .#{$namespace}card-line-top {
@@ -38,9 +37,10 @@ figure {
   display: flex;
   flex-wrap: wrap;
   color: inherit;
+  @include hover-shadow();
 
   &:hover {
-    @include box-shadow($card-box-shadow-darker);
+    // @include box-shadow($card-box-shadow-darker);
     > * {
       text-decoration: none;
     }

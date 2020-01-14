@@ -24,10 +24,10 @@
     <div class="hc-global-footer-bottom">
       <div class="container">
         <div class="d-lg-flex">
-          <div rel="license">
+          <div class="hc-footer-bottom-copy" rel="license">
             <small>Copyright &copy; <span>2018</span> LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</small>
           </div>
-          <div class="d-flex align-items-center ml-auto">
+          <div class="hc-footer-bottom-legal">
             <small class="hc-footer-bottom-links">
               <a href="#">Terms</a><a href="#">Privacy Policy</a><a href="#">Security Statement</a>
             </small>

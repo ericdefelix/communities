@@ -55,7 +55,7 @@
 .#{$namespace}article-list {
   .#{$namespace}article-heading {
     margin-bottom: v('space-xs');
-    font-weight: 400;
+    // font-weight: 400;
   }
 
   &:not(.#{$namespace}article-list-lg) {

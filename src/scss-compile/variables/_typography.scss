@@ -18,14 +18,14 @@ $text-sizes: (
     "Segoe UI Emoji", "Segoe UI Symbol";
 
   // Body Font Size
-  --font-size-base: 0.875rem;
+  --font-size-base: 1rem;
 
   // Line Height
   --line-height-base: 1.4;
   --line-height-heading: 1.4;
 
   // Type Scale
-  --text-scale-ratio: 1.25;
+  --text-scale-ratio: 1.125;
   --text-scale-ratio-xs: 1.333;
   --text-xxs: calc(var(--font-size-base) / var(--text-scale-ratio-xs));
   --text-xs: calc(var(--font-size-base) / var(--text-scale-ratio-xs) - 0.2);
@@ -41,7 +41,7 @@ $text-sizes: (
 
 @include media-breakpoint-up('lg') {
   :root {
-  --font-size-base: 1rem;
+  --text-scale-ratio: 1.25;
   }
 }
 

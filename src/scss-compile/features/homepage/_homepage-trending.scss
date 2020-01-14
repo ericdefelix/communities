@@ -17,31 +17,37 @@
     @include media-breakpoint-up('lg') {
       grid-template-columns: $homepage-fixed-width-lg 1fr;
     }
-    @include media-breakpoint-up('xxl') {
-      .#{$namespace}trending-articles {
-        padding: 0 v('space-xxl');
-      }
+  }
 
-      .#{$namespace}article-list {
-        &.#{$namespace}article-pinned > *:first-child {
-          .#{$namespace}article-heading {
-            font-size: v('text-md');
-            font-weight: 600;
-          }
-        }
 
-        .#{$namespace}article-link {
-          margin-bottom: v('space-lg');
-        }
-
-        .#{$namespace}article-heading {
-          font-size: v('text-sm');
-        }
-      }
+  @include media-breakpoint-up('xxl') {
+    .#{$namespace}trending-articles {
+      padding: 0 v('space-xxl');
     }
 
-    .#{$namespace}article-pinned *:first-child {
-      // grid-column: span 2;
+    .#{$namespace}article-list {
+      &.#{$namespace}article-pinned > *:first-child {
+        .#{$namespace}article-heading {
+          font-size: v('text-md');
+          font-weight: 600;
+        }
+      }
+
+      .#{$namespace}article-link {
+        margin-bottom: v('space-lg');
+      }
+
+      .#{$namespace}article-heading {
+        font-size: v('text-sm');
+      }
+    }
+  }
+
+  .#{$namespace}article-pinned *:first-child {
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
     }
   }
 }

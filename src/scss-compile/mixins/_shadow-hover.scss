@@ -1,3 +1,9 @@
 @mixin hover-shadow() {
-  
+  @include box-shadow($card-box-shadow);
+  @include transition(all $easing);
+
+  &:hover {
+    @include box-shadow($card-box-shadow-darker);
+    @include transition(all $easing);
+  }
 }
