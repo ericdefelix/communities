@@ -49,7 +49,10 @@ $hc-inverted-wave-bg-height: 6rem;
 
   &-content {
     p {
-      margin-bottom: v('space-lg');
+      margin-bottom: v('space-xxl');
+      @include media-breakpoint-down('md') {
+        margin-bottom: v('space-xl');
+      }
     }
 
     @include media-breakpoint-down('md') {

@@ -5,12 +5,7 @@
 
   a:not(:hover) {
     color: v('footer-link-color');
-  }
-
-  // &-test {
-  //   display: flex;
-  //   justify-content: flex-start;
-  // }
+  } 
 
   &-top {
     padding: calc(var(--text-xxl)) 0;
@@ -26,17 +21,6 @@
         grid-template-columns: 24rem repeat(3, 1fr);
       }
 
-      // @include media-breakpoint-up('lg') {
-      //   grid-template-columns: 25% repeat(3, 1fr);
-      // }
-
-      // @include media-breakpoint-between('md','lg') {
-      //   grid-template-columns: 20rem repeat(3, 1fr);
-      // }
-
-      // @include media-breakpoint-up('md') {
-      //   grid-template-columns: repeat(4, 1fr);
-      // }
       .#{$namespace}global-footer-col {
         &:first-of-type {
           margin-bottom: 2rem;
@@ -49,6 +33,9 @@
 
         @include media-breakpoint-down('md') {
           max-width: 100%;
+        }
+
+        @include media-breakpoint-down('sm') {
           border-bottom: 1px solid #4a4a4a;
         }
       }

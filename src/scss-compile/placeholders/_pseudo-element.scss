@@ -1,0 +1,11 @@
+%pseudo-element-absolute {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+%pseudo-element-relative {
+  content: '';
+  position: relative;
+  display: block;
+}

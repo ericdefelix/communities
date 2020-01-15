@@ -16,20 +16,15 @@
   --card-padding: 2rem 1.5rem;
 
   @include media-breakpoint-down('md') {
+    --grid-gap: var(--space-lg);
+    --component-padding: var(--space-lg);
+  }
+
+  @include media-breakpoint-down('sm') {
     --grid-gap: var(--space-md);
     --component-padding: var(--space-md);
   }
-  // @include media-breakpoint-up('lg') {
-  //   --grid-gap: var(--space-lg);
-  // }
-  // @include media-breakpoint-up('xl') {
-  //   --grid-gap: var(--space-xl);
-  // }
-  // @include media-breakpoint-up('xxl') {
-  //   --grid-gap: var(--space-xxl);
-  // }
 }
-
 
 // List Group
 $list-group-item-padding-x: v('space-md');
@@ -68,5 +63,5 @@ $navbar-toggler-padding-y: v('grid-gap');
 $navbar-brand-padding-y: 0;
 $navbar-padding-x: v('space-sm'); 
 $navbar-padding-y: 0;
-$navbar-nav-link-padding-x: v('space-md');
+$navbar-nav-link-padding-x: v('space-lg');
 $navbar-nav-link-padding-y: 1.4rem;

@@ -1,24 +1,55 @@
 .#{$namespace}section-articles {
   background-color: $purplish-grey;
 
-    .#{$namespace}article-text {
-      color: v('brand-grey-dark');
+  .#{$namespace}article-text {
+    color: v('brand-grey-dark');
+  }
+
+  .#{$namespace}trending-articles .#{$namespace}article-link {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-radius: $border-radius;
+    margin-bottom: 0;
+
+    &:not(:first-of-type) {
+      @include transition(background-color, $easing);
+      &:hover {
+        @include transition(background-color, $easing);
+        background-color: darken($purplish-grey,3%);
+      }
     }
+  }
 
   .grid {
     @include media-breakpoint-up('md') {
       grid-template-columns: 1fr 1fr;
     }
-    @include media-breakpoint-between('xs', 'md') {
-      grid-template-columns: 1fr;
-      grid-row-gap: v('space-lg');
-    }
 
     @include media-breakpoint-up('lg') {
       grid-template-columns: $homepage-fixed-width-lg 1fr;
     }
-  }
 
+    @include media-breakpoint-down('lg') {
+      grid-template-columns: 1fr;
+      grid-row-gap: v('grid-gap');
+    }
+
+    @include media-breakpoint-between('md','lg') {
+      .#{$namespace}spotlights {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: v('grid-gap');
+      }
+
+      .#{$namespace}spotlight-card-thumbnail {
+        width: 100%;
+      }
+
+      .#{$namespace}card-line-top::before {
+        margin-left: 0;
+      }
+    }
+  }
 
   @include media-breakpoint-up('xxl') {
     .#{$namespace}trending-articles {
@@ -34,7 +65,7 @@
       }
 
       .#{$namespace}article-link {
-        margin-bottom: v('space-lg');
+        
       }
 
       .#{$namespace}article-heading {
@@ -43,11 +74,24 @@
     }
   }
 
-  .#{$namespace}article-pinned *:first-child {
-    &::after {
-      position: absolute;
-      content: '';
-      display: block;
+  .#{$namespace}article-pinned {
+    > *:first-child {
+      @include box-shadow(0 0px 0px 0.0625rem #ececec);
+      position: relative;
+      margin-bottom: 0.25rem;
+      
+      &::after {
+        @extend %pseudo-element-absolute;
+        width: 4rem;
+        height: 4rem;
+        top: -0.75rem;
+        right: 0.75rem;
+        background-image: $pin-bg;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
     }
   }
 }

@@ -14,7 +14,6 @@
       }
     }
 
-
     @include media-breakpoint-down('sm') {
       grid-template-columns: 1fr;
       grid-row-gap: v('grid-gap');
@@ -33,15 +32,15 @@
   }
 
   &-img {
-    width: 16rem;
-    height: 16rem;
+    width: 10rem;
+    height: auto;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     @include media-breakpoint-down('xl') {
       width: 6.25rem;
       margin: auto;
-      margin-bottom: v('space-sm');
+      margin-bottom: v('space-md');
     }
     img {
       max-width: 100%;

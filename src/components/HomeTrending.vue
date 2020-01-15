@@ -39,10 +39,9 @@ export default {
         { heading: 'Heading', subheading: 'Subheading', content: 'Content' }
       ],
       articles: [
-        { heading: 'Getting Started', subheading: 'Installing and Setup', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' },
+        { heading: 'Getting Started', subheading: 'Installing and Setup', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit incidunt potenti rutrum fugit incidunt potenti rutrum fugit.' },
         { heading: 'Importing a document to a matter', subheading: 'Matter Management', text: 'Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos' },
         { heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' },
-        { heading: 'Recording time in Microsoft Outlook', subheading: 'Accounting', text: 'Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos' },
         { heading: 'Troubleshooting printer problems', subheading: 'Technical', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' }
       ]
     }

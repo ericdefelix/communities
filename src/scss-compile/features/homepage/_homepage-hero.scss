@@ -24,6 +24,11 @@ $hc-wave-bg-height: 10rem;
         margin-bottom: v('space-md');
         text-align: center;
       }
+
+      @include media-breakpoint-down('lg') {
+        font-size: 40px;
+        font-weight: 300;
+      }
     }
   }
 
@@ -80,7 +85,7 @@ $hc-wave-bg-height: 10rem;
     > img {
       width: 100%;
       height: auto;
-      max-width: 28rem;
+      max-width: 20rem;
 
       @include media-breakpoint-up('xl') {
         max-width: 40vw;

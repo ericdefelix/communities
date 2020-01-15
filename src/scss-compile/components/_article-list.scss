@@ -1,4 +1,5 @@
 .#{$namespace}article {
+  width: 100%;
   &-heading {
     color: v('brand-black');
   }
@@ -9,10 +10,16 @@
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
     color: $subheading-color;
+    margin-bottom: v('space-xs');
   }
   &-text {
     margin-bottom: 0;
     color: $body-color;
+    // width: 100%;
+    // max-width: 100%;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
   }
 
   &-item {
@@ -82,18 +89,19 @@
 }
 
 .#{$namespace}article-bullet-list {
-  > * {
+  > * > a {
+    position: relative;
+    padding-left: 1rem;
     &::before {
-      content: '';
-      position: relative;
-      display: inline-block;
+      @extend %pseudo-element-absolute;
+      top: 0.5rem;
+      left: 0;
       width: 0.5rem;
       height: 0.5rem;
       margin: 0 v('space-sm') 0 0.0625rem;
       background-size: contain;
       background-position: center center;
       background-repeat: none;
-      top: -0.0625rem;
       vertical-align: middle;
       background-image: $bullet-bg;
     }
