@@ -63,3 +63,9 @@ $list-group-border-color: null;
 $text-primary: v('brand-primary');
 $text-primary-lighter: v('brand-primary-lighter');
 $text-secondary: v('brand-secondary');
+
+// Breadcrumb
+$breadcrumb-color:                  var(--body-text-color);
+$breadcrumb-hover-color:            var(--brand-secondary);
+$breadcrumb-active-color:           var(--brand-primary);
+$breadcrumb-bg:                     var(--brand-light-grey);

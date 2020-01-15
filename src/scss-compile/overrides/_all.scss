@@ -1,0 +1,24 @@
+.nav-tabs {
+  .nav-item {
+    .nav-link {
+      border: none;
+      text-transform: uppercase;
+      font-size: v('navlink-text-size');
+      font-weight: 600;
+      padding: 1rem var(--space-lg);
+      color: v('brand-label-grey');
+      &:hover {
+        color: v('brand-secondary');
+      }
+
+      &:active {
+
+      }
+
+      &.active {
+        color: $body-color;
+        @include box-shadow(inset 0 -2px v('brand-secondary'));
+      }
+    }
+  }
+}

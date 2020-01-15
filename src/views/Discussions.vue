@@ -1,51 +1,18 @@
 <template>
 <div>
 <!-- Container -->
-  <section class=""></section>
+  <Breadcrumbs/>
+
   <section class="hc-section">
     <div class="container">
       <div class="hc-layout-aside-main grid grid-2 grid-gap-responsive">
         <aside class="hc-aside">
           <div class="hc-aside-trending mb-5">
-            <h4 class="text-primary-lighter">Trending Articles</h4>
-            <div class="list-group">
-              <a href="#" class="list-group-item">
-                <article class="hc-list-item-summary">
-                  <small class="subheading">Installing and Setup</small>
-                  <span class="h5">Getting Started</span>
-                </article>
-              </a>
-              <a href="#" class="list-group-item">
-                <article class="hc-list-item-summary">
-                  <small class="subheading">sadfadfsadfa</small>
-                  <span class="h5">Importing a document to a matter</span>
-                </article>
-              </a>
-              <a href="#" class="list-group-item">
-                <article class="hc-list-item-summary">
-                  <small class="subheading">sadfadfsadfa</small>
-                  <span class="h5">Calculation of VAT on Invoices - Rounding of Amounts</span>
-                </article>
-              </a>
-              <a href="#" class="list-group-item">
-                <article class="hc-list-item-summary">
-                  <small class="subheading">sadfadfsadfa</small>
-                  <span class="h5">Recording time in Microsoft Outlook</span>
-                </article>
-              </a>
-            </div>
+            <h6 class="text-secondary text-uppercase small">Trending Articles</h6>
+            <ArticleList v-bind:articles="articles"/>
           </div>
 
-          <article class="hc-card hc-card-line-top hc-spotlight-card">
-            <a href="">
-              <div class="hc-spotlight-card-thumbnail" style="background-image: url('./src/assets/sample1.jpg')"></div>
-              <div class="hc-spotlight-card-body">
-                <small class="subheading">Learning</small>
-                <h4 class="text-primary-lighter">University</h4>
-                <p class="mb-0">asdfasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfa</p>
-              </div>
-            </a>
-          </article>
+          <SpotlightCard v-bind:spotlight="spotlights[0]" />
         </aside>
         <div class="hc-main">
           <h4>Question</h4>
@@ -115,11 +82,28 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import componentName from '@/components/'
+import SpotlightCard from '@/components/SpotlightCard'
+import ArticleList from '@/components/ArticleList'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default {
   name: 'discussionsPage',
-  components: {}
+  components: {
+    SpotlightCard, ArticleList, Breadcrumbs
+  },
+  data: function () {
+    return {
+      spotlights: [
+        { heading: 'Heading', subheading: 'Subheading', content: 'Content' }
+      ],
+      articles: [
+        { heading: 'Getting Started', subheading: 'Installing and Setup' },
+        { heading: 'Importing a document to a matter', subheading: 'Matter Management' },
+        { heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting' },
+        { heading: 'Recording time in Microsoft Outlook', subheading: 'Accounting' },
+        { heading: 'Troubleshooting printer problems', subheading: 'Technical' }
+      ]
+    }
+  }
 }
 </script>

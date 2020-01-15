@@ -7,6 +7,10 @@
           color: v('body-text-color')
         }
       }
+
+      .#{$namespace}spotlight-card-thumbnail {
+        width: 100%;
+      }
     }
     &main {
     }
