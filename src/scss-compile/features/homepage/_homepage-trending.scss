@@ -22,22 +22,22 @@
 
   .grid {
     @include media-breakpoint-up('md') {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0,1fr) minmax(0,1fr);
     }
 
     @include media-breakpoint-up('lg') {
-      grid-template-columns: $homepage-fixed-width-lg 1fr;
+      grid-template-columns: $homepage-fixed-width-lg minmax(0,1fr);
     }
 
     @include media-breakpoint-down('lg') {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0,1fr);
       grid-row-gap: v('grid-gap');
     }
 
     @include media-breakpoint-between('md','lg') {
       .#{$namespace}spotlights {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3,minmax(0,1fr));
         grid-gap: v('grid-gap');
       }
 

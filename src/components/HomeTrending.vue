@@ -13,7 +13,7 @@
         </div>
 
         <div class="hc-trending-articles">
-          <h5 class="text-primary-lighter">Trending Articles</h5>
+          <!-- <h5 class="text-primary-lighter">Trending Articles</h5> -->
           <ArticleList v-bind:articles="articles" v-bind:hasPin="hasPin"/>
         </div>
       </div>

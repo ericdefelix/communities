@@ -69,6 +69,7 @@ $hc-wave-bg-height: 10rem;
     margin-bottom: -($hc-wave-bg-height - 2);
     text-align: center;
     display: none;
+    position: absolute;
 
 
     @include media-breakpoint-up('md') {
@@ -86,14 +87,15 @@ $hc-wave-bg-height: 10rem;
       width: 100%;
       height: auto;
       max-width: 20rem;
+      // position: absolute;
 
-      @include media-breakpoint-up('xl') {
-        max-width: 40vw;
-      }
+      // @include media-breakpoint-up('xl') {
+      //   max-width: 40vw;
+      // }
 
-      @include media-breakpoint-up('xxl') {
-        max-width: 36rem;
-      }
+      // @include media-breakpoint-up('xxl') {
+      //   max-width: 36rem;
+      // }
     }
   }
 

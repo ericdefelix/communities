@@ -10,9 +10,7 @@
           </a>
         </router-link>
         <div class="d-flex ml-auto align-items-center">
-          <a href="#" class="badge hc-server-status ok">
-            <span>Servers are Up</span>
-          </a>
+          <ServerStatus/>
 
           <button class="navbar-toggle hamburger hamburger--slider" tabindex="0" data-target="#navbar" data-toggle="menu" aria-expanded="false">
             <span class="hamburger-box">
@@ -51,10 +49,11 @@
 
 <script>
 import Footer from '@/components/Footer'
+import ServerStatus from '@/components/ServerStatus'
 // import hcUI from '@/scss-compile/hc-ui'
 
 export default {
-  components: { Footer },
+  components: { Footer, ServerStatus },
   props: {
     headerSticky: Boolean
   },

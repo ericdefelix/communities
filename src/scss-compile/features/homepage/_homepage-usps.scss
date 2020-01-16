@@ -25,6 +25,7 @@
     @include media-breakpoint-down('sm') {
       border-bottom: 1px solid v('brand-light-grey');
       padding-bottom: var(--space-lg);
+      padding-top: var(--space-lg);
     }
     @include media-breakpoint-down('xl') {
       display: block;
