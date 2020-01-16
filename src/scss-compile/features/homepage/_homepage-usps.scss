@@ -59,9 +59,9 @@
     a {
       display: block;
       // text-transform: uppercase;
-      font-size: 0.875rem;
+      font-size: v('navlink-text-size');
       font-weight: $font-weight-semibold;
-      // margin-top: v('space-lg')
+      margin-top: v('space-lg');
     }
   }
 
