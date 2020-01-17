@@ -89,6 +89,9 @@
 }
 
 .#{$namespace}article-bullet-list {
+  li {
+    margin-bottom: 0.5rem;
+  }
   > * > a {
     position: relative;
     padding-left: 1rem;

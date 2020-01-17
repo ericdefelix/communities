@@ -1,19 +1,45 @@
 $hc-hero-gradient-start: #1C365F;
 $hc-hero-gradient-end: #0060AA;
 $hc-news-heading-color: var(--brand-secondary);
-$hc-wave-bg-height: 10rem;
+$hc-wave-bg-height: 142px;
 
 .#{$namespace}hero {
   position: relative;
   background-color: #12467B;
   @include scrim-gradient('to bottom',$hc-hero-gradient-start);
 
+  @include media-breakpoint-up('lg') {
+    padding-bottom: 0 !important;
+  }
+
+  .grid {
+    // grid-template-columns: 1fr;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+
+    @include media-breakpoint-up('sm') {
+      // grid-template-columns: 1fr 30%;
+    }
+
+    @include media-breakpoint-up('xl') {
+      
+    }
+  }
+
   &-container {
     @extend 
       %d-flex,
       %align-items-center;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    grid-column: span 12;
+
+    @include media-breakpoint-up('lg') {
+      grid-column: span 8;
+    }
+
+    @include media-breakpoint-up('xxl') {
+      grid-column: span 6;
+    }
   }
 
   &-row {
@@ -33,105 +59,94 @@ $hc-wave-bg-height: 10rem;
   }
 
   &-background {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     position: relative;
     width: 100%;
-    background-repeat: no-repeat;
-    background-image: $wave-shape-bg-white;
+    height: $hc-wave-bg-height;
+    z-index: 1;
 
-    height: $hc-wave-bg-height / 2;
-    margin-top: -$hc-wave-bg-height / 2;
-    background-size: 124% 100%;
-    background-position: left top;
+    &::before, &::after {
+      content: '';
+      height: $hc-wave-bg-height + 16;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+    }
 
-    @include media-breakpoint-up('xl') {
-      height: $hc-wave-bg-height - 2 ;
-      margin-top: -($hc-wave-bg-height - 2);
-      background-size: 118% 100%;
+    &::before {
+      grid-column: span 8;
+      background-image: $wave-shape-bg-white-1;
       background-position: left top;
     }
 
-    @include media-breakpoint-up('xxl') {
-      height: $hc-wave-bg-height;
-      margin-top: -$hc-wave-bg-height;
-      background-size: 100%;
-      background-position: right top;
-    }
-
     &::after {
-      content: '';
-      background-color: #fff;
+      grid-column: span 4;
+      background-image: $wave-shape-bg-white-2;
+      background-position: right top;
     }
   }
 
-  &-image {
-    margin-top: -1rem;
-    margin-bottom: -($hc-wave-bg-height - 2);
-    text-align: center;
-    display: none;
+  &-image { 
+    // display: none;
     position: absolute;
+    top: 0;
+    z-index: 2;
 
-
-    @include media-breakpoint-up('md') {
-      display: block;
-      z-index: 2;
+    @include media-breakpoint-up('xl') {
+      height: 560px;
+      left: 48%;
     }
 
-    @include media-breakpoint-between('sm', 'lg') {
-      position: absolute;
-      right: 0;
-      z-index: 1;
+    @include media-breakpoint-up('xxl') {
+      height: 600px;
+      left: 45%;
+    }
+
+    @include media-breakpoint-up('xxxl') {
+      height: 600px;
+      left: 50%;
+    }
+
+    @include media-breakpoint-up('ultra') {
+      height: 660px;
     }
 
     > img {
-      width: 100%;
-      height: auto;
-      max-width: 20rem;
-      // position: absolute;
-
-      // @include media-breakpoint-up('xl') {
-      //   max-width: 40vw;
-      // }
-
-      // @include media-breakpoint-up('xxl') {
-      //   max-width: 36rem;
-      // }
+      width: auto;
+      height: 100%;
     }
   }
 
+  // LEAP logo shape vector sitting behind the hero image
   &::after {
     content: '';
     position: absolute;
     display: block;
-    left: 0;
-    right: 0;
+    left: 5%;
+    right: 5%;
     top: 0;
     bottom: 0;
     z-index: 0;
     background-image: $hero-shape-bg;
     background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center;
-    opacity: 0.1;
+    background-size: 70%;
+    background-position: right;
+    opacity: 1;
+    z-index: 0;
 
     @include media-breakpoint-down('md') {
       background-size: 80%;
     }
   }
-
-  .grid {
-    grid-template-columns: 1fr;
-
-    @include media-breakpoint-up('sm') {
-      grid-template-columns: 1fr 30%;
-    }
-
-    @include media-breakpoint-up('xl') {
-      grid-template-columns: 60% 1fr;
-    }
-  }
 }
 
+@include media-breakpoint-down('md') {
+  .#{$namespace}hero-image,
+  .#{$namespace}hero-background {
+    display: none !important;
+  } 
+}
 
 .#{$namespace}news-heading {
   color: $hc-news-heading-color;
@@ -140,8 +155,9 @@ $hc-wave-bg-height: 10rem;
 }
 
 .#{$namespace}news-content {
+  margin-bottom: v('')
   li {
-    margin-bottom: v('space-sm');
+    margin-bottom: v('grid-gap');
   }
   a {
     color: lighten($primary, 70%);

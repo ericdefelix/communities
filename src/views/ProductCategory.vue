@@ -35,7 +35,7 @@
               <div class="hc-article-link-group">
                 <div class="hc-article-link-group-item" v-for="link in links" v-bind:key="link.id">
                   <h6 class="text-primary-lighter">{{ link.name }}</h6>
-                  <ArticleList v-bind:articles="link.list"/>
+                  <ArticleList v-bind:articles="link.list" v-bind:isRegularLink="true"/>
                   <button class="btn btn-default">View all 25 articles</button>
                 </div>
               </div>

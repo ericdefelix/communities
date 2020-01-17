@@ -15,6 +15,7 @@ export default {
   },
   props: {
     articles: Array,
+    isRegularLink: Boolean,
     hasPin: Boolean
   }
 }

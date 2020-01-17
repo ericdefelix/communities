@@ -1,7 +1,7 @@
 <template>
   <section class="hc-section hc-hero">
     <div class="container">
-      <div class="grid grid-2">
+      <div class="grid">
         <div class="hc-hero-container">
           <div class="hc-hero-row">
             <h1 class="hc-hero-lead text-light">Hi, how can we help?</h1>
@@ -16,12 +16,12 @@
             </ul>
           </div>
         </div>
-
-        <figure class="hc-hero-image">
-          <img class="img-fluid" src="@/assets/hero-image_@2x.png" alt="">
-        </figure>
       </div>
     </div>
+    <figure class="hc-hero-image">
+      <img class="img-fluid" src="@/assets/hero-image_@2x.png" alt="">
+    </figure>
+    <div class="hc-hero-background"></div>
   </section>
 </template>
 

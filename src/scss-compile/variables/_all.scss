@@ -1,11 +1,4 @@
-@function v($var) {
-  @return var(--#{$var});
-}
-
-@function rvr($multiple) {
-  @return calc(var(--line-height-base) * $multiple * 1rem);
-}
-
+@import './functions';
 @import './appearance';
 @import './colors';
 @import './dimensions';

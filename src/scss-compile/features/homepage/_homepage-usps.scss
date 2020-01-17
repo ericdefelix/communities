@@ -3,6 +3,8 @@
   &-group {
     list-style: none;
     margin-left: 0;
+    margin-bottom: v('space-xxl');
+    margin-top: v('space-xxl');
     padding-left: 0;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: v('grid-gap');

@@ -27,17 +27,17 @@ h1, h2, h3, h4, h5, h6,
       // margin-bottom: 1rem;
 
       @if $headingNumber < 4 {
-        font-weight: $font-weight-light;
+        // font-weight: $font-weight-light;
       }
 
       @if $headingNumber > 4 {
-        font-weight: $font-weight-semibold;
+        // font-weight: $font-weight-semibold;
       }
 
       @include media-breakpoint-down('md') {
         @if $headingNumber < 4 {
-          font-weight: $font-weight-normal;
-          margin-bottom: getMarginBottom($headingNumber + 2);
+          // font-weight: $font-weight-normal;
+          // margin-bottom: getMarginBottom($headingNumber + 2);
         }
       }
     }

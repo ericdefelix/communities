@@ -3,8 +3,6 @@
 <!-- Container -->
   <HomeHero/>
 
-  <div class="hc-hero-background"></div>
-
   <HomeUniqueSellingPoints />
 
   <HomeTrending/>
