@@ -1,6 +1,6 @@
 <template>
-  <a href="#" class="badge hc-server-status ok">
-    <span>Servers are Up</span>
+  <a href="#" class="hc-server-status okay">
+    <span>All Services Running</span>
   </a>
 </template>
 

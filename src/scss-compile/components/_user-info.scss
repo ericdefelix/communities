@@ -1,0 +1,27 @@
+.#{$namespace}user {
+  &-info {
+    display: flex;
+  }
+
+  &-avatar {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    font-size: v('text-sm');
+    line-height: 1.875rem;
+    color: v('brand-white');
+    text-align: center;
+    background-color: v('brand-secondary');
+  }
+
+  &-name {
+    font-size: v('text-xs');
+    font-weight: $font-weight-semibold;
+    margin-left: v('space-md');
+  }
+
+  &-timestamp {
+    font-size: v('text-xxs');
+    color: v('brand-label-grey')
+  }
+}

@@ -22,6 +22,9 @@
 
   --brand-secondary: #f79239;
   --brand-secondary-darker: #f68520;
+
+  --brand-default: #fff;
+  --brand-default-darker: #e3e3e3;
 }
 
 $primary: #1e365e;
@@ -29,6 +32,7 @@ $secondary: #f79239;
 
 $input-placeholder-color: #88909A;
 $purplish-grey: #F7F5F6;
+$light-green: #7ece7b;
 
 // Body
 $body-color: v('body-text-color');
@@ -69,3 +73,17 @@ $breadcrumb-color:                  var(--body-text-color);
 $breadcrumb-hover-color:            var(--brand-secondary);
 $breadcrumb-active-color:           var(--brand-primary);
 $breadcrumb-bg:                     var(--brand-light-grey);
+
+// Server Status
+$service-background-okay: #419044;
+$service-color-okay: #f2fff2;
+
+$service-background-warning: #e68500;
+$service-color-warning: #ffe9c7;
+
+$service-background-danger: #bf2525;
+$service-color-danger: #ffe6e6;
+
+// Badge
+$badge-green: #d9f0d6;
+$badge-default: #d2d7df;

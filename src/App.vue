@@ -50,7 +50,7 @@
 <script>
 import Footer from '@/components/Footer'
 import ServerStatus from '@/components/ServerStatus'
-// import hcUI from '@/scss-compile/hc-ui'
+import hcUI from '@/scss-compile/hc-ui'
 
 export default {
   components: { Footer, ServerStatus },
@@ -72,6 +72,7 @@ export default {
     }
   },
   mounted: () => {
+    hcUI.run()
   }
 }
 </script>

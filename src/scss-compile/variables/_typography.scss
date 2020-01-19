@@ -39,6 +39,7 @@ $text-sizes: (
   --navlink-text-size: 0.875rem;
 }
 
+
 @include media-breakpoint-up('lg') {
   :root {
   --text-scale-ratio: 1.25;

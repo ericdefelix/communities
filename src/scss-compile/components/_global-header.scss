@@ -128,16 +128,35 @@
   }
 
   @include media-breakpoint-down('md') {
-    .navbar-collapse.expanded {
-      display: flex;
-      background-color: v('brand-primary');
+    .navbar-collapse {
+      @include transition(opacity $easing);
+      display: flex !important;
       position: fixed;
+      background-color: $primary;
       left: 0;
       right: 0;
       bottom: 0;
       padding: v('space-md');
       overflow-y: auto;
       align-items: flex-start;
+      visibility: hidden;
+      opacity: 0;
+
+      .navbar-nav {
+        @include transition(transform $cubic-easing);
+        @include transform(translateY(2rem));
+      }
+
+      &.expanded {
+        .navbar-nav {
+          @include transition(transform $cubic-easing);
+          @include transform(translateY(0));
+        }
+
+        @include transition(opacity $easing);
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     .no-scroll {

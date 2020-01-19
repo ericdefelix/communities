@@ -32,13 +32,7 @@
 
           <div class="tab-content">
             <div class="tab-pane fade show active" id="productCategoryApp" role="tabpanel" aria-labelledby="productCategoryApp">
-              <div class="hc-article-link-group">
-                <div class="hc-article-link-group-item" v-for="link in links" v-bind:key="link.id">
-                  <h6 class="text-primary-lighter">{{ link.name }}</h6>
-                  <ArticleList v-bind:articles="link.list" v-bind:isRegularLink="true"/>
-                  <button class="btn btn-default">View all 25 articles</button>
-                </div>
-              </div>
+              <TopicList v-bind:topics="links"/>
             </div>
             <div class="tab-pane fade" id="productCategoryCompanion" role="tabpanel" aria-labelledby="productCategoryCompanion">
             </div>
@@ -54,12 +48,13 @@
 <script>
 import SpotlightCard from '@/components/SpotlightCard'
 import ArticleList from '@/components/ArticleList'
+import TopicList from '@/components/TopicList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default {
   name: 'productCategoryPage',
   components: {
-    SpotlightCard, ArticleList, Breadcrumbs
+    SpotlightCard, ArticleList, Breadcrumbs, TopicList
   },
   data: function () {
     return {

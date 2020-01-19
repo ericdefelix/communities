@@ -1,0 +1,18 @@
+.#{$namespace}question-card {
+  $cardHasHover: false;
+  @include card-shadow($cardHasHover);
+  background-image: $question-card-bg;
+  background-repeat: no-repeat;
+  background-position: 95% 0%;
+
+  .#{$namespace}card-body {
+    padding-right: v('space-xxl');
+  }
+
+  .#{$namespace}card-meta-info {
+    list-style-type: none;
+    > li {
+      display: inline-block;
+    }
+  }
+}

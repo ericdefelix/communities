@@ -1,0 +1,10 @@
+// @mixin badge-status-color($status) {
+//   $statusCode: str-replace($status,"'",'');
+//   &.#{$statusCode} {
+//     background-color: $service-background-#{$statusCode};
+//     color: $service-color-#{$statusCode};
+//     // &:hover {
+//     //   background-color: darken($service-background-#{$statusCode}, 10%);
+//     // }
+//   }
+// }

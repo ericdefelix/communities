@@ -60,7 +60,11 @@ fieldset:disabled a.btn {
 }
 
 .btn-default {
-  @include custom-button-variant(secondary,white);
+  @include custom-button-variant(default,var(--brand-primary));
+
+  &:hover {
+    background-color: #fbfbfb;
+  }
 }
 
 //

@@ -32,8 +32,8 @@ $container-max-widths: (
   // lg: 960px,
   xl: 1140px,
   xxl: 1380px,
-  xxxl: 1580px,
-  ultra: 1740px
+  xxxl: 1580px
+  // ultra: 1740px
 );
 
 @include media-breakpoint-up('ultra') {

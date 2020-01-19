@@ -1,0 +1,39 @@
+.#{$namespace}spotlight-card {
+  $cardHasHover: true;
+  @include card-shadow($cardHasHover);
+
+  flex-wrap: wrap;
+
+  &:hover {
+    > * {
+      text-decoration: none;
+    }
+  }
+
+  #{&}-thumbnail {
+    width: $spotlight-card-thumbnail-width;
+    height: auto;
+    min-height: $spotlight-card-thumbnail-width;
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--brand-grey);
+    margin-top: -$card-border-top;
+  }
+
+  .#{$namespace}article-heading {
+    margin-bottom: v('space-md');
+  }
+
+  &::before {
+    width: 100%;
+    // margin-left: $spotlight-card-thumbnail-width;
+  }
+
+  // &::after {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: $spotlight-card-thumbnail-width;
+  //   opacity: 0.6;
+  // }
+}

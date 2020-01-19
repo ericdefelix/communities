@@ -1,7 +1,7 @@
 <template>
-  <a href="#" class="hc-article-link hc-card hc-card-line-top hc-spotlight-card">
+  <a href="#" class="hc-article-link hc-card hc-card-line hc-spotlight-card">
     <figure class="hc-spotlight-card-thumbnail" v-bind:style="{'background-image': 'url(' + require('@/assets/sample1.jpg') + ')'}"></figure>
-    <div class="hc-spotlight-card-body">
+    <div class="hc-card-body">
       <article class="hc-article">
         <small class="hc-article-subheading">{{ spotlight.heading }}</small>
         <h5 class="hc-article-heading">{{ spotlight.heading }}</h5>

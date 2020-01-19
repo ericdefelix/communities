@@ -21,7 +21,7 @@ $hc-inverted-wave-bg-height: 6rem;
     width: 100%;
     height: $hc-inverted-wave-bg-height / 2;
     background-repeat: no-repeat;
-    // background-image: $wave-shape-bg-white;
+    background-image: $wave-shape-bg-white-full;
     background-color: v('brand-primary');
     @include transform(scale(-1,-1));
 
@@ -84,7 +84,7 @@ $hc-inverted-wave-bg-height: 6rem;
     }
     img {
       width: 100%;
-      @include media-breakpoint-up('xl') {
+      @include media-breakpoint-up('xxl') {
         width: 90%;
       }
     }

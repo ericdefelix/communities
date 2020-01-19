@@ -1,0 +1,15 @@
+.#{$namespace}answer-card {
+  border: $card-border-dash;
+  border-left: none;
+  border-right: none;
+
+  &.top-rated {
+    background-color: #ebf7e9;
+  }
+
+  .user-profile {
+    .user-avatar {
+      background: grey;
+    }
+  }
+}

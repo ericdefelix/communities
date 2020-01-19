@@ -5,30 +5,18 @@
 
       <div class="grid grid-2 grid-gap-responsive">
         <div class="hc-homepage-tabs hc-trending-articles">
-          <div class="nav flex-column nav-pills list-group" role="tablist" aria-orientation="vertical">
-            <a class="list-group-item active" id="app1" data-toggle="tab" href="#appC1" role="tab" aria-controls="app1" aria-selected="true">
-              <article class="hc-article-item">
-                <h5 class="hc-article-item-heading">By Lawyers</h5>
-                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
-              </article>
+          <div class="nav flex-column nav-pills hc-article-list-lg" role="tablist" aria-orientation="vertical">
+            <a class="hc-article-link active" id="app1" data-toggle="tab" href="#appC1" role="tab" aria-controls="app1" aria-selected="true">
+              <ArticleItem v-bind:content="{ heading:'By Lawyers', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </a>
-            <a class="list-group-item" id="app2" data-toggle="tab" href="#appC2" role="tab" aria-controls="app2" aria-selected="false">
-              <article class="hc-list-item-summary">
-                <h5>Info Track</h5>
-                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
-              </article>
+            <a class="hc-article-link" id="app2" data-toggle="tab" href="#appC2" role="tab" aria-controls="app2" aria-selected="false">
+              <ArticleItem v-bind:content="{ heading:'Info Track', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </a>
-            <a class="list-group-item" id="app3" data-toggle="tab" href="#appC3" role="tab" aria-controls="app3" aria-selected="false">
-              <article class="hc-list-item-summary">
-                <h5>RapidPay</h5>
-                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
-              </article>
+            <a class="hc-article-link" id="app3" data-toggle="tab" href="#appC3" role="tab" aria-controls="app3" aria-selected="false">
+              <ArticleItem v-bind:content="{ heading:'RapidPay', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </a>
-            <a class="list-group-item" id="app4" data-toggle="tab" href="#appC4" role="tab" aria-controls="app4" aria-selected="false">
-              <article class="hc-list-item-summary">
-                <h5>LawConnect</h5>
-                <p>Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.</p>
-              </article>
+            <a class="hc-article-link" id="app4" data-toggle="tab" href="#appC4" role="tab" aria-controls="app4" aria-selected="false">
+              <ArticleItem v-bind:content="{ heading:'LawConnect', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </a>
           </div>
         </div>
@@ -46,10 +34,26 @@
 </template>
 
 <script>
+import ArticleItem from '@/components/ArticleItem'
+
 export default {
   name: 'HomeCompanion',
+  components: {
+    ArticleItem
+  },
   props: {
-    msg: String
+    content: Object
+  },
+  data: function () {
+    return {
+      hasPin: false,
+      articles: [
+        { heading: 'Getting Started', subheading: 'Installing and Setup', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit incidunt potenti rutrum fugit incidunt potenti rutrum fugit.' },
+        { heading: 'Importing a document to a matter', subheading: 'Matter Management', text: 'Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos' },
+        { heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' },
+        { heading: 'Troubleshooting printer problems', subheading: 'Technical', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' }
+      ]
+    }
   }
 }
 </script>

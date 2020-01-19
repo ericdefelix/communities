@@ -2,6 +2,8 @@
   width: 100%;
   &-heading {
     color: v('brand-primary');
+    font-weight: $font-weight-semibold;
+    margin-bottom: v('space-xs');
   }
   &-subheading {
     display: block;
@@ -61,13 +63,13 @@
 
 .#{$namespace}article-list {
   .#{$namespace}article-heading {
-    margin-bottom: v('space-xs');
     // font-weight: 400;
   }
 
   &:not(.#{$namespace}article-list-lg) {
     .#{$namespace}article-heading {
       font-size: v('font-size-base');
+      // font-weight: 600;
     }
   }
 }

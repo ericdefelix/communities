@@ -1,34 +1,66 @@
 .hc-server-status {
   line-height: 1;
   color: white;
-  padding: 0.4rem 0.6rem;
-  background-color: v('brand-primary-lighter');
-  margin-right: $navbar-nav-link-padding-x;
-  font-weight: 400;
+  padding: 0.5rem 0.875rem 0.5rem 1rem;
+  font-weight: 600;
+  font-size: var(--text-xxs);
   text-transform: uppercase;
+  background: transparent;
+  border-radius: 0.25rem;
+  margin-right: var(--space-lg);
+
+  > span {
+    margin-left: 0.5rem;
+  }
 
   &::before {
-    display: inline-block;
     content: '';
-    border-radius: 4rem;
+    display: inline-block;
     width: 0.5rem;
     height: 0.5rem;
-    margin-right: 0.2rem;
+    border-radius: 0.5rem;
   }
 
-  &.ok::before {
-    background-color: v('brand-green');
+  &.okay {
+    background-color: $service-background-okay;
+    color: $service-color-okay;
+    &:hover {
+      background-color: darken($service-background-okay,5%);
+    }
+
+    // &::before {
+    //   @include transform(rotate(45deg));
+    //   width: 0.45rem;
+    //   height: 0.75rem;
+    //   margin-top: -0.25rem;
+    //   border-bottom: 0.125rem solid $service-color-okay;
+    //   border-right: 0.125rem solid $service-color-okay;
+    // }
+
+    &::before {
+      background-color: lighten(saturate($service-background-okay,70%),10%);
+    }
   }
 
-  &.down {
-    
+  &.warning {
+    background-color: $service-background-warning;
+    color: $service-color-warning;
+    &:hover {
+      background-color: darken($service-background-warning,5%);
+    }
+    &::before {
+      background-color: lighten(saturate($service-background-warning,70%),10%);
+    }
   }
 
-  &.issues {
-    
-  }
-  
-  &:hover {
-    background-color: v('brand-primary-darker');
+  &.danger {
+    background-color: $service-background-danger;
+    color: $service-color-danger;
+    &:hover {
+      background-color: darken($service-background-danger,5%);
+    }
+    &::before {
+      background-color: lighten(saturate($service-background-danger,70%),10%);
+    }
   }
 }
