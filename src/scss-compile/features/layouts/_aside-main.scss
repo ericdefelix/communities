@@ -2,17 +2,10 @@
   grid-template-columns: 24% 1fr;
   .#{$namespace} {
     &aside {
-      .#{$namespace}article-link:not(:hover) {
-        .#{$namespace}article-heading {
-          color: v('body-text-color')
-        }
-      }
-
-      .#{$namespace}spotlight-card-thumbnail {
-        width: 100%;
-      }
+      
     }
     &main {
+      padding-left: 4rem;
     }
   }
 }

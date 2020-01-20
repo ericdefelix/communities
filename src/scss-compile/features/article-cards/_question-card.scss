@@ -9,9 +9,21 @@
     padding-right: v('space-xxl');
   }
 
-  .#{$namespace}card-meta-info {
-    list-style-type: none;
-    > li {
+  .#{$namespace}article-heading {
+    margin-bottom: v('space-lg');
+  }
+}
+
+.#{$namespace}card-meta-info {
+  list-style-type: none;
+  margin-bottom: 0;
+  > li {
+    font-size: v('navlink-text-size');
+    display: inline-block;
+
+    &:not(:last-of-type)::after {
+      content: '\2022';
+      padding: 0 0.5rem;
       display: inline-block;
     }
   }

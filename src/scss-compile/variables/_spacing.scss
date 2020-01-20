@@ -9,20 +9,19 @@
   --space-xl: 2rem;
   --space-xxl: 4rem;
 
-  --component-padding: var(--space-lg);
-  --grid-gap: var(--space-xl);
   --list-margin-bottom: var(--space-md);
+  --grid-gap: var(--space-md);
   --container-padding: var(--grid-gap);
-  --card-padding: 2rem 1.5rem;
+  --component-padding: var(--space-md);
 
-  @include media-breakpoint-down('md') {
+  @include media-breakpoint-up('md') {
     --grid-gap: var(--space-lg);
     --component-padding: var(--space-lg);
   }
 
-  @include media-breakpoint-down('sm') {
-    --grid-gap: var(--space-md);
-    --component-padding: var(--space-md);
+  @include media-breakpoint-up('lg') {
+    --grid-gap: var(--space-xl);
+    --component-padding: var(--space-xl);
   }
 }
 

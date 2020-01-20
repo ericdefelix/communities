@@ -1,29 +1,27 @@
 <template>
-  <div class="hc-discussion-question">
+  <div class="hc-discussion-question mb-5">
     <!-- R1 -->
-    <div class="">
-      <h4 class="text-primary-lighter">Question</h4>
-      <div class="hc-btn-group">
+    <div class="d-flex">
+      <h5 class="text-primary-lighter">Question</h5>
+      <div class="hc-btn-group ml-auto">
         <button type="button" class="btn btn-primary">Sign In &amp; Answer</button>
         <button type="button" class="btn btn-default">Share</button>
       </div>
     </div>
 
-    <!-- Question Card -->
-    <div class="">
-      <div class="hc-card hc-card-line hc-question-card">
-        <div class="hc-card-body">
-          <ArticleItem v-bind:content="content" />
-          <UserInfoSnippet/>
-        </div>
+    <div class="hc-card hc-card-line hc-question-card mb-4">
+      <div class="hc-card-body">
+        <ArticleItem v-bind:content="content" />
+        <UserInfoSnippet/>
       </div>
+    </div>
 
+    <div class="d-flex mb-5 align-items-center">
       <div class="hc-badge-group">
         <Badge v-bind:content="badge_group[0]"/>
         <Badge v-bind:content="badge_group[1]"/>
       </div>
-
-      <ul class="hc-card-meta-info"><li>1 answer</li><li>26 views</li></ul>
+      <ul class="hc-card-meta-info ml-auto"><li>1 answer</li><li>26 views</li></ul>
     </div>
 
   </div>

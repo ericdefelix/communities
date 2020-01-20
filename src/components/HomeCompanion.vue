@@ -6,18 +6,18 @@
       <div class="grid grid-2 grid-gap-responsive">
         <div class="hc-homepage-tabs hc-trending-articles">
           <div class="nav flex-column nav-pills hc-article-list-lg" role="tablist" aria-orientation="vertical">
-            <a class="hc-article-link active" id="app1" data-toggle="tab" href="#appC1" role="tab" aria-controls="app1" aria-selected="true">
+            <span class="hc-article-link active" id="app1" data-toggle="tab" role="tab" aria-controls="app1" aria-selected="true">
               <ArticleItem v-bind:content="{ heading:'By Lawyers', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </a>
-            <a class="hc-article-link" id="app2" data-toggle="tab" href="#appC2" role="tab" aria-controls="app2" aria-selected="false">
+            </span>
+            <span class="hc-article-link" id="app2" data-toggle="tab" role="tab" aria-controls="app2" aria-selected="false">
               <ArticleItem v-bind:content="{ heading:'Info Track', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </a>
-            <a class="hc-article-link" id="app3" data-toggle="tab" href="#appC3" role="tab" aria-controls="app3" aria-selected="false">
+            </span>
+            <span class="hc-article-link" id="app3" data-toggle="tab" role="tab" aria-controls="app3" aria-selected="false">
               <ArticleItem v-bind:content="{ heading:'RapidPay', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </a>
-            <a class="hc-article-link" id="app4" data-toggle="tab" href="#appC4" role="tab" aria-controls="app4" aria-selected="false">
+            </span>
+            <span class="hc-article-link" id="app4" data-toggle="tab" role="tab" aria-controls="app4" aria-selected="false">
               <ArticleItem v-bind:content="{ heading:'LawConnect', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </a>
+            </span>
           </div>
         </div>
         <div class="hc-homepage-content">

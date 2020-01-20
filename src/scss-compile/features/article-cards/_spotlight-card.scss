@@ -1,3 +1,8 @@
+.#{$namespace}spotlights {
+  display: grid;
+  grid-row-gap: v('space-md');
+}
+
 .#{$namespace}spotlight-card {
   $cardHasHover: true;
   @include card-shadow($cardHasHover);

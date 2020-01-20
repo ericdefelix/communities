@@ -1,7 +1,7 @@
 <template>
   <div class="hc-article-link-group">
     <div class="hc-article-link-group-item" v-for="topic in topics" v-bind:key="topic.id">
-      <h5>{{ topic.name }}</h5>
+      <h5 class="text-primary-lighter text-bold">{{ topic.name }}</h5>
       <div class="hc-article-item" v-for="link in topic.list" v-bind:key="link.id">
         <a href="#">{{ link.heading }}</a>
       </div>

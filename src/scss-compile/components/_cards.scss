@@ -15,7 +15,7 @@ figure {
   #{&}-body {
     width: calc(100% - #{$spotlight-card-thumbnail-width});
     flex-grow: 1;
-    padding: $spotlight-card-padding;
+    padding: v('component-padding');
 
     > * {
       white-space: normal;
@@ -26,7 +26,7 @@ figure {
   #{&}-heading {
     width: calc(100% - #{$spotlight-card-thumbnail-width});
     flex-grow: 1;
-    padding: $spotlight-card-padding;
+    padding: v('component-padding');
     padding-bottom: 0;
   }
 

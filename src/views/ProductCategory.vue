@@ -8,11 +8,12 @@
       <div class="hc-layout-aside-main grid grid-2 grid-gap-responsive">
         <aside class="hc-aside">
           <div class="hc-aside-topics mb-5">
-            <ArticleList v-bind:articles="topics"/>
+            <h6 class="text-primary-lighter text-uppercase text-bold">Topics</h6>
+            <ArticleList v-bind:articles="topics" v-bind:isSmall="true"/>
           </div>
           <div class="hc-aside-trending mb-5">
-            <h6 class="text-secondary text-uppercase small">Trending Articles</h6>
-            <ArticleList v-bind:articles="articles"/>
+            <h6 class="text-primary-lighter text-uppercase text-bold">Trending Articles</h6>
+            <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
           </div>
 
           <SpotlightCard v-bind:spotlight="spotlights[0]" />

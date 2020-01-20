@@ -1,5 +1,5 @@
 <template>
-  <div class="hc-article-list" v-bind:class="{ 'hc-article-pinned': hasPin }">
+  <div class="hc-article-list" v-bind:class="{ 'hc-article-pinned': hasPin, 'hc-article-list-sm': isSmall }">
     <a href="#" class="hc-article-link" v-for="content in articles" v-bind:key="content.id">
       <ArticleItem v-bind:content="content" v-bind:isLarge="articles.isLarge"/>
     </a>
@@ -15,7 +15,7 @@ export default {
   },
   props: {
     articles: Array,
-    isRegularLink: Boolean,
+    isSmall: Boolean,
     hasPin: Boolean
   }
 }

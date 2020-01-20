@@ -6,17 +6,22 @@
   }
 
   .#{$namespace}trending-articles .#{$namespace}article-link {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding: v('space-lg');
     border-radius: $border-radius;
+    border-bottom: none;
     margin-bottom: 0;
 
     &:not(:first-of-type) {
+      border-bottom: 1px solid #e3e3e3;
       @include transition(background-color, $easing);
       &:hover {
         @include transition(background-color, $easing);
         background-color: darken($purplish-grey,3%);
       }
+    }
+
+    &:last-of-type {
+      border-bottom: none;
     }
   }
 

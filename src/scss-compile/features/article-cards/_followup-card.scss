@@ -1,0 +1,19 @@
+.#{$namespace}followup-card {
+  $cardHasHover: false;
+  @include card-shadow($cardHasHover);
+
+  &::before {
+    background-color: v('brand-primary-lighter');
+  }
+
+  &-content {
+    min-width: 40rem;
+    max-width: 45rem;
+    margin: auto;
+  }
+
+  // .grid {
+  //   align-items: center;
+  //   grid-template-columns: 1fr 1fr;
+  // }
+}
