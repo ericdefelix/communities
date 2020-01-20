@@ -1,26 +1,33 @@
 .#{$namespace}user {
   &-info {
     display: flex;
+    align-items: center;
+
+    &-group {
+      margin-left: 0.875rem;
+    }
   }
 
   &-avatar {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: v('text-xl');
+    height: v('text-xl');
+    font-size: v('text-xs');
     border-radius: 50%;
-    font-size: v('text-sm');
-    line-height: 1.875rem;
+    line-height: v('text-xl');
     color: v('brand-white');
     text-align: center;
+    text-transform: uppercase;
     background-color: v('brand-secondary');
   }
 
   &-name {
     font-size: v('text-xs');
     font-weight: $font-weight-semibold;
-    margin-left: v('space-md');
+    display: block;
   }
 
   &-timestamp {
+    display: block;
     font-size: v('text-xxs');
     color: v('brand-label-grey')
   }

@@ -1,7 +1,9 @@
 .#{$namespace}section-companion {
 
-  .list-group-item {
-    color: v('brand-primary');
+  // .hc-homepage-tabs {}
+
+  .hc-article-link {
+    padding: v('space-lg');
     &.active {
       background-color: v('brand-white');
       @include box-shadow($card-box-shadow);
@@ -13,12 +15,18 @@
   }
 
   .grid {
+    margin-top: var(--space-xxl);
     grid-template-columns: 1fr;
-    @include media-breakpoint-between('md', 'xlg',$grid-breakpoints) {
+    @include media-breakpoint-between('md', 'xlg') {
       grid-template-columns: 1fr 1fr;
     }
-    @include media-breakpoint-up('lg',$grid-breakpoints) {
+    @include media-breakpoint-up('lg') {
       grid-template-columns: $homepage-fixed-width-lg 1fr;
+    }
+    @include media-breakpoint-up('xxl') {
+      .#{$namespace}homepage-content {
+        padding: 0 v('space-xxl');
+      }
     }
   }
 }

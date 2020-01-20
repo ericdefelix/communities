@@ -1,14 +1,22 @@
 .#{$namespace}badge {
   display: inline-block;
-  padding: $badge-padding;
-  @include font-size($badge-font-size);
-  font-weight: $badge-font-weight;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  @include border-radius($badge-pill-border-radius);
-  @include transition($badge-transition);
+
+  > * {
+    padding: $badge-padding;
+    display: inline-block;
+    font-weight: $badge-font-weight;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include font-size($badge-font-size);
+    @include border-radius($badge-pill-border-radius);
+    @include transition($badge-transition);
+  }
+
+  & + & {
+    margin-left: 0.5rem;
+  }
 
   @at-root a#{&} {
     @include hover-focus() {
@@ -16,19 +24,23 @@
     }
   }
 
-  &-green {
+  &-green > * {
     background-color: $badge-green;
     color: darken($badge-green, 50%);
   }
 
   &-default {
-    background-color: $badge-default;
-    color: darken($badge-default, 20%);
+    > * {
+      background-color: $badge-default;
+      color: darken($badge-default, 60%);
+    }
+
+    > a:hover {
+      background-color: darken($badge-default,5%);
+      color: darken($badge-default, 70%);
+    }
   }
 
-  > * {
-    display: inline-block;
-  }
 
   &-sm {
     padding: $badge-padding-sm;
