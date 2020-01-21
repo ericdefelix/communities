@@ -2,14 +2,14 @@
   <div class="hc-discussion-question mb-5">
     <!-- R1 -->
     <div class="d-flex">
-      <h5 class="text-primary-lighter">Question</h5>
+      <h5 class="text-primary">Question</h5>
       <div class="hc-btn-group ml-auto">
         <button type="button" class="btn btn-primary">Sign In &amp; Answer</button>
         <button type="button" class="btn btn-default">Share</button>
       </div>
     </div>
 
-    <div class="hc-card hc-card-line hc-question-card mb-4">
+    <div class="hc-card hc-question-card mb-4">
       <div class="hc-card-body">
         <ArticleItem v-bind:content="content" />
         <UserInfoSnippet/>

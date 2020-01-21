@@ -8,9 +8,8 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-xxl: 4rem;
-
-  --list-margin-bottom: var(--space-md);
   --grid-gap: var(--space-md);
+
   --container-padding: var(--grid-gap);
   --component-padding: var(--space-md);
 
@@ -21,7 +20,12 @@
 
   @include media-breakpoint-up('lg') {
     --grid-gap: var(--space-xl);
-    --component-padding: var(--space-xl);
+    // --component-padding: var(--space-xl);
+  }
+
+  @include media-breakpoint-up('xxl') {
+    --grid-gap: var(--space-xxl);
+    // --component-padding: var(--space-xl);
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="hc-global-footer-col hc-global-footer-test">
+  <div class="hc-global-footer-col">
     <div>
       <h6 class="small hc-footer-nav-heading">{{ column.title }}</h6>
       <ul class="hc-top-footer-nav-links">

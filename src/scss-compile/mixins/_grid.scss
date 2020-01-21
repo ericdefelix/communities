@@ -1,7 +1,7 @@
 @mixin create-container() {
   width: 100%;
-  padding-right: v('container-padding');
-  padding-left: v('container-padding');
+  padding-right: v('component-padding');
+  padding-left: v('component-padding');
   margin-right: auto;
   margin-left: auto;
 }

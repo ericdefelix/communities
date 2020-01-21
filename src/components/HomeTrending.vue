@@ -5,7 +5,7 @@
 
       <h2 class="text-center text-primary-lighter">Popular articles and highlights</h2>
 
-      <div class="grid grid-2 grid-gap-responsive">
+      <div class="grid">
         <div class="hc-spotlights">
           <SpotlightCard v-bind:spotlight="spotlights[0]" />
           <SpotlightCard v-bind:spotlight="spotlights[1]" />

@@ -1,39 +1,30 @@
 <template>
   <div class="hc-discussion-answers mb-5">
-    <div class="mb-5">
-      <h6 class="text-secondary">Top Rated Answer</h6>
-      <!-- Card -->
-      <div class="hc-card hc-answer-card top-rated">
-        <div class="hc-card-heading">
-          <div class="d-flex">
-            <UserInfoSnippet/>
-            <div class="ml-auto">
-              <Badge v-bind:content="badge"/> <button type="button" class="btn btn-default">T</button>
-            </div>
+    <h5 class="text-primary">Answers</h5>
+    <div class="hc-card hc-answer-card top-rated">
+      <div class="hc-card-heading">
+        <div class="d-flex">
+          <UserInfoSnippet/>
+          <div class="ml-auto">
+            <Badge v-bind:content="badge"/> <button type="button" class="btn btn-default">T</button>
           </div>
         </div>
-        <div class="hc-card-body"><discussionTextPlaceholder/></div>
       </div>
-      <!-- Card -->
+      <div class="hc-card-body"><discussionTextPlaceholder/></div>
     </div>
 
-    <div>
-      <h6 class="text-primary-lighter">All Answers</h6>
-      <!-- Card -->
-      <div class="hc-card hc-answer-card">
-        <div class="hc-card-heading">
-          <div class="d-flex">
-            <UserInfoSnippet v-bind:data="user"/>
-            <div class="ml-auto">
-              <button type="button" class="btn btn-default">T</button>
-            </div>
+    <div class="hc-card hc-answer-card">
+      <div class="hc-card-heading">
+        <div class="d-flex">
+          <UserInfoSnippet v-bind:data="user"/>
+          <div class="ml-auto">
+            <button type="button" class="btn btn-default">T</button>
           </div>
         </div>
-        <div class="hc-card-body">
-          <discussionTextPlaceholder/>
-        </div>
       </div>
-      <!-- Card -->
+      <div class="hc-card-body">
+        <discussionTextPlaceholder/>
+      </div>
     </div>
 
   </div>

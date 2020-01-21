@@ -1,9 +1,25 @@
 .#{$namespace}question-card {
-  $cardHasHover: false;
-  @include card-shadow($cardHasHover);
-  background-image: $question-card-bg;
-  background-repeat: no-repeat;
-  background-position: 95% 0%;
+  background-color: $card-bg-gray;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: block;
+    width: 5rem;
+    height: 7rem;
+    opacity: 0.25;
+    background-image: $question-card-bg;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   .#{$namespace}card-body {
     padding-right: v('space-xxl');

@@ -7,7 +7,7 @@
             <h1 class="hc-hero-lead text-light">Hi, how can we help?</h1>
             <div class="hc-search-input">
               <input type="text" class="form-control" placeholder="Search for help articles, community posts, ideas...">
-              <i class="hc-ico-search"></i>
+              <!-- <i class="hc-ico-search"></i> -->
             </div>
             <h6 class="hc-news-heading">News and Announcements</h6>
             <ul class="hc-news-content hc-article-bullet-list list-unstyled">

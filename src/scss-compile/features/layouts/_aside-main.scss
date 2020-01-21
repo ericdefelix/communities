@@ -1,11 +1,11 @@
 .#{$namespace}layout-aside-main {
-  grid-template-columns: 24% 1fr;
+  grid-template-columns: repeat(12,1fr);
   .#{$namespace} {
     &aside {
-      
+      .#{$namespace}spotlight-card-thumbnail {
+        width: 100%;
+      }
     }
-    &main {
-      padding-left: 4rem;
-    }
+    // &main {}
   }
 }

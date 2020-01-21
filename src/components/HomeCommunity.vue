@@ -1,7 +1,7 @@
 <template>
   <section class="hc-section hc-section-community">
     <div class="container">
-      <div class="grid grid-2 grid-gap-responsive">
+      <div class="grid">
         <div class="hc-community-content-wrapper">
           <div class="hc-community-content">
             <h2 class="text-light">Explore Our Community</h2>

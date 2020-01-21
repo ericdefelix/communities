@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="text-primary-lighter text-center">Companion Products</h2>
 
-      <div class="grid grid-2 grid-gap-responsive">
+      <div class="grid">
         <div class="hc-homepage-tabs hc-trending-articles">
           <div class="nav flex-column nav-pills hc-article-list-lg" role="tablist" aria-orientation="vertical">
             <span class="hc-article-link active" id="app1" data-toggle="tab" role="tab" aria-controls="app1" aria-selected="true">

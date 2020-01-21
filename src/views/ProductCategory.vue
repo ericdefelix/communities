@@ -5,14 +5,14 @@
 
   <section class="hc-section">
     <div class="container">
-      <div class="hc-layout-aside-main grid grid-2 grid-gap-responsive">
+      <div class="hc-layout-aside-main grid">
         <aside class="hc-aside">
           <div class="hc-aside-topics mb-5">
-            <h6 class="text-bold">Topics</h6>
+            <!-- <h6 class="text-primary text-bold">Topics</h6> -->
             <ArticleList v-bind:articles="topics" v-bind:isSmall="true"/>
           </div>
           <div class="hc-aside-trending mb-5">
-            <h6 class="text-bold">Trending Articles</h6>
+            <h6 class="text-primary text-bold">Trending Articles</h6>
             <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
           </div>
 
@@ -20,7 +20,7 @@
         </aside>
 
         <div class="hc-main">
-          <h2 class="text-primary-lighter mb-3">Knowledge Base</h2>
+          <h3 class="text-primary-lighter mb-3">Knowledge Base</h3>
           <p class="mb-4">Browse our topics & articles to learn how to use LEAP to its full potential.</p>
           <ul class="nav nav-tabs" role="tablist" aria-orientation="horizontal">
             <li class="nav-item">

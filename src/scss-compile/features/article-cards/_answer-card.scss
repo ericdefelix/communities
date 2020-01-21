@@ -1,15 +1,7 @@
 .#{$namespace}answer-card {
-  border: $card-border-dash;
-  border-left: none;
-  border-right: none;
-
+  background-color: $card-bg-gray;
+  margin-bottom: v('space-xl');
   &.top-rated {
-    background-color: #ebf7e9;
-  }
-
-  .user-profile {
-    .user-avatar {
-      background: grey;
-    }
+    background-color: $card-light-green;
   }
 }

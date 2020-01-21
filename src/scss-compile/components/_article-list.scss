@@ -40,11 +40,6 @@
       padding: v('component-padding');
       grid-column: span 2;
     }
-
-    &:not(:first-child) {
-      // padding-left: v('component-padding');
-      // padding-right: v('component-padding');
-    }
   }
 }
 
@@ -71,10 +66,9 @@
   }
 }
 
-.#{$namespace}article-list-sm {
-  .#{$namespace}article-heading {
-    font-size: v('font-size-base');
-  }
+.#{$namespace}article-list-sm .#{$namespace}article-heading{
+  font-size: v('font-size-base');
+  font-weight: 400;
 }
 
 .#{$namespace}article-link {
@@ -108,4 +102,3 @@
     }
   }
 }
-

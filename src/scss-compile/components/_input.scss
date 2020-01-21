@@ -35,6 +35,21 @@
 .#{$namespace}search-input {
   position: relative;
 
+  &::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-image: $search-icon;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   // @include media-breakpoint-between('sm', 'md') {
   //   max-width: 75%;
   //   margin: auto;

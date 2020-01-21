@@ -2,7 +2,7 @@
   <section class="hc-section hc-usps">
     <div class="container">
       <h2 class="text-secondary">Let's learn our products...</h2>
-      <ul class="hc-usps-group grid grid-3 grid-gap-responsive">
+      <ul class="hc-usps-group grid">
         <li>
           <article class="hc-usps-item">
             <figure class="hc-usps-img"><img src="@/static/homepage-knowledge-base.svg"/></figure>

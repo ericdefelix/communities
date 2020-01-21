@@ -1,4 +1,16 @@
 .#{$namespace}prefooter {
   @extend %w-100;
   background-color: #F7F5F6;
+
+  @include media-breakpoint-up('md') {
+    &-title {
+
+    }
+
+    &-tiles {
+      .#{$namespace}prefooter-col {
+        grid-column: span 4;
+      }
+    }
+  }
 }

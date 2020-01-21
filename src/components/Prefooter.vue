@@ -1,19 +1,19 @@
 <template>
-  <section class="hc-section hc-prefooter">
+  <section class="hc-prefooter">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-4 help-foot">
-          <h4>Still can't find what you're<br />looking for?</h4>
+      <div class="grid grid-aside-main">
+        <div class="hc-prefooter-title">
+          <h4>Still can't find what you're looking for?</h4>
         </div>
-        <div class="col help-links">
-          <div class="row align-items-center">
-            <div class="col">
+        <div class="hc-prefooter-content">
+          <div class="grid grid-three-col">
+            <div class="hc-prefooter-col">
               Start a Discussion with other LEAP users &#8594;
             </div>
-            <div class="col">
+            <div class="hc-prefooter-col">
               Start LiveChat session with our consultant &#8594;
             </div>
-            <div class="col">
+            <div class="hc-prefooter-col">
               Email us so that we can contact you &#8594;
             </div>
           </div>

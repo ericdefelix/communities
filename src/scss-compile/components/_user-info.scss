@@ -21,9 +21,10 @@
   }
 
   &-name {
+    display: block;
     font-size: v('text-xs');
     font-weight: $font-weight-semibold;
-    display: block;
+    margin-bottom: 0.25rem;
   }
 
   &-timestamp {

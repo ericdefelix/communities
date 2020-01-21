@@ -7,9 +7,22 @@
 .grid {
   display: grid;
   display: -ms-grid;
-  grid-column-gap: $spacer;
+  grid-gap: v('grid-gap');
 }
 
-.grid-gap-responsive {
-  grid-column-gap: v('grid-gap');
+.grid-aside-main {
+  grid-template-columns: repeat(12,1fr);
+
+  @include media-breakpoint-up('lg') {
+    > *:first-child { grid-column: span 3; }
+    > *:last-child { grid-column: span 9; }
+  }
+
+  @include media-breakpoint-up('xl') {
+
+  }
+}
+
+.grid-three-col {
+  
 }
