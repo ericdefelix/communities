@@ -2,14 +2,12 @@
   @extend %w-100;
   background-color: #F7F5F6;
 
-  @include media-breakpoint-up('md') {
-    &-title {
-
-    }
-
-    &-tiles {
-      .#{$namespace}prefooter-col {
-        grid-column: span 4;
+  &-title {
+    position: relative;
+    > * {
+      @include media-breakpoint-between('lg','xl') {
+        position: absolute;
+        bottom: 0;
       }
     }
   }

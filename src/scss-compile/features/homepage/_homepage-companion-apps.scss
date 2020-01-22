@@ -1,8 +1,6 @@
 .#{$namespace}section-companion {
 
-  // .hc-homepage-tabs {}
-
-  .hc-article-link {
+  .#{$namespace}article-link {
     padding: v('space-lg');
     &.active {
       background-color: v('brand-white');
@@ -14,14 +12,21 @@
     }
   }
 
+  .#{$namespace}homepage-content {
+    .hc-article-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   .grid {
     margin-top: var(--space-xxl);
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     @include media-breakpoint-between('md', 'xlg') {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
     @include media-breakpoint-up('lg') {
-      grid-template-columns: $homepage-fixed-width-lg 1fr;
+      grid-template-columns: $homepage-fixed-width-lg minmax(0, 1fr);
     }
     @include media-breakpoint-up('xxl') {
       .#{$namespace}homepage-content {

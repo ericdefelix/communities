@@ -6,7 +6,9 @@
           <li><a href="#">Knowledge Base</a></li>
           <li><a href="#">Creating a new matter</a></li>
         </ul>
-        <input class="form-control" type="text" name="search" placeholder="Search for help articles, community posts, ideas...">
+        <div class="hc-search-input-secondary ml-auto">
+          <input class="form-control" type="text" name="search" placeholder="Search for help articles, community posts, ideas...">
+        </div>
       </div>
     </div>
 </template>

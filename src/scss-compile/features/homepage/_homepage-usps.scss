@@ -6,10 +6,11 @@
     margin-bottom: v('space-xxl');
     margin-top: v('space-xxl');
     padding-left: 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-row-gap: v('grid-gap');
 
     > li {
+      grid-column: span 4;
       &:last-of-type .#{$namespace}usps-item {
         border-bottom: none;
         padding-bottom: 0;

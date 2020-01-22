@@ -19,10 +19,16 @@ const routes = [
     path: '/discussions',
     name: 'discussionsPage',
     component: () => import('../views/Discussions.vue')
+  },
+  {
+    path: '/detail',
+    name: 'articleDetailPage',
+    component: () => import('../views/ArticleDetail.vue')
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

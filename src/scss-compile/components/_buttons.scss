@@ -52,7 +52,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  @include custom-button-variant(secondary,white);
+  @include custom-button-variant(secondary,'white');
 }
 
 .btn-outline-light {
@@ -60,7 +60,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-default {
-  @include custom-button-variant(default,var(--brand-primary));
+  @include custom-button-variant(default,'primary');
 
   &:hover {
     background-color: #fbfbfb;
@@ -74,7 +74,3 @@ fieldset:disabled a.btn {
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
-
-// .btn-sm {
-//   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-// }

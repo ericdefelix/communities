@@ -7,22 +7,12 @@ $hc-wave-bg-height: 142px;
   position: relative;
   background-color: #12467B;
   @include scrim-gradient('to bottom',$hc-hero-gradient-start);
-
   @include media-breakpoint-up('lg') {
     padding-bottom: 0 !important;
   }
 
   .grid {
-    // grid-template-columns: 1fr;
     grid-template-columns: repeat(12, minmax(0,1fr));
-
-    @include media-breakpoint-up('sm') {
-      // grid-template-columns: 1fr 30%;
-    }
-
-    @include media-breakpoint-up('xl') {
-      
-    }
   }
 
   &-container {
@@ -34,11 +24,7 @@ $hc-wave-bg-height: 142px;
     grid-column: span 12;
 
     @include media-breakpoint-up('lg') {
-      grid-column: span 9;
-    }
-
-    @include media-breakpoint-up('xl') {
-      grid-column: span 8;
+      grid-column: span 7;
     }
 
     @include media-breakpoint-up('xxl') {
@@ -88,10 +74,15 @@ $hc-wave-bg-height: 142px;
   }
 
   &-image { 
-    // display: none;
     position: absolute;
     top: 0;
     z-index: 2;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
     @include media-breakpoint-up('lg') {
       height: 450px;
       right: 0;
@@ -99,7 +90,7 @@ $hc-wave-bg-height: 142px;
     }
 
     @include media-breakpoint-up('xl') {
-      height: 540px;
+      height: 600px;
       right: 5%;
       left: auto;
     }
@@ -120,7 +111,10 @@ $hc-wave-bg-height: 142px;
 
     > img {
       width: auto;
-      height: 100%;
+      height: 80%;
+      margin-top: 5%;
+      z-index: 1;
+      position: relative;
     }
   }
 

@@ -1,16 +1,29 @@
 .hc-server-status {
+  @extend %d-flex, %align-items-center;
+
   line-height: 1;
   color: white;
-  padding: 0.5rem 0.875rem 0.5rem 1rem;
+  padding: 0.5rem 0.875rem;
   font-weight: 600;
   font-size: var(--text-xxs);
   text-transform: uppercase;
   background: transparent;
   border-radius: 0.25rem;
-  margin-right: var(--space-lg);
 
   > span {
+    display: none;
     margin-left: 0.5rem;
+    white-space: nowrap;
+    min-width: 3rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @include media-breakpoint-up('sm') {
+    margin-right: var(--space-lg);
+    > span {
+      display: inline-block;
+    }
   }
 
   &::before {

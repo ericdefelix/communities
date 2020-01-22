@@ -65,12 +65,12 @@ $homepage-sections-padding: v('space-xl') 0;
 $homepage-section-title-mbottom: v('space-lg');
 
 //Navbar
-$navbar-toggler-padding-x: v('grid-gap');
-$navbar-toggler-padding-y: v('grid-gap');
+$navbar-toggler-padding-x: v('space-lg');
+$navbar-toggler-padding-y: v('space-lg');
 
 // Navbar
 $navbar-brand-padding-y: 0;
 $navbar-padding-x: v('space-sm'); 
 $navbar-padding-y: 0;
-$navbar-nav-link-padding-x: v('space-lg');
+$navbar-nav-link-padding-x: v('space-md');
 $navbar-nav-link-padding-y: 1.4rem;

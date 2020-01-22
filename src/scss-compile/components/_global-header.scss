@@ -28,7 +28,18 @@
     height: 100%;
   }
 
+  // .nav-divider {
+  //   position: relative;
+  //   &::after {
+  //     content: '';
+  //     width: 0.125rem;
+  //     height: 100%;
+  //     background-color: v('brand-primary-lighter');
+  //   }
+  // }
+
   .nav-link {
+    height: $header-height;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: v('navlink-text-size');
@@ -107,11 +118,16 @@
   }
 
   .navbar-toggle {
+    height: $header-height;
     border: none;
     outline: none;
     position: relative;
     line-height: 1;
     display: none;
+
+    > .hamburger-box {
+      margin-top: -0.25rem;
+    }
 
     &:active {
       background-color: v('brand-primary-darker');
@@ -148,6 +164,8 @@
       }
 
       &.expanded {
+        padding-left: 0;
+        padding-right: 0;
         .navbar-nav {
           @include transition(transform $cubic-easing);
           @include transform(translateY(0));

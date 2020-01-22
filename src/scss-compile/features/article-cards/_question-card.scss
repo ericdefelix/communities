@@ -4,8 +4,6 @@
   &::after {
     content: '';
     position: absolute;
-    top: 2rem;
-    right: 1rem;
     display: block;
     width: 5rem;
     height: 7rem;
@@ -14,6 +12,14 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
+
+    bottom: 2rem;
+    right: 1rem;
+
+    @include media-breakpoint-up('md') {
+      top: 2rem;
+      right: 1rem;
+    }
   }
 
   > * {
@@ -21,8 +27,10 @@
     z-index: 1;
   }
 
-  .#{$namespace}card-body {
-    padding-right: v('space-xxl');
+  @include media-breakpoint-up('md') {
+    .#{$namespace}card-body {
+      padding-right: v('space-xxl');
+    }
   }
 
   .#{$namespace}article-heading {
@@ -33,6 +41,7 @@
 .#{$namespace}card-meta-info {
   list-style-type: none;
   margin-bottom: 0;
+  padding-left: 0;
   > li {
     font-size: v('navlink-text-size');
     display: inline-block;

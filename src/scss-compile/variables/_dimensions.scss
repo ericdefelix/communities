@@ -11,6 +11,7 @@ $input-height: 1rem;
 $input-height-lg: 4rem;
 
 // Navbar
+$header-height: 3.75rem;
 $navbar-brand-height: '';
 $nav-link-height: '';
 $homepage-fixed-width-lg: 32rem;
@@ -29,7 +30,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   // sm: 540px,
   // md: 720px,
-  lg: 960px,
+  // lg: 960px,
   xl: 1140px,
   xxl: 1380px,
   xxxl: 1440px

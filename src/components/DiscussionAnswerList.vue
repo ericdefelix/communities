@@ -3,7 +3,7 @@
     <h5 class="text-primary">Answers</h5>
     <div class="hc-card hc-answer-card top-rated">
       <div class="hc-card-heading">
-        <div class="d-flex">
+        <div class="flex-sm-adjust flex-sm-reverse">
           <UserInfoSnippet/>
           <div class="ml-auto">
             <Badge v-bind:content="badge"/> <button type="button" class="btn btn-default">T</button>

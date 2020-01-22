@@ -2,8 +2,8 @@
   <footer class="hc-global-footer">
     <div class="hc-global-footer-top">
       <div class="container">
-        <div class="grid">
-          <div class="hc-global-footer-col">
+        <div class="grid grid-aside-main">
+          <div class="hc-global-footer-title">
             <div class="hc-footer-logo">
               <img src="@/assets/leap-logo-small.svg" alt="logo" />
             </div>
@@ -14,9 +14,11 @@
             <button type="button" class="btn btn-outline-light">Follow On Twitter</button>
           </div>
 
-          <FooterColumnLinks v-bind:column="columnLinks[0]"/>
-          <FooterColumnLinks v-bind:column="columnLinks[1]"/>
-          <FooterColumnLinks v-bind:column="columnLinks[2]"/>
+          <div class="grid grid-three-col hc-global-footer-links">
+            <FooterColumnLinks v-bind:column="columnLinks[0]"/>
+            <FooterColumnLinks v-bind:column="columnLinks[1]"/>
+            <FooterColumnLinks v-bind:column="columnLinks[2]"/>
+          </div>
         </div>
       </div>
     </div>
@@ -25,7 +27,7 @@
       <div class="container">
         <div class="d-lg-flex">
           <div class="hc-footer-bottom-copy" rel="license">
-            <small>Copyright &copy; <span>2018</span> LEAP Legal Software. All rights reserved - Law Society of NSW Certificate 11</small>
+            <small>Copyright &copy; <span>2018</span> LEAP Legal Software. <br />All rights reserved - Law Society of NSW Certificate 11</small>
           </div>
           <div class="hc-footer-bottom-legal">
             <small class="hc-footer-bottom-links">

@@ -1,11 +1,37 @@
 .#{$namespace}layout-aside-main {
   grid-template-columns: repeat(12,1fr);
+
+  @include media-breakpoint-down('md') {
+    display: flex;
+    flex-direction: column-reverse;
+
+    > *:last-child {
+      margin-bottom: v('space-xxl');
+    }
+  }
+
   .#{$namespace} {
-    &aside {
-      .#{$namespace}spotlight-card-thumbnail {
-        width: 100%;
+    @include media-breakpoint-up('lg') {
+      &aside {
+        .#{$namespace}spotlight-card-thumbnail {
+          width: 100%;
+        }
       }
     }
-    // &main {}
+
+    @include media-breakpoint-down('md') {
+      &aside-topics {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        background: white;
+        padding: var(--space-lg);
+        margin: 0 !important;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }

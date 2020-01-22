@@ -1,6 +1,6 @@
 <template>
   <a href="#" class="hc-server-status okay">
-    <span>All Services Running</span>
+    <span>All Services Okay</span>
   </a>
 </template>
 

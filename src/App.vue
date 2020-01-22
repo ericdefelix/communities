@@ -23,7 +23,7 @@
           <nav class="navbar-nav" id="nav">
             <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/category">
               <div class="nav-item">
-                <a href="#" class="nav-link" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Knowledge Base</a>
+                <a href="#" class="nav-link nav-divider" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Knowledge Base</a>
               </div>
             </router-link>
             <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/discussions">
@@ -33,7 +33,7 @@
             </router-link>
             <router-link to="/">
               <div class="nav-item">
-                <a href="#" class="nav-link">Sign In</a>
+                <a href="#" class="nav-link nav-divider">Sign In</a>
               </div>
             </router-link>
           </nav>

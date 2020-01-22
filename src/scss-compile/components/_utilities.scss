@@ -1,0 +1,24 @@
+.flex-sm-adjust {
+  align-items: left;
+  display: flex;
+}
+
+@include media-breakpoint-down('md') {
+  .flex-sm-adjust {
+    flex-direction: column;
+
+    &:not(.flex-sm-reverse) > .ml-auto {
+      margin-top: v('grid-gap');
+    }
+
+    > .ml-auto {
+      margin-left: 0 !important;
+      margin-bottom: v('space-sm');
+      text-align: right;
+    }
+  }
+
+  .flex-sm-reverse {
+    flex-direction: column-reverse;
+  }
+}

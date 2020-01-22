@@ -1,0 +1,8 @@
+.#{$namespace}article {
+  &-title-container {
+  }
+  &-html-container {
+    margin-top: v('space-xl');
+    margin-bottom: v('space-xl');
+  }
+}

@@ -1,8 +1,8 @@
 <template>
   <div class="hc-discussion-question mb-5">
     <!-- R1 -->
-    <div class="d-flex">
-      <h5 class="text-primary">Question</h5>
+    <div class="flex-sm-adjust flex-sm-reverse">
+      <h4 class="text-bold text-primary">Question</h4>
       <div class="hc-btn-group ml-auto">
         <button type="button" class="btn btn-primary">Sign In &amp; Answer</button>
         <button type="button" class="btn btn-default">Share</button>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="d-flex mb-5 align-items-center">
+    <div class="mb-5 flex-sm-adjust">
       <div class="hc-badge-group">
         <Badge v-bind:content="badge_group[0]"/>
         <Badge v-bind:content="badge_group[1]"/>
