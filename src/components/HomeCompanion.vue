@@ -24,7 +24,7 @@
           <div class="tab-content">
             <div class="tab-pane fade show active" id="appC1" role="tabpanel" aria-labelledby="app1">
               <h6 class="text-primary text-bold">Trending Articles for ByLawyers</h6>
-              <ArticleList v-bind:articles="articles" v-bind:isSmall="false"/>
+              <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
               <button type="button" class="btn btn-default">View more articles</button>
             </div>
             <div class="tab-pane fade" id="appC2" role="tabpanel" aria-labelledby="app2">2</div>
