@@ -28,24 +28,12 @@
     height: 100%;
   }
 
-  // .nav-divider {
-  //   position: relative;
-  //   &::after {
-  //     content: '';
-  //     width: 0.125rem;
-  //     height: 100%;
-  //     background-color: v('brand-primary-lighter');
-  //   }
-  // }
-
   .nav-link {
-    height: $header-height;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: v('navlink-text-size');
     line-height: 1;
-    padding-top: $navbar-nav-link-padding-y;
-    padding-bottom: $navbar-nav-link-padding-y;
+    padding: $navbar-nav-link-padding-y $navbar-nav-link-padding-x;
     position: relative;
 
     &:hover {
@@ -65,9 +53,8 @@
     }
 
     @include media-breakpoint-down('md') {
-      padding-left: $navbar-nav-link-padding-x;
-      padding-right: $navbar-nav-link-padding-x;
-
+      // height: $header-height;
+      padding: v('space-md');
       &.active::before {
         width: $navbar-dark-active-border-width;
         height: auto;

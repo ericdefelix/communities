@@ -25,6 +25,8 @@
           </div>
 
           <ArticleFollowupHotJar/>
+
+          <RelatedDiscussions v-bind:discussions="discussions" v-bind:isSmall="true"/>
         </div>
       </div>
     </div>
@@ -41,6 +43,7 @@ import ArticleList from '@/components/ArticleList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Prefooter from '@/components/Prefooter'
 import ArticleFollowupHotJar from '@/components/ArticleFollowupHotJar'
+import RelatedDiscussions from '@/components/RelatedDiscussions'
 import articleTextPlaceholder from '@/components/_articleTextPlaceholder'
 
 export default {
@@ -51,6 +54,7 @@ export default {
     Breadcrumbs,
     Prefooter,
     ArticleFollowupHotJar,
+    RelatedDiscussions,
     articleTextPlaceholder
   },
   data: function () {
@@ -64,6 +68,11 @@ export default {
         { heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting' },
         { heading: 'Recording time in Microsoft Outlook', subheading: 'Accounting' },
         { heading: 'Troubleshooting printer problems', subheading: 'Technical' }
+      ],
+      discussions: [
+        { heading: 'Should document register be listed under documents tab for client?', text: 'Installing and Setup' },
+        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', text: 'Matter Management' },
+        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', text: 'Accounting' }
       ]
     }
   }

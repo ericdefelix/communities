@@ -1,5 +1,7 @@
 /* eslint-disable no-useless-escape */
 import 'bootstrap.native/dist/bootstrap-native-v4'
+import 'sticky-sidebar/src/sticky-sidebar'
+
 import { CustomToggleNavbar } from './js/navbar-toggle'
 import cssVars from 'css-vars-ponyfill'
 
@@ -15,6 +17,13 @@ const hcUI = {
 
     const toggleSelector = document.querySelector('[data-toggle="menu"]')
     CustomToggleNavbar(toggleSelector)
+
+    // var sidebar = new StickySidebar('#sidebar', {
+    //   containerSelector: '#main-content',
+    //   innerWrapperSelector: '.sidebar__inner',
+    //   topSpacing: 20,
+    //   bottomSpacing: 20
+    // })
   }
 }
 

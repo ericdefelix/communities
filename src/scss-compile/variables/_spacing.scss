@@ -13,6 +13,8 @@
   --container-padding: var(--grid-gap);
   --component-padding: var(--space-md);
 
+  --navbar-nav-link-padding-x: v('space-md');
+
   @include media-breakpoint-up('md') {
     --grid-gap: var(--space-lg);
     --component-padding: var(--space-lg);
@@ -20,12 +22,14 @@
 
   @include media-breakpoint-up('lg') {
     --grid-gap: var(--space-xl);
-    // --component-padding: var(--space-xl);
+    --component-padding: var(--space-xl);
+    --navbar-nav-link-padding-x: var(--space-lg);
   }
 
   @include media-breakpoint-up('xxl') {
     --grid-gap: var(--space-xxl);
-    // --component-padding: var(--space-xl);
+    --component-padding: var(--space-xl);
+    --navbar-nav-link-padding-x: var(--space-xl);
   }
 }
 
@@ -72,5 +76,5 @@ $navbar-toggler-padding-y: v('space-lg');
 $navbar-brand-padding-y: 0;
 $navbar-padding-x: v('space-sm'); 
 $navbar-padding-y: 0;
-$navbar-nav-link-padding-x: v('space-md');
+$navbar-nav-link-padding-x: v('navbar-nav-link-padding-x'); // converted to CSS variable
 $navbar-nav-link-padding-y: 1.4rem;

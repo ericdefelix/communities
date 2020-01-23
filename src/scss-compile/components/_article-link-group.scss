@@ -16,14 +16,26 @@
   }
 
   &-name {
-    grid-column: span 5;
-    padding-right: v('grid-gap');
+    grid-column: span 4;
+
+    @include media-breakpoint-up('xl') {
+      grid-column: span 3;
+    }
   }
 
   &-content {
-    grid-column: span 7;
+    padding-left: v('grid-gap');
+    grid-column: span 8;
+    > *:first-child {
+      columns: 2;
+    }
   }
-  
+
+  &-btn {
+    display: block;
+    margin-top: v('space-md');
+    font-weight: 600;
+  }
 
   @include media-breakpoint-down('sm') {
     &-name {
@@ -33,6 +45,10 @@
 
     &-content {
       grid-column: span 12;
+
+      > *:first-child {
+        columns: 1;
+      }
     } 
   }
 }

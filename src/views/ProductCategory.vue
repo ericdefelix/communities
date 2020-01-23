@@ -5,21 +5,22 @@
 
   <section class="hc-section">
     <div class="container">
-      <div class="hc-layout-aside-main grid grid-aside-main">
-        <aside class="hc-aside">
-          <div class="hc-aside-topics mb-5">
-            <!-- <h6 class="text-primary text-bold">Topics</h6> -->
-            <ArticleList v-bind:articles="topics" v-bind:isSmall="true"/>
+      <div class="hc-layout-aside-main grid grid-aside-main main" id="main">
+        <aside class="hc-aside sidebar" id="sidebar">
+          <div class="sidebar__inner">
+            <div class="hc-aside-topics mb-5">
+              <h6 class="text-primary text-bold mb-4">Main Topics</h6>
+              <ArticleList v-bind:articles="topics" v-bind:isSmall="true"/>
+            </div>
+            <div class="hc-aside-trending mb-5">
+              <h6 class="text-primary text-bold">Trending Articles</h6>
+              <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
+            </div>
+            <SpotlightCard v-bind:spotlight="spotlights[0]" />
           </div>
-          <div class="hc-aside-trending mb-5">
-            <h6 class="text-primary text-bold">Trending Articles</h6>
-            <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
-          </div>
-
-          <SpotlightCard v-bind:spotlight="spotlights[0]" />
         </aside>
 
-        <div class="hc-main">
+        <div class="hc-main content" id="content">
           <small class="hc-article-subheading text-uppercase text-bold">Browse topics & articles</small>
           <h4 class="text-primary mb-3 text-bold">Knowledge Base</h4>
 
@@ -58,6 +59,12 @@ export default {
   components: {
     SpotlightCard, ArticleList, Breadcrumbs, TopicList
   },
+  methods: {
+    randomViewAllText () {
+      const randomNumber = () => { return Math.floor(Math.random() * (60 - 1 + 1) + 1) }
+      return `View all ${randomNumber()} articles`
+    }
+  },
   data: function () {
     return {
       spotlights: [
@@ -84,35 +91,43 @@ export default {
       links: [
         {
           name: 'What\'s New',
-          list: [{ heading: 'Latest Release' }, { heading: 'Previous Releases' }]
+          list: [{ heading: 'Latest Release' }, { heading: 'Previous Releases' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Installing & Setting Up',
-          list: [{ heading: 'Getting Started' }, { heading: 'Installing LEAP' }, { heading: 'Installing LEAP Conveyancer' }, { heading: 'General Admin Tasks' }, { heading: 'Accounting Admin Tasks' }, { heading: 'Managing Your Staff' }]
+          list: [{ heading: 'Getting Started' }, { heading: 'Installing LEAP' }, { heading: 'Installing LEAP Conveyancer' }, { heading: 'General Admin Tasks' }, { heading: 'Accounting Admin Tasks' }, { heading: 'Managing Your Staff' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Matter Management',
-          list: [{ heading: 'Creating a New Matter' }, { heading: 'Duplicating a Matter' }, { heading: 'Sorting Matters' }, { heading: 'Customising a Matter' }, { heading: 'Recurring Matters' }, { heading: 'Archiving Matters' }, { heading: 'Restricting Staff Access to a Matter' }, { heading: 'Deleting a Matter' }, { heading: 'Cost Estimates' }, { heading: 'Document Register & Packet' }]
+          list: [{ heading: 'Creating a New Matter' }, { heading: 'Duplicating a Matter' }, { heading: 'Sorting Matters' }, { heading: 'Customising a Matter' }, { heading: 'Recurring Matters' }, { heading: 'Archiving Matters' }, { heading: 'Restricting Staff Access to a Matter' }, { heading: 'Deleting a Matter' }, { heading: 'Cost Estimates' }, { heading: 'Document Register & Packet' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Card Management',
-          list: [{ heading: 'Creating Cards' }, { heading: 'Card Tabs' }, { heading: 'Search, Sort & Filter Cards' }, { heading: 'Merge Cards' }, { heading: 'Deleting a Card' }, { heading: 'Conflict of Interest Check' }, { heading: 'People List' }, { heading: 'Referrers' }]
+          list: [{ heading: 'Creating Cards' }, { heading: 'Card Tabs' }, { heading: 'Search, Sort & Filter Cards' }, { heading: 'Merge Cards' }, { heading: 'Deleting a Card' }, { heading: 'Conflict of Interest Check' }, { heading: 'People List' }, { heading: 'Referrers' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Guides & Precedents',
-          list: [{ heading: 'Guides - By Lawyers' }, { heading: 'Precedents' }]
+          list: [{ heading: 'Guides - By Lawyers' }, { heading: 'Precedents' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Office Accounting',
-          list: [{ heading: 'GL Link' }, { heading: 'Invoicing' }, { heading: 'Deposits/Cheques' }, { heading: 'Office Payments' }, { heading: 'Office Receipts' }, { heading: 'Credit Notes' }]
+          list: [{ heading: 'GL Link' }, { heading: 'Invoicing' }, { heading: 'Deposits/Cheques' }, { heading: 'Office Payments' }, { heading: 'Office Receipts' }, { heading: 'Credit Notes' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Calendar & Tasks',
-          list: [{ heading: 'Calendar Appointments' }, { heading: 'Critical Dates' }, { heading: 'Tasks' }]
+          list: [{ heading: 'Calendar Appointments' }, { heading: 'Critical Dates' }, { heading: 'Tasks' }],
+          viewall_count: this.randomViewAllText()
         },
         {
           name: 'Reports & Dashboards',
-          list: [{ heading: 'Matters & Clients' }, { heading: 'Trust' }, { heading: 'Office' }, { heading: 'Management' }, { heading: 'Dashboards' }]
+          list: [{ heading: 'Matters & Clients' }, { heading: 'Trust' }, { heading: 'Office' }, { heading: 'Management' }, { heading: 'Dashboards' }],
+          viewall_count: this.randomViewAllText()
         }
       ]
     }
