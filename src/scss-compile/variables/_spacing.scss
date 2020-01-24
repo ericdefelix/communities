@@ -12,8 +12,9 @@
 
   --container-padding: var(--grid-gap);
   --component-padding: var(--space-md);
+  --list-item-gap: var(--space-md);
 
-  --navbar-nav-link-padding-x: v('space-md');
+  --navbar-nav-link-padding-x: v(--space-md);
 
   @include media-breakpoint-up('md') {
     --grid-gap: var(--space-lg);
@@ -34,15 +35,15 @@
 }
 
 // List Group
-$list-group-item-padding-x: v('space-md');
-$list-group-item-padding-y: v('space-md');
-$list-group-item-margin: v('space-md');
+$list-group-item-padding-x: var(--space-md);
+$list-group-item-padding-y: var(--space-md);
+$list-group-item-margin: var(--space-md);
 
 // Input
-$input-padding-x-lg: v('space-md');
+$input-padding-x-lg: var(--space-md);
 // $input-padding-y-lg: v('space-sm');
 $breadcrumb-search-padding: 1rem 1rem 1rem 2rem;
-$breadcrumb-padding: v('space-md') 0;
+$breadcrumb-padding: var(--space-md) 0;
 
 // Buttons
 $btn-padding-y: 0.75rem;
@@ -59,22 +60,22 @@ $spacer: 1rem;
 $spacer-lg: var(--spacer-lg);
 
 // Cards
-$spotlight-card-padding: v('space-lg');
+$spotlight-card-padding: var(--space-lg);
 $card-padding: var(--card-padding);
-$list-group-item-margin-bottom: v('space-md');
+$list-group-item-margin-bottom: var(--space-md);
 
 // Homepage Sections
 $homepage-hero-img-offset: 0;
-$homepage-sections-padding: v('space-xl') 0;
-$homepage-section-title-mbottom: v('space-lg');
+$homepage-sections-padding: var(--space-xl) 0;
+$homepage-section-title-mbottom: var(--space-lg);
 
 //Navbar
-$navbar-toggler-padding-x: v('space-lg');
-$navbar-toggler-padding-y: v('space-lg');
+$navbar-toggler-padding-x: var(--space-lg);
+$navbar-toggler-padding-y: var(--space-lg);
 
 // Navbar
 $navbar-brand-padding-y: 0;
-$navbar-padding-x: v('space-sm'); 
+$navbar-padding-x: var(--space-sm); 
 $navbar-padding-y: 0;
 $navbar-nav-link-padding-x: v('navbar-nav-link-padding-x'); // converted to CSS variable
 $navbar-nav-link-padding-y: 1.4rem;

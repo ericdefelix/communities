@@ -12,11 +12,14 @@
 
   &:focus,
   &.focus {
+    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
+    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
   }
 }
 
@@ -38,6 +41,8 @@
 
   &.disabled,
   &:disabled {
+    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
     // color: $color;
     // background-color: transparent;
   }

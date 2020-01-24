@@ -1,0 +1,31 @@
+.#{$namespace}topic-catalog {
+  &-item {
+    padding: v('component-padding');
+    margin-top: v('list-item-gap');
+    background-color: $card-bg-gray;
+    border-radius: 0.125rem;
+  }
+
+  &-btn {
+    display: block;
+    // margin-top: v('space-lg');
+    padding-top: v('list-item-gap');
+    border-top: 1px dotted darken($card-bg,20%);
+    font-weight: 600;
+  }
+
+  // Apply two column layot only if Topic List is under a Topic Catalog component
+  .#{$namespace}topic-list {
+    &-content {
+      display: block;
+      flex-flow: column;
+      columns: 2;
+    }
+
+    @include media-breakpoint-down('sm') {
+      &-content {
+        columns: 1;
+      } 
+    }
+  }
+}

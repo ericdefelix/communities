@@ -6,7 +6,7 @@
         <div class="flex-sm-adjust flex-sm-reverse">
           <UserInfoSnippet/>
           <div class="ml-auto">
-            <Badge v-bind:content="badge"/> <button type="button" class="btn btn-default">T</button>
+            <Badge v-bind:content="badge"/> <button type="button" class="btn btn-default"><i class="fas fa-thumbs-up"></i></button>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
         <div class="d-flex">
           <UserInfoSnippet v-bind:data="user"/>
           <div class="ml-auto">
-            <button type="button" class="btn btn-default">T</button>
+            <button type="button" class="btn btn-default"><i class="fas fa-thumbs-up"></i></button>
           </div>
         </div>
       </div>

@@ -70,9 +70,9 @@ export default {
         { heading: 'Troubleshooting printer problems', subheading: 'Technical' }
       ],
       discussions: [
-        { heading: 'Should document register be listed under documents tab for client?', text: 'Installing and Setup' },
-        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', text: 'Matter Management' },
-        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', text: 'Accounting' }
+        { heading: 'Should document register be listed under documents tab for client?', text: 'LEAP Desktop • Richard Dart 11 • May 2017 at 12:17 AM' },
+        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', text: 'LEAP Desktop • Richard Dart 11 • May 2017 at 12:17 AM' },
+        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', text: 'LEAP Desktop • Richard Dart 11 • May 2017 at 12:17 AM' }
       ]
     }
   }

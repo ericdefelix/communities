@@ -1,0 +1,14 @@
+.#{$namespace}related-discussion-list-item {
+  display: flex;
+  align-items: center;
+
+  .#{$namespace}article-link-append-item {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+}   

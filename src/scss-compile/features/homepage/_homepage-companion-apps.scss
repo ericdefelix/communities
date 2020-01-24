@@ -1,23 +1,18 @@
 .#{$namespace}section-companion {
 
-  .#{$namespace}article-link {
-    padding: v('space-lg');
-    &.active {
-      background-color: v('brand-white');
-      @include box-shadow($card-box-shadow);
+  .#{$namespace}trending-articles {
+    .#{$namespace}article-link {
+      padding: v('component-padding');
+      &.active {
+        background-color: v('brand-white');
+        @include box-shadow($card-box-shadow);
 
-      &:hover {
-        @include box-shadow($card-box-shadow-darker);
+        &:hover {
+          @include box-shadow($card-box-shadow-darker);
+        }
       }
     }
   }
-
-  // .#{$namespace}homepage-content {
-  //   .hc-article-link {
-  //     padding-left: 0;
-  //     padding-right: 0;
-  //   }
-  // }
 
   .grid {
     margin-top: var(--space-xxl);

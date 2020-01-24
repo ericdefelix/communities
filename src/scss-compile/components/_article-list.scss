@@ -3,6 +3,7 @@
   &-heading {
     color: v('brand-primary');
     font-weight: $font-weight-semibold;
+    font-size: v('font-size-base');
     margin-bottom: 0;
   }
   &-subheading {
@@ -14,6 +15,7 @@
     margin-bottom: v('space-xs');
   }
   &-text {
+    font-size: v('text-xs');
     margin-top: v('space-xs');
     margin-bottom: 0;
     color: $body-color;
@@ -22,16 +24,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-
-  &-item {
-    margin-bottom: v('space-md');
-  }
-
-  &-list {
-    &-item {
-      display: block;
-    }
   }
 
   &-pinned > * {
@@ -43,32 +35,13 @@
   }
 }
 
-.#{$namespace}article-card {
-  background-color: v('brand-white');
-  border-radius: $border-radius-xs;
-  overflow: hidden;
-
-  > .#{$namespace}article-link {
-    padding: v('component-padding');
-    &:not(:last-child) {
-      border-bottom: 0.0625rem solid $border-bottom-color;
-    }
-  }
-}
-
 .#{$namespace}article-list {
   .#{$namespace}article-link {
-    padding: v('space-md') 0;
-
+    // padding: v('space-md') 0;
     &:not(:last-of-type) {
       // border-bottom: 1px dotted #e3e3e3;
     }
   }
-}
-
-.#{$namespace}article-list-sm .#{$namespace}article-heading{
-  font-size: v('font-size-base');
-  font-weight: 400;
 }
 
 .#{$namespace}article-link {
@@ -80,25 +53,14 @@
   }
 }
 
-.#{$namespace}article-bullet-list {
-  li {
-    margin-bottom: 0.5rem;
-  }
-  > * > a {
-    position: relative;
-    padding-left: 1rem;
-    &::before {
-      @extend %pseudo-element-absolute;
-      top: 0.5rem;
-      left: 0;
-      width: 0.5rem;
-      height: 0.5rem;
-      margin: 0 v('space-sm') 0 0.0625rem;
-      background-size: contain;
-      background-position: center center;
-      background-repeat: none;
-      vertical-align: middle;
-      background-image: $bullet-bg;
-    }
+.#{$namespace}article-link-append {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  margin: 0;
+  margin-left: auto;
+
+  &-item {
+
   }
 }
