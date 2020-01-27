@@ -8,16 +8,15 @@
       <div class="hc-layout-aside-main grid grid-aside-main">
         <aside class="hc-aside">
           <div class="hc-aside-trending mb-5">
-            <h6 class="text-primary text-bold">Related Articles</h6>
-            <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
+            <h5 class="text-primary-lighter text-bold">Related Articles</h5>
+            <ArticleList v-bind:articles="articles"/>
           </div>
 
           <SpotlightCard v-bind:spotlight="spotlights[0]" />
         </aside>
         <div class="hc-main">
           <div class="hc-article-title-container">
-            <small class="hc-subheading text-uppercase text-bold">Matters</small>
-            <h4 class="hc-article-heading">Creating matter via InfoTrack</h4>
+            <ArticleItem v-bind:content="{ isLarge: false, heading:'Creating matter via InfoTrack', subheading:'Matters'}"/>
           </div>
 
           <div class="hc-article-html-container">
@@ -26,7 +25,7 @@
 
           <ArticleFollowupHotJar/>
 
-          <RelatedDiscussions v-bind:discussions="discussions" v-bind:isSmall="true"/>
+          <RelatedDiscussions v-bind:discussions="discussions"/>
         </div>
       </div>
     </div>
@@ -39,6 +38,7 @@
 
 <script>
 import SpotlightCard from '@/components/SpotlightCard'
+import ArticleItem from '@/components/ArticleItem'
 import ArticleList from '@/components/ArticleList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Prefooter from '@/components/Prefooter'
@@ -50,6 +50,7 @@ export default {
   name: 'articleDetailPage',
   components: {
     SpotlightCard,
+    ArticleItem,
     ArticleList,
     Breadcrumbs,
     Prefooter,

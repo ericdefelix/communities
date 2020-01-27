@@ -22,14 +22,14 @@
 
   &-name {
     display: block;
-    font-size: v('text-xs');
+    font-size: v('font-size-base');
     font-weight: $font-weight-semibold;
     margin-bottom: 0.25rem;
   }
 
   &-timestamp {
     display: block;
-    font-size: v('text-xxs');
+    font-size: v('text-xs');
     color: v('brand-label-grey')
   }
 }

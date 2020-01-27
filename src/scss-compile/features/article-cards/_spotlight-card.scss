@@ -26,19 +26,16 @@
   }
 
   .#{$namespace}article-heading {
+    font-size: v('text-md') !important;
     margin-bottom: v('space-md');
+  }
+
+  .#{$namespace}article-tagline {
+    overflow: visible;
+    white-space: initial;
   }
 
   &::before {
     width: 100%;
-    // margin-left: $spotlight-card-thumbnail-width;
   }
-
-  // &::after {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: $spotlight-card-thumbnail-width;
-  //   opacity: 0.6;
-  // }
 }

@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-escape */
 import 'bootstrap.native/dist/bootstrap-native-v4'
-import 'sticky-sidebar/src/sticky-sidebar'
+// import 'sticky-sidebar/src/sticky-sidebar'
 
 import { CustomToggleNavbar } from './js/navbar-toggle'
 import cssVars from 'css-vars-ponyfill'

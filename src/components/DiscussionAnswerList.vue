@@ -1,6 +1,6 @@
 <template>
   <div class="hc-discussion-answers mb-5">
-    <h5 class="text-primary">Answers</h5>
+    <h5 class="text-primary-lighter">Answers</h5>
     <div class="hc-card hc-answer-card top-rated">
       <div class="hc-card-heading">
         <div class="flex-sm-adjust flex-sm-reverse">

@@ -151,7 +151,7 @@ $hc-wave-bg-height: 142px;
 .#{$namespace}news-heading {
   color: $hc-news-heading-color;
   text-transform: uppercase;
-  font-size: v('text-xs');
+  font-size: v('text-sm');
 }
 
 .#{$namespace}news-content {

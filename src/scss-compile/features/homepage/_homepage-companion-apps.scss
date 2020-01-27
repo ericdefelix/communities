@@ -3,6 +3,9 @@
   .#{$namespace}trending-articles {
     .#{$namespace}article-link {
       padding: v('component-padding');
+      background-color: #fbfbfb;
+      border-radius: $border-radius-xs;
+      margin-bottom: $list-group-item-margin-bottom;
       &.active {
         background-color: v('brand-white');
         @include box-shadow($card-box-shadow);

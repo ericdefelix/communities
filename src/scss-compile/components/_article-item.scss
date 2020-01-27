@@ -1,0 +1,34 @@
+.#{$namespace}article {
+  width: 100%;
+  &-heading {
+    color: v('brand-primary');
+    font-weight: $font-weight-semibold;
+    font-size: v('font-size-base');
+    margin-bottom: 0;
+  }
+  &-subheading {
+    display: block;
+    font-size: v('text-xxs');
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    color: $subheading-color;
+  }
+  &-tagline {
+    font-size: v('font-size-base');
+    margin-top: v('space-xs');
+    margin-bottom: 0;
+    color: $body-color;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.#{$namespace}article-lg {
+    .#{$namespace}article-heading {
+      font-size: var(--text-sm);
+    }
+    // &-tagline {}
+  }
+}

@@ -1,8 +1,8 @@
 <template>
-  <article class="hc-article">
+  <article class="hc-article" v-bind:class="{'hc-article-lg': content.isLarge}">
     <small class="hc-article-subheading" v-if="content.subheading">{{ content.subheading }}</small>
-    <h6 class="hc-article-heading">{{ content.heading }}</h6>
-    <p class="hc-article-text" v-if="content.text">{{ content.text }}</p>
+    <p class="hc-article-heading">{{ content.heading }}</p>
+    <summary class="hc-article-tagline" v-if="content.text">{{ content.text }}</summary>
   </article>
 </template>
 
@@ -10,8 +10,7 @@
 export default {
   name: 'ArticleItem',
   props: {
-    content: Object,
-    isLarge: Boolean
+    content: Object
   }
 }
 </script>

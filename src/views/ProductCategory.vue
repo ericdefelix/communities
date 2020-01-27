@@ -12,7 +12,7 @@
               <TopicList v-bind:topics="sidebar_topics.topics" v-bind:heading="sidebar_topics.heading"/>
             </div>
             <div class="hc-aside-trending mb-5">
-              <h6 class="text-primary-lighter text-bold">Trending Articles</h6>
+              <h5 class="text-primary-lighter text-bold">Trending Articles</h5>
               <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
             </div>
             <SpotlightCard v-bind:spotlight="spotlights[0]" />
@@ -21,7 +21,7 @@
 
         <div class="hc-main content" id="content">
           <small class="hc-article-subheading text-uppercase text-bold">Browse topics & articles</small>
-          <h4 class="text-primary mb-3 text-bold">Knowledge Base</h4>
+          <h2 class="text-primary-lighter mb-3">Knowledge Base</h2>
 
           <ul class="nav nav-tabs" role="tablist" aria-orientation="horizontal">
             <li class="nav-item">

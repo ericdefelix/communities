@@ -1,22 +1,22 @@
 .#{$namespace}section-articles {
   background-color: $purplish-grey;
 
-  .#{$namespace}article-text {
-    color: v('brand-grey-dark');
+  .#{$namespace}article-tagline {
+    // color: v('brand-grey-dark');
   }
 
   .#{$namespace}trending-articles .#{$namespace}article-link {
-    padding: v('space-lg');
+    padding: v('space-lg') 0;
     border-radius: $border-radius;
     border-bottom: none;
     margin-bottom: 0;
 
     &:not(:first-of-type) {
       border-bottom: 1px solid #e3e3e3;
-      @include transition(background-color, $easing);
+      // @include transition(background-color, $easing);
       &:hover {
         @include transition(background-color, $easing);
-        background-color: darken($purplish-grey,3%);
+        // background-color: darken($purplish-grey,3%);
       }
     }
 
@@ -40,13 +40,18 @@
     }
 
     @include media-breakpoint-between('md','lg') {
+      .#{$namespace}spotlight-card {
+        flex-flow: column;
+      }
+
       .#{$namespace}spotlights {
         display: grid;
         grid-template-columns: repeat(3,minmax(0,1fr));
         grid-gap: v('grid-gap');
       }
 
-      .#{$namespace}spotlight-card-thumbnail {
+      .#{$namespace}spotlight-card-thumbnail,
+      .#{$namespace}card-body {
         width: 100%;
       }
 
@@ -60,28 +65,20 @@
     .#{$namespace}trending-articles {
       padding: 0 v('space-xxl');
     }
-
-    .#{$namespace}article-list {
-      &.#{$namespace}article-pinned > *:first-child {
-        .#{$namespace}article-heading {
-          font-size: v('text-md');
-          font-weight: 600;
-        }
-      }
-
-      // .#{$namespace}article-link {}
-
-      .#{$namespace}article-heading {
-        font-size: v('text-sm');
-      }
-    }
   }
+}
 
-  .#{$namespace}article-pinned {
+.#{$namespace}trending-articles {
+  .#{$namespace}article-list {
     > *:first-child {
       @include box-shadow(0 0px 0px 0.0625rem #ececec);
+      grid-column: span 2;
+      background-color: v('brand-white');
       position: relative;
+      padding: v('component-padding');
       margin-bottom: 0.25rem;
+      margin-left: calc(#{var(--component-padding)} * -1);
+      margin-right: calc(#{var(--component-padding)} * -1);
       
       &::after {
         @extend %pseudo-element-absolute;

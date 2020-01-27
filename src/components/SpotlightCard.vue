@@ -1,21 +1,22 @@
 <template>
   <a href="#" class="hc-article-link hc-card hc-card-line hc-spotlight-card">
-    <figure class="hc-spotlight-card-thumbnail" v-bind:style="{'background-image': 'url(' + require('@/assets/sample1.jpg') + ')'}"></figure>
+    <figure class="hc-spotlight-card-thumbnail" v-bind:style="{'background-image': 'url(' + require('@/assets/'+ content.url) + ')'}"></figure>
     <div class="hc-card-body">
-      <article class="hc-article">
-        <small class="hc-article-subheading">{{ spotlight.heading }}</small>
-        <h5 class="hc-article-heading">{{ spotlight.heading }}</h5>
-        <p class="hc-article-text">{{ spotlight.content }}</p>
-      </article>
+      <ArticleItem v-bind:content="content" />
     </div>
   </a>
 </template>
 
 <script>
+import ArticleItem from '@/components/ArticleItem'
+
 export default {
   name: 'spotlightComponent',
   props: {
-    spotlight: Object
+    content: Object
+  },
+  components: {
+    ArticleItem
   }
 }
 </script>

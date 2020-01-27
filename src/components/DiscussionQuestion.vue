@@ -2,7 +2,7 @@
   <div class="hc-discussion-question mb-5">
     <!-- R1 -->
     <div class="flex-sm-adjust flex-sm-reverse">
-      <h4 class="text-bold text-primary">Question</h4>
+      <h4 class="text-primary-lighter">Question</h4>
       <div class="hc-btn-group ml-auto">
         <button type="button" class="btn btn-primary">Sign In &amp; Answer</button>
         <button type="button" class="btn btn-default">Share</button>

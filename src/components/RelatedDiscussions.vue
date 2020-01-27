@@ -1,13 +1,15 @@
 <template>
   <div>
-    <h6 class="text-primary text-bold">Related Discussions</h6>
+    <h5 class="text-primary-lighter text-bold">Related Discussions</h5>
 
-    <div class="hc-article-list" v-bind:class="{ 'hc-article-list-sm': isSmall }">
-      <div class="hc-related-discussion-list-item" v-for="discussion in discussions" v-bind:key="discussion.id">
-        <a href="" class="hc-article-link">
+    <div class="hc-article-list">
+      <div class="hc-article-list-item d-flex" v-for="discussion in discussions" v-bind:key="discussion.id">
+        <a href="#" class="hc-article-link">
           <article class="hc-article">
-              <h6 class="hc-article-heading text-bold">{{ discussion.heading }} </h6>
-              <p class="hc-article-text" v-if="discussion.text">{{ discussion.text }}</p>
+            <p class="hc-article-heading">{{ discussion.heading }} </p>
+            <ul class="hc-card-meta-info ml-auto">
+              <li>LEAP Desktop</li><li>Richard Dart 11</li><li>May 2017 at 12:17 AM</li>
+            </ul>
           </article>
         </a>
         <ul class="hc-article-link-append">

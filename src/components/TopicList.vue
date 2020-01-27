@@ -1,6 +1,6 @@
 <template>
   <div class="hc-topic-list">
-    <h6 class="hc-topic-catalog-heading text-bold text-primary-lighter">{{ heading }}</h6>
+    <h5 class="hc-topic-catalog-heading text-bold text-primary-lighter">{{ heading }}</h5>
     <div class="hc-topic-list-content">
       <a class="hc-topic-list-link" href="#" v-for="link in topics" v-bind:key="link.id" >{{ link.text }}</a>
     </div>
