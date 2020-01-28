@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/category',
-    name: 'productCategoryPage',
-    component: () => import('../views/ProductCategory.vue')
+    path: '/topiccatalog',
+    name: 'topicCatalogPage',
+    component: () => import('../views/Topics.vue')
   },
   {
     path: '/discussions',
@@ -21,9 +21,14 @@ const routes = [
     component: () => import('../views/Discussions.vue')
   },
   {
-    path: '/detail',
+    path: '/article',
     name: 'articleDetailPage',
     component: () => import('../views/ArticleDetail.vue')
+  },
+  {
+    path: '/topicdetail',
+    name: 'topicDetailPage',
+    component: () => import('../views/TopicDetail.vue')
   }
 ]
 

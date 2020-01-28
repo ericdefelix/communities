@@ -55,7 +55,7 @@ import TopicList from '@/components/TopicList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default {
-  name: 'productCategoryPage',
+  name: 'topicCatalogPage',
   components: {
     SpotlightCard, Breadcrumbs, TopicCatalog, TopicList, ArticleList
   },

@@ -21,7 +21,7 @@
 
         <div class="collapse navbar-collapse" id="navbar">
           <nav class="navbar-nav" id="nav">
-            <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/category">
+            <router-link v-slot="{ href, route, navigate, isActive, isExactActive }" to="/topiccatalog">
               <div class="nav-item">
                 <a href="#" class="nav-link nav-divider" :class="[isActive && 'active', isExactActive && 'active']" @click="navigate">Knowledge Base</a>
               </div>

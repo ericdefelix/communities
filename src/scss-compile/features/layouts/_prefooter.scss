@@ -4,11 +4,10 @@
 
   &-title {
     position: relative;
+    display: flex;
+    align-items: center;
     > * {
-      @include media-breakpoint-between('lg','xl') {
-        position: absolute;
-        bottom: 0;
-      }
+      margin-bottom: 0;
     }
   }
 }
