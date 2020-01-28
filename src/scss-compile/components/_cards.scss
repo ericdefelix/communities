@@ -5,7 +5,7 @@ figure {
 
 .#{$namespace}card {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   border-radius: 0.0625rem;
   display: flex;
   flex-wrap: wrap;
@@ -23,13 +23,21 @@ figure {
     }
   }
 
-  #{&}-heading {
+  &-heading {
     width: calc(100% - #{$spotlight-card-thumbnail-width});
     flex-grow: 1;
     padding: v('component-padding');
     padding-bottom: 0;
   }
 
+  // &-body {
+  //   height: 100%;
+  // }
+}
+
+.#{$namespace}card-hover {
+  $cardHasHover: true;
+  @include card-shadow($cardHasHover);
 }
 
 .#{$namespace}card-line {

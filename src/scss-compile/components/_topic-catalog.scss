@@ -20,6 +20,7 @@
       display: block;
       flex-flow: column;
       columns: 2;
+      margin-bottom: v('list-item-gap');
     }
 
     @include media-breakpoint-down('sm') {

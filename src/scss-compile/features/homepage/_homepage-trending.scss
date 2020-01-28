@@ -1,28 +1,13 @@
 .#{$namespace}section-articles {
   background-color: $purplish-grey;
 
-  .#{$namespace}article-tagline {
-    // color: v('brand-grey-dark');
-  }
+  // .#{$namespace}article-tagline {
+  //   // color: v('brand-grey-dark');
+  // }
 
   .#{$namespace}trending-articles .#{$namespace}article-link {
-    padding: v('space-lg') 0;
     border-radius: $border-radius;
-    border-bottom: none;
-    margin-bottom: 0;
-
-    &:not(:first-of-type) {
-      border-bottom: 1px solid #e3e3e3;
-      // @include transition(background-color, $easing);
-      &:hover {
-        @include transition(background-color, $easing);
-        // background-color: darken($purplish-grey,3%);
-      }
-    }
-
-    &:last-of-type {
-      border-bottom: none;
-    }
+    margin-bottom: v('space-xl');
   }
 
   .grid {
@@ -37,6 +22,14 @@
     @include media-breakpoint-down('lg') {
       grid-template-columns: minmax(0,1fr);
       grid-row-gap: v('grid-gap');
+
+      .#{$namespace}spotlight-card-thumbnail {
+        min-height: 7rem;
+      }
+
+      .#{$namespace}spotlights {
+        margin-bottom: v('space-lg');
+      }
     }
 
     @include media-breakpoint-between('md','lg') {
@@ -75,12 +68,13 @@
       grid-column: span 2;
       background-color: v('brand-white');
       position: relative;
-      padding: v('component-padding');
-      margin-bottom: 0.25rem;
-      margin-left: calc(#{var(--component-padding)} * -1);
-      margin-right: calc(#{var(--component-padding)} * -1);
+      padding: v('space-md');
+      margin-bottom: v('space-xl');
+      margin-left: calc(#{var(--space-md)} * -1);
+      margin-right: calc(#{var(--space-md)} * -1);
+
       
-      &::after {
+      &::before {
         @extend %pseudo-element-absolute;
         width: 4rem;
         height: 4rem;

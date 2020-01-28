@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h5 class="text-primary-lighter text-bold">Related Discussions</h5>
+    <h5 class="text-heading text-bold">Related Discussions</h5>
 
     <div class="hc-article-list">
-      <div class="hc-article-list-item d-flex" v-for="discussion in discussions" v-bind:key="discussion.id">
+      <div class="hc-article-list-item" v-for="discussion in discussions" v-bind:key="discussion.id">
         <a href="#" class="hc-article-link">
           <article class="hc-article">
             <p class="hc-article-heading">{{ discussion.heading }} </p>

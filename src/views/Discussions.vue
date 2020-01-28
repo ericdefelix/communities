@@ -8,7 +8,7 @@
       <div class="hc-layout-aside-main grid grid-aside-main">
         <aside class="hc-aside">
           <div class="hc-aside-trending mb-5">
-            <h5 class="text-primary-lighter text-bold">Related Articles</h5>
+            <h5 class="text-heading text-bold">Related Articles</h5>
             <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
           </div>
 

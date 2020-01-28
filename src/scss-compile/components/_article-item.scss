@@ -27,8 +27,7 @@
 
   &.#{$namespace}article-lg {
     .#{$namespace}article-heading {
-      font-size: var(--text-sm);
+      font-size: v('text-sm');
     }
-    // &-tagline {}
   }
 }

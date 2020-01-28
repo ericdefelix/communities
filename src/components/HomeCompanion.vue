@@ -1,21 +1,21 @@
 <template>
   <section class="hc-section hc-section-companion">
     <div class="container">
-      <h2 class="text-primary-lighter text-center">Companion Products</h2>
+      <h2 class="text-heading text-center">Companion Products</h2>
 
       <div class="grid">
         <div class="hc-homepage-tabs hc-trending-articles">
           <div class="nav flex-column nav-pills hc-article-list-lg" role="tablist" aria-orientation="vertical">
-            <span class="hc-article-link active" id="app1" data-toggle="tab" data-target="#appC1" role="tab" aria-controls="app1" aria-selected="true">
+            <span class="hc-article-link hc-card hc-card-hover active" id="app1" data-toggle="tab" data-target="#appC1" role="tab" aria-controls="app1" aria-selected="true">
               <ArticleItem v-bind:content="{ isLarge: true, heading:'By Lawyers', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </span>
-            <span class="hc-article-link" id="app2" data-toggle="tab" data-target="#appC2" role="tab" aria-controls="app2" aria-selected="false">
+            <span class="hc-article-link hc-card hc-card-hover" id="app2" data-toggle="tab" data-target="#appC2" role="tab" aria-controls="app2" aria-selected="false">
               <ArticleItem v-bind:content="{ isLarge: true, heading:'Info Track', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </span>
-            <span class="hc-article-link" id="app3" data-toggle="tab" data-target="#appC3" role="tab" aria-controls="app3" aria-selected="false">
+            <span class="hc-article-link hc-card hc-card-hover" id="app3" data-toggle="tab" data-target="#appC3" role="tab" aria-controls="app3" aria-selected="false">
               <ArticleItem v-bind:content="{ isLarge: true, heading:'RapidPay', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </span>
-            <span class="hc-article-link" id="app4" data-toggle="tab" data-target="#appC4" role="tab" aria-controls="app4" aria-selected="false">
+            <span class="hc-article-link hc-card hc-card-hover" id="app4" data-toggle="tab" data-target="#appC4" role="tab" aria-controls="app4" aria-selected="false">
               <ArticleItem v-bind:content="{ isLarge: true, heading:'LawConnect', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
             </span>
           </div>
@@ -23,9 +23,9 @@
         <div class="hc-homepage-content">
           <div class="tab-content">
             <div class="tab-pane fade show active" id="appC1" role="tabpanel" aria-labelledby="app1">
-              <h4 class="text-primary-lighter">Trending Articles for ByLawyers</h4>
+              <h4 class="text-heading">Trending Articles for ByLawyers</h4>
               <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
-              <button type="button" class="btn btn-default">View more articles</button>
+              <a href="#" class="btn btn-default">View more articles</a>
             </div>
             <div class="tab-pane fade" id="appC2" role="tabpanel" aria-labelledby="app2">2</div>
             <div class="tab-pane fade" id="appC3" role="tabpanel" aria-labelledby="app3">3</div>

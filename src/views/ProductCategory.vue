@@ -12,10 +12,10 @@
               <TopicList v-bind:topics="sidebar_topics.topics" v-bind:heading="sidebar_topics.heading"/>
             </div>
             <div class="hc-aside-trending mb-5">
-              <h5 class="text-primary-lighter text-bold">Trending Articles</h5>
+              <h5 class="text-heading text-bold">Trending Articles</h5>
               <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
             </div>
-            <SpotlightCard v-bind:spotlight="spotlights[0]" />
+            <SpotlightCard v-bind:content="spotlight[0]" />
           </div>
         </aside>
 
@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
   </section>
 <!-- Container -->
 </div>
@@ -71,8 +71,8 @@ export default {
   },
   data: function () {
     return {
-      spotlights: [
-        { heading: 'Heading', subheading: 'Subheading', content: 'Content' }
+      spotlight: [
+        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
       ],
       articles: [
         { heading: 'Getting Started', subheading: 'Installing and Setup' },

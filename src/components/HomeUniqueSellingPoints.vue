@@ -7,7 +7,7 @@
           <article class="hc-usps-item">
             <figure class="hc-usps-img"><img src="@/static/homepage-knowledge-base.svg"/></figure>
             <div class="hc-usps-content">
-              <h4 class="text-primary-lighter">Knowledge Base</h4>
+              <h4 class="text-heading">Knowledge Base</h4>
               <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
               <a href="">Browse articles</a>
             </div>
@@ -17,7 +17,7 @@
           <article class="hc-usps-item">
             <figure class="hc-usps-img"><img src="@/static/homepage-community.svg"/></figure>
             <div class="hc-usps-content">
-              <h4 class="text-primary-lighter">Community</h4>
+              <h4 class="text-heading">Community</h4>
               <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
               <a href="">Join the Community</a>
             </div>
@@ -28,7 +28,7 @@
             <figure class="hc-usps-img"><img src="@/static/homepage-whats-new.svg"/></figure>
             <div class="hc-usps-content">
               <div class="hc-list-item-summary">
-                <h4 class="text-primary-lighter">What's New</h4>
+                <h4 class="text-heading">What's New</h4>
                 <p>Impedit repellendus aliquam cursus eos perspiciatis faucibus aliquid, est.</p>
               </div>
               <a href="">Learn about new features</a>

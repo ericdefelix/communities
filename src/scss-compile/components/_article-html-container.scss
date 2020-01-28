@@ -1,5 +1,9 @@
 .#{$namespace}article {
   &-title-container {
+    .#{$namespace}article-heading {
+      font-size: v('text-xl');
+      color: v('brand-primary-lighter');
+    }
   }
   &-html-container {
     margin-top: v('space-xl');

@@ -32,8 +32,8 @@ $input-border-radius: var(--text-input-radius);
 //Cards
 $card-border-top: 0.3125rem;
 $card-border-dash: 0.075rem dashed #ccc;
-$card-box-shadow: 0 0 0.8125rem 0 rgba(30, 54, 94, 0.1);
-$card-box-shadow-darker: 0 0 1rem 0 rgba(30, 54, 94, 0.3);
+$card-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+$card-box-shadow-darker: 0 2px 20px rgba(0, 0, 0, 0.3), 0 1px 7px rgba(0, 0, 0, 0);
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-lg: $border-radius;

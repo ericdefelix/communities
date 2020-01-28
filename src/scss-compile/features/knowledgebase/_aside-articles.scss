@@ -1,13 +1,25 @@
 .#{$namespace}aside-topics {
-  .#{$namespace}spotlight-card-thumbnail {
-    width: 100%;
+  .#{$namespace}spotlight-card {
+    flex-flow: column;
+
+    &-thumbnail, .#{$namespace}card-body {
+      width: 100%;
+    }
   }
 
-  .hc-article-list {
-    .hc-article-link {
+  .#{$namespace}article-list {
+    .#{$namespace}article-link {
       border-bottom: none;
       padding: 0;
       margin-bottom: 1rem;
+    }
+  }
+
+
+  .#{$namespace}topic-list {
+    &-link {
+      color: v('brand-primary');
+      font-weight: $font-weight-semibold;
     }
   }
 }

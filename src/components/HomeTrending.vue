@@ -3,7 +3,7 @@
     <div class="container">
       <figure class="hc-homepage-abstract-img"><img src="@/assets/abstract.svg" alt=""></figure>
 
-      <h2 class="text-center text-primary-lighter">Popular articles and highlights</h2>
+      <h2 class="text-center text-heading">Popular articles and highlights</h2>
 
       <div class="grid">
         <div class="hc-spotlights">
@@ -13,8 +13,9 @@
         </div>
 
         <div class="hc-trending-articles">
-          <!-- <h5 class="text-primary-lighter">Trending Articles</h5> -->
+          <h4 class="text-heading">Popular Articles</h4>
           <ArticleList v-bind:articles="articles"/>
+          <a href="#" class="btn btn-default">View more articles</a>
         </div>
       </div>
     </div>
@@ -33,9 +34,9 @@ export default {
   data: function () {
     return {
       spotlights: [
-        { isLarge: true, heading: '2020 Summit', subheading: 'Events', text: 'Rerum elementum eaque sequi earum', url: 'sample1.jpg' },
-        { isLarge: true, heading: 'Nothing Else Matters', subheading: 'Matter Management', text: 'Dio porro ullam incidunt potenti', url: 'sample2.jpg' },
-        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
+        { isLarge: true, heading: '2020 Summit', subheading: 'Events', text: 'Rerum elementum eaque sequi earum lobortis odio', url: 'sample1.jpg' },
+        { isLarge: true, heading: 'Nothing Else Matters', subheading: 'Matter Management', text: 'Dio porro ullam incidunt potenti lobortis odio', url: 'sample2.jpg' },
+        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum lobortis odio', url: 'sample3.jpg' }
       ],
       articles: [
         { isLarge: true, heading: 'Getting Started', subheading: 'Installing and Setup', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit incidunt potenti rutrum fugit incidunt potenti rutrum fugit.' },

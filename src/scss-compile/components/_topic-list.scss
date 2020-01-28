@@ -1,6 +1,7 @@
 .#{$namespace}topic-list {
   &-link {
     display: block;
+    color: v('brand-black');
     margin-bottom: v('list-item-gap');
   }
 }

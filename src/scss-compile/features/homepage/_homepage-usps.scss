@@ -60,11 +60,15 @@
       text-align: center;
     }
 
+    .text-heading {
+      margin-bottom: 1rem;
+    }
+
     a {
-      display: block;
+      display: inline-block;
       // font-size: v('navlink-text-size');
       font-weight: $font-weight-semibold;
-      margin-top: v('space-lg');
+      // margin-top: v('space-lg');
     }
   }
 

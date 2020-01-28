@@ -27,7 +27,7 @@
       <div class="container">
         <div class="d-lg-flex">
           <div class="hc-footer-bottom-copy" rel="license">
-            <small>Copyright &copy; <span>2018</span> LEAP Legal Software. <br class="hidden-xl" />All rights reserved - Law Society of NSW Certificate 11</small>
+            <small>Copyright &copy; <span>2018</span> LEAP Legal Software. <br class="hidden-md" />All rights reserved - Law Society of NSW Certificate 11</small>
           </div>
           <div class="hc-footer-bottom-legal">
             <small class="hc-footer-bottom-links">

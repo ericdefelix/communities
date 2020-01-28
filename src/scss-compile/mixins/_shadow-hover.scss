@@ -4,7 +4,7 @@
 
   @if $cardHasHover {
     &:hover {
-      @include box-shadow($card-box-shadow-darker);
+      @include box-shadow($card-box-shadow-darker !important);
       @include transition(all $easing);
     }
   }

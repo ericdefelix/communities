@@ -1,15 +1,20 @@
 .#{$namespace}article-list {
   &-item {
     margin-bottom: v('space-lg');
+    display: flex;
   }
 }
 
 .#{$namespace}article-link {
-  display: block;
+  display: flex;
   cursor: pointer;
 
   &:hover .#{$namespace}article-heading {
     color: v('brand-secondary');
+  }
+
+  &:hover .#{$namespace}article-subheading {
+    color: darken($subheading-color, 20%);
   }
 }
 
@@ -21,5 +26,7 @@
   margin-left: auto;
 
   &-item {
+    display: flex;
+    align-items: center;
   }
 }

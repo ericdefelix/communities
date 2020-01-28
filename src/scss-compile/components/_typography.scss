@@ -39,14 +39,14 @@ h1, h2, h3, h4, h5, h6,
  color: $text-primary-lighter;
 }
 
-.text-muted {
-
-}
-
 .text-secondary {
   color: $text-secondary; 
 }
 
 .text-bold {
   font-weight: $font-weight-semibold !important;
+}
+
+.text-heading {
+  color: v('brand-primary-lighter');
 }

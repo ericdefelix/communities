@@ -2,17 +2,28 @@
 
   .#{$namespace}trending-articles {
     .#{$namespace}article-link {
+      @include box-shadow(none);
       padding: v('component-padding');
       background-color: #fbfbfb;
+      border: 1px solid #fbfbfb;
       border-radius: $border-radius-xs;
       margin-bottom: $list-group-item-margin-bottom;
+
+      &:hover {
+        border-color: v('brand-white');
+      }
+
       &.active {
         background-color: v('brand-white');
-        @include box-shadow($card-box-shadow);
+        border: 1px solid $border-bottom-color;
 
         &:hover {
-          @include box-shadow($card-box-shadow-darker);
+          border-color: darken($border-bottom-color,20%);
         }
+      }
+
+      .#{$namespace}article-tagline {
+        white-space: unset;
       }
     }
   }
@@ -29,6 +40,10 @@
     @include media-breakpoint-up('xxl') {
       .#{$namespace}homepage-content {
         padding: 0 v('space-xxl');
+
+        .hc-article-list-item {
+          margin-bottom: v('space-xl');
+        }
       }
     }
   }

@@ -43,8 +43,9 @@
   margin-bottom: 0;
   padding-left: 0;
   > li {
-    font-size: v('navlink-text-size');
     display: inline-block;
+    font-size: v('navlink-text-size');
+    color: $subheading-color;
 
     &:not(:last-of-type)::after {
       content: '\2022';
