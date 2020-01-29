@@ -2,13 +2,10 @@
   &-item {
     padding: v('component-padding');
     margin-top: v('list-item-gap');
-    // background-color: $card-bg-gray;
-    // border-radius: 0.125rem;
   }
 
   &-btn {
     display: block;
-    // margin-top: v('space-lg');
     padding-top: v('list-item-gap');
     border-top: 1px dotted darken($card-bg,20%);
     font-weight: 600;

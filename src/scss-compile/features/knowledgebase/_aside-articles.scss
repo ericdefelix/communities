@@ -20,6 +20,10 @@
     &-link {
       color: v('brand-primary');
       font-weight: $font-weight-semibold;
+
+      &:hover {
+        color: v('brand-secondary');
+      }
     }
   }
 }
