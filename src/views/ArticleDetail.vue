@@ -12,7 +12,7 @@
             <ArticleList v-bind:articles="articles"/>
           </div>
 
-          <SpotlightCard v-bind:spotlight="spotlights[0]" />
+          <SpotlightCard v-bind:content="spotlights[0]" />
         </aside>
         <div class="hc-main">
           <div class="hc-article-title-container">
@@ -25,7 +25,8 @@
 
           <ArticleFollowupHotJar/>
 
-          <RelatedDiscussions v-bind:discussions="discussions"/>
+          <h5 class="text-heading text-bold">Related Discussions</h5>
+          <ArticleListAppend v-bind:articles="discussions"/>
         </div>
       </div>
     </div>
@@ -43,7 +44,7 @@ import ArticleList from '@/components/ArticleList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import Prefooter from '@/components/Prefooter'
 import ArticleFollowupHotJar from '@/components/ArticleFollowupHotJar'
-import RelatedDiscussions from '@/components/RelatedDiscussions'
+import ArticleListAppend from '@/components/ArticleListAppend'
 import articleTextPlaceholder from '@/components/_articleTextPlaceholder'
 
 export default {
@@ -55,13 +56,13 @@ export default {
     Breadcrumbs,
     Prefooter,
     ArticleFollowupHotJar,
-    RelatedDiscussions,
+    ArticleListAppend,
     articleTextPlaceholder
   },
   data: function () {
     return {
       spotlights: [
-        { heading: 'Heading', subheading: 'Subheading', content: 'Content' }
+        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
       ],
       articles: [
         { heading: 'Getting Started', subheading: 'Installing and Setup' },
@@ -71,9 +72,9 @@ export default {
         { heading: 'Troubleshooting printer problems', subheading: 'Technical' }
       ],
       discussions: [
-        { heading: 'Should document register be listed under documents tab for client?', text: 'LEAP Desktop • Richard Dart 11 • May 2017 at 12:17 AM' },
-        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', text: 'LEAP Desktop • Richard Dart 11 • May 2017 at 12:17 AM' },
-        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', text: 'LEAP Desktop • Richard Dart 11 • May 2017 at 12:17 AM' }
+        { heading: 'Should document register be listed under documents tab for client?', metadata: ['LEAP Desktop', 'Richard Dart', 'May 2017 at 12:17 AM'] },
+        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', metadata: ['LEAP Desktop', 'Richard Dart', 'May 2017 at 12:17 AM'] },
+        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', metadata: ['LEAP Desktop', 'Richard Dart', 'May 2017 at 12:17 AM'] }
       ]
     }
   }

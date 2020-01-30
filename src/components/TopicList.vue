@@ -2,14 +2,24 @@
   <div class="hc-topic-list">
     <h5 class="hc-topic-catalog-heading text-bold text-primary-lighter">{{ heading }}</h5>
     <div class="hc-topic-list-content">
-      <a class="hc-topic-list-link" href="#" v-for="link in topics" v-bind:key="link.id" >{{ link.text }}</a>
+      <div v-for="link in topics" v-bind:key="link.id">
+        <router-link to="/topicdetail">
+          <a class="hc-topic-list-link" href="#">{{ link.text }}</a>
+        </router-link>
+        <SubTopicList v-if="link.hasOwnProperty('topics')" v-bind:topics="link.topics"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import SubTopicList from '@/components/SubTopicList'
+
 export default {
   name: 'TopicList',
+  components: {
+    SubTopicList
+  },
   props: {
     heading: String,
     topics: Array

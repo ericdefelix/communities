@@ -20,8 +20,9 @@
         </aside>
 
         <div class="hc-main content" id="content">
-          <small class="hc-article-subheading text-uppercase text-bold">Browse topics & articles</small>
-          <h2 class="text-primary-lighter mb-3">Knowledge Base</h2>
+          <div class="hc-article-title-container">
+            <ArticleItem v-bind:content="{ isLarge: false, heading:'Knowledge Base', subheading: 'Browse topics & articles' }"/>
+          </div>
 
           <ul class="nav nav-tabs" role="tablist" aria-orientation="horizontal">
             <li class="nav-item">
@@ -48,6 +49,7 @@
 </template>
 
 <script>
+import ArticleItem from '@/components/ArticleItem'
 import ArticleList from '@/components/ArticleList'
 import SpotlightCard from '@/components/SpotlightCard'
 import TopicCatalog from '@/components/TopicCatalog'
@@ -57,7 +59,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 export default {
   name: 'topicCatalogPage',
   components: {
-    SpotlightCard, Breadcrumbs, TopicCatalog, TopicList, ArticleList
+    SpotlightCard, Breadcrumbs, TopicCatalog, TopicList, ArticleList, ArticleItem
   },
   props: {
     topics: Array,

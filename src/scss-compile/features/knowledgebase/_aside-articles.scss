@@ -26,4 +26,26 @@
       }
     }
   }
+
+  .#{$namespace}subtopic-list {
+    padding-left: v('space-lg');
+    margin-bottom: v('space-lg');
+    position: relative;
+
+    .#{$namespace}topic-list-link {
+      font-size: v('navlink-text-size');
+      font-weight: 400;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.1875rem;
+      height: auto;
+      top: 0.25rem;
+      bottom: 0.25rem;
+      left: 0;
+      background-color: #efefef;
+    }
+  }
 }
