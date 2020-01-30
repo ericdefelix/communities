@@ -1,8 +1,8 @@
 <template>
   <div class="hc-article-list">
-    <a href="#" class="hc-article-list-item hc-article-link" v-for="content in articles" v-bind:key="content.id">
+    <router-link to="/article" class="hc-article-list-item hc-article-link" v-for="content in articles" v-bind:key="content.id">
       <ArticleItem v-bind:content="content" />
-    </a>
+    </router-link>
   </div>
 </template>
 

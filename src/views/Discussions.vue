@@ -9,10 +9,10 @@
         <aside class="hc-aside">
           <div class="hc-aside-trending mb-5">
             <h5 class="text-heading text-bold">Related Articles</h5>
-            <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
+            <ArticleList v-bind:articles="articles"/>
           </div>
 
-          <SpotlightCard v-bind:spotlight="spotlights[0]" />
+          <SpotlightCard v-bind:content="spotlight[0]" />
         </aside>
         <div class="hc-main">
           <DiscussionQuestion/>
@@ -50,8 +50,8 @@ export default {
   },
   data: function () {
     return {
-      spotlights: [
-        { heading: 'Heading', subheading: 'Subheading', content: 'Content' }
+      spotlight: [
+        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
       ],
       articles: [
         { heading: 'Getting Started', subheading: 'Installing and Setup' },

@@ -3,9 +3,7 @@
     <h5 class="hc-topic-catalog-heading text-bold text-primary-lighter">{{ heading }}</h5>
     <div class="hc-topic-list-content">
       <div v-for="link in topics" v-bind:key="link.id">
-        <router-link to="/topicdetail">
-          <a class="hc-topic-list-link" href="#">{{ link.text }}</a>
-        </router-link>
+        <router-link to="/topicdetail" class="hc-topic-list-link">{{ link.text }}</router-link>
         <SubTopicList v-if="link.hasOwnProperty('topics')" v-bind:topics="link.topics"/>
       </div>
     </div>
