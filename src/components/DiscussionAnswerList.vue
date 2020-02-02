@@ -35,7 +35,7 @@ import Badge from '@/components/Badge'
 import UserInfoSnippet from '@/components/UserInfoSnippet'
 
 // Placeholder only
-import discussionTextPlaceholder from '@/components/_discussionTextPlaceholder'
+import discussionTextPlaceholder from '@/dummy-data/discussionTextPlaceholder'
 
 export default {
   name: 'DiscussionAnswerList',

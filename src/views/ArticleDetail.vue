@@ -45,7 +45,8 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Prefooter from '@/components/Prefooter'
 import ArticleFollowupHotJar from '@/components/ArticleFollowupHotJar'
 import ArticleListAppend from '@/components/ArticleListAppend'
-import articleTextPlaceholder from '@/components/_articleTextPlaceholder'
+
+import articleTextPlaceholder from '@/dummy-data/articleTextPlaceholder'
 
 export default {
   name: 'articleDetailPage',

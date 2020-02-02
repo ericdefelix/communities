@@ -9,13 +9,13 @@
         <aside class="hc-aside sidebar" id="sidebar">
           <div class="sidebar__inner">
             <div class="hc-aside-topics mb-5">
-              <TopicList v-bind:topics="sidebar_topics.topics" v-bind:heading="sidebar_topics.heading"/>
+              <TopicList v-bind:topics="sidebar_topics" v-bind:heading="sidebar_heading"/>
             </div>
             <div class="hc-aside-trending mb-5">
               <h5 class="text-heading text-bold">Trending Articles</h5>
               <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
             </div>
-            <SpotlightCard v-bind:content="spotlight[0]" />
+            <SpotlightCard v-bind:content="spotlight" />
           </div>
         </aside>
 
@@ -56,6 +56,8 @@ import TopicCatalog from '@/components/TopicCatalog'
 import TopicList from '@/components/TopicList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
+import { spotlights, sideTrending, sidebarTopics, topicCatalog } from '@/dummy-data/dummyData'
+
 export default {
   name: 'topicCatalogPage',
   components: {
@@ -65,80 +67,13 @@ export default {
     topics: Array,
     heading: String
   },
-  methods: {
-    randomViewAllText () {
-      const randomNumber = () => { return Math.floor(Math.random() * (60 - 1 + 1) + 1) }
-      return `View all ${randomNumber()} articles`
-    }
-  },
   data: function () {
     return {
-      spotlight: [
-        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
-      ],
-      articles: [
-        { heading: 'Getting Started', subheading: 'Installing and Setup' },
-        { heading: 'Importing a document to a matter', subheading: 'Matter Management' },
-        { heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting' },
-        { heading: 'Recording time in Microsoft Outlook', subheading: 'Accounting' },
-        { heading: 'Troubleshooting printer problems', subheading: 'Technical' }
-      ],
-      sidebar_topics: {
-        heading: 'Main Topics',
-        topics: [
-          { text: 'What\'s New' },
-          { text: 'Installing & Setting Up Matters' },
-          { text: 'Cards' },
-          { text: 'Calendar & Tasks' },
-          { text: 'Time & Fee Recording' },
-          { text: 'Guides & Precedences' },
-          { text: 'Office Accounting' },
-          { text: 'Trust Accounting' },
-          { text: 'Reports & Dashboards' }
-        ]
-      },
-      topic_catalog: [
-        {
-          name: 'What\'s New',
-          topics: [{ text: 'Latest Release' }, { text: 'Previous Releases' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Installing & Setting Up',
-          topics: [{ text: 'Getting Started' }, { text: 'Installing LEAP' }, { text: 'Installing LEAP Conveyancer' }, { text: 'General Admin Tasks' }, { text: 'Accounting Admin Tasks' }, { text: 'Managing Your Staff' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Matter Management',
-          topics: [{ text: 'Creating a New Matter' }, { text: 'Duplicating a Matter' }, { text: 'Sorting Matters' }, { text: 'Customising a Matter' }, { text: 'Recurring Matters' }, { text: 'Archiving Matters' }, { text: 'Restricting Staff Access to a Matter' }, { text: 'Deleting a Matter' }, { text: 'Cost Estimates' }, { text: 'Document Register & Packet' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Card Management',
-          topics: [{ text: 'Creating Cards' }, { text: 'Card Tabs' }, { text: 'Search, Sort & Filter Cards' }, { text: 'Merge Cards' }, { text: 'Deleting a Card' }, { text: 'Conflict of Interest Check' }, { text: 'People topics' }, { text: 'Referrers' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Guides & Precedents',
-          topics: [{ text: 'Guides - By Lawyers' }, { text: 'Precedents' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Office Accounting',
-          topics: [{ text: 'GL Link' }, { text: 'Invoicing' }, { text: 'Deposits/Cheques' }, { text: 'Office Payments' }, { text: 'Office Receipts' }, { text: 'Credit Notes' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Calendar & Tasks',
-          topics: [{ text: 'Calendar Appointments' }, { text: 'Critical Dates' }, { text: 'Tasks' }],
-          viewall_count: this.randomViewAllText()
-        },
-        {
-          name: 'Reports & Dashboards',
-          topics: [{ text: 'Matters & Clients' }, { text: 'Trust' }, { text: 'Office' }, { text: 'Management' }, { text: 'Dashboards' }],
-          viewall_count: this.randomViewAllText()
-        }
-      ]
+      spotlight: spotlights[2],
+      articles: sideTrending,
+      sidebar_topics: sidebarTopics.topics,
+      sidebar_heading: sidebarTopics.heading,
+      topic_catalog: topicCatalog
     }
   }
 }

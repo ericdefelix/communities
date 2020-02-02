@@ -11,8 +11,8 @@
             </div>
             <h6 class="hc-news-heading">News and Announcements</h6>
             <ul class="hc-news-content hc-article-bullet-list list-unstyled">
-              <li><a href="">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
-              <li><a href="">Server Maintenance Completed - 7:30 PM, 2 Feb 2019</a></li>
+              <li><a href="">Server Maintenance Completed - 2 Feb 19</a></li>
+              <li><a href="">Next LEAP Maintenance Window - Saturday 2 Feb 2019 6/12/2018</a></li>
             </ul>
           </div>
         </div>

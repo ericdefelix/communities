@@ -26,6 +26,8 @@
 import SpotlightCard from '@/components/SpotlightCard'
 import ArticleList from '@/components/ArticleList'
 
+import { spotlights, trending } from '@/dummy-data/dummyData'
+
 export default {
   name: 'HomeTrending',
   components: {
@@ -33,17 +35,8 @@ export default {
   },
   data: function () {
     return {
-      spotlights: [
-        { isLarge: true, heading: '2020 Summit', subheading: 'Events', text: 'Rerum elementum eaque sequi earum lobortis odio', url: 'sample1.jpg' },
-        { isLarge: true, heading: 'Nothing Else Matters', subheading: 'Matter Management', text: 'Dio porro ullam incidunt potenti lobortis odio', url: 'sample2.jpg' },
-        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum lobortis odio', url: 'sample3.jpg' }
-      ],
-      articles: [
-        { isLarge: true, heading: 'Getting Started', subheading: 'Installing and Setup', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit incidunt potenti rutrum fugit incidunt potenti rutrum fugit.' },
-        { isLarge: true, heading: 'Importing a document to a matter', subheading: 'Matter Management', text: 'Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos' },
-        { isLarge: true, heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' },
-        { isLarge: true, heading: 'Troubleshooting printer problems', subheading: 'Technical', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' }
-      ]
+      spotlights: spotlights,
+      articles: trending
     }
   }
 }

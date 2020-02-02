@@ -11,13 +11,13 @@
       </router-link>
       <ul class="hc-article-link-append">
         <li class="hc-article-link-append-item">
-          <i class="fas fa-eye"></i><span>23</span>
+          <i class="fas fa-eye"></i><span>{{ article.activity_count.views }}</span>
         </li>
         <li class="hc-article-link-append-item">
-          <i class="fas fa-thumbs-up"></i><span>12</span>
+          <i class="fas fa-thumbs-up"></i><span>{{ article.activity_count.likes }}</span>
         </li>
         <li class="hc-article-link-append-item">
-          <i class="fas fa-comment-alt"></i><span>9</span>
+          <i class="fas fa-comment-alt"></i><span>{{ article.activity_count.comments }}</span>
         </li>
       </ul>
     </div>

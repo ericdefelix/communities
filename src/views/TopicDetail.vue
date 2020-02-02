@@ -11,10 +11,7 @@
             <div class="hc-aside-topics mb-5">
               <TopicList v-bind:topics="sidebar_topics.topics" v-bind:heading="sidebar_topics.heading"/>
             </div>
-            <!-- <div class="hc-aside-trending mb-5">
-              <h5 class="text-heading text-bold">Trending Articles</h5>
-              <ArticleList v-bind:articles="trending" v-bind:isSmall="true"/>
-            </div> -->
+
             <SpotlightCard v-bind:content="spotlight[0]" />
           </div>
         </aside>
@@ -41,13 +38,14 @@ import SpotlightCard from '@/components/SpotlightCard'
 import TopicList from '@/components/TopicList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
+import { topicArticles, sidebarTopicsSubtopic } from '@/dummy-data/dummyData'
+
 export default {
   name: 'topicDetailPage',
   components: {
     SpotlightCard,
     Breadcrumbs,
     TopicList,
-    // ArticleList,
     ArticleItem,
     ArticleListAppend
   },
@@ -60,31 +58,8 @@ export default {
       spotlight: [
         { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
       ],
-      sidebar_topics: {
-        heading: 'Main Topics',
-        topics: [
-          { text: 'What\'s New' },
-          { text: 'Installing & Setting Up', topics: [{ text: 'Getting Started' }, { text: 'Installing LEAP' }, { text: 'Installing LEAP Conveyancer' }, { text: 'General Admin Tasks' }, { text: 'Accounting Admin Tasks' }, { text: 'Managing Your Staff' }] },
-          { text: 'Cards' },
-          { text: 'Calendar & Tasks' },
-          { text: 'Time & Fee Recording' },
-          { text: 'Guides & Precedences' },
-          { text: 'Office Accounting' },
-          { text: 'Trust Accounting' },
-          { text: 'Reports & Dashboards' }
-        ]
-      },
-      articles: [
-        { heading: 'Should document register be listed under documents tab for client?', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Should document register be listed under documents tab for client?', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Should document register be listed under documents tab for client?', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', metadata: ['Richard Dart', 'May 2017 at 12:17 AM'] }
-      ],
+      sidebar_topics: sidebarTopicsSubtopic,
+      articles: topicArticles,
       trending: [
         { heading: 'Getting Started', subheading: 'Installing and Setup' },
         { heading: 'Importing a document to a matter', subheading: 'Matter Management' },

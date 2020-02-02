@@ -5,9 +5,7 @@
         <div class="hc-community-content-wrapper">
           <div class="hc-community-content">
             <h2 class="text-light">Explore Our Community</h2>
-            <p>Officia ultrices. Nisl earum cursus blanditiis molestiae dui aspernatur non quae odit mattis laoreet. Porro blandit
-              ullamcorper pulvinar turpis vivamus dolore eveniet necessitatibus sagittis cillum metus necessitatibus, ornare eros
-              vel.</p>
+            <p>LEAP Community is your searchable site where you can find step-by-step guides, new feature announcements, how-to guides, user forums, and a comprehensive library of resources.</p>
 
             <button type="button" class="btn btn-outline-light btn-lg">Explore Community</button>
             <button type="button" class="btn btn-primary btn-lg">Join Community</button>

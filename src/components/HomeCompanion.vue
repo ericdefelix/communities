@@ -6,30 +6,18 @@
       <div class="grid">
         <div class="hc-homepage-tabs hc-trending-articles">
           <div class="nav flex-column nav-pills hc-article-list-lg" role="tablist" aria-orientation="vertical">
-            <span class="hc-article-link hc-card hc-card-hover active" id="app1" data-toggle="tab" data-target="#appC1" role="tab" aria-controls="app1" aria-selected="true">
-              <ArticleItem v-bind:content="{ isLarge: true, heading:'By Lawyers', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </span>
-            <span class="hc-article-link hc-card hc-card-hover" id="app2" data-toggle="tab" data-target="#appC2" role="tab" aria-controls="app2" aria-selected="false">
-              <ArticleItem v-bind:content="{ isLarge: true, heading:'Info Track', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </span>
-            <span class="hc-article-link hc-card hc-card-hover" id="app3" data-toggle="tab" data-target="#appC3" role="tab" aria-controls="app3" aria-selected="false">
-              <ArticleItem v-bind:content="{ isLarge: true, heading:'RapidPay', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
-            </span>
-            <span class="hc-article-link hc-card hc-card-hover" id="app4" data-toggle="tab" data-target="#appC4" role="tab" aria-controls="app4" aria-selected="false">
-              <ArticleItem v-bind:content="{ isLarge: true, heading:'LawConnect', text:'Adipiscing lobortis odio porro ullam incidunt'}"/>
+            <span class="hc-article-link hc-card hc-card-hover" v-bind:class="{ 'active' : index == 0 }" role="tab" aria-labelledby="index" v-for="(nav, index) in companions" v-bind:key="nav.id">
+              <ArticleItem v-bind:content="nav.article_item"/>
             </span>
           </div>
         </div>
         <div class="hc-homepage-content">
           <div class="tab-content">
-            <div class="tab-pane fade show active" id="appC1" role="tabpanel" aria-labelledby="app1">
+            <div class="tab-pane fade" v-bind:class="{ 'show active' : index == 0 }" role="tabpanel" aria-labelledby="index" v-for="(list, index) in companions" v-bind:key="list.id">
               <h4 class="text-heading">Trending Articles for ByLawyers</h4>
-              <ArticleList v-bind:articles="articles" v-bind:isSmall="true"/>
+              <ArticleList v-bind:articles="list.article_list"/>
               <a href="#" class="btn btn-default">View more articles</a>
             </div>
-            <div class="tab-pane fade" id="appC2" role="tabpanel" aria-labelledby="app2">2</div>
-            <div class="tab-pane fade" id="appC3" role="tabpanel" aria-labelledby="app3">3</div>
-            <div class="tab-pane fade" id="appC4" role="tabpanel" aria-labelledby="app4">4</div>
           </div>
         </div>
       </div>
@@ -41,6 +29,8 @@
 import ArticleItem from '@/components/ArticleItem'
 import ArticleList from '@/components/ArticleList'
 
+import { companions } from '@/dummy-data/dummyData'
+
 export default {
   name: 'HomeCompanion',
   components: {
@@ -51,12 +41,7 @@ export default {
   },
   data: function () {
     return {
-      articles: [
-        { isLarge: true, heading: 'Getting Started', subheading: 'Installing and Setup', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit incidunt potenti rutrum fugit incidunt potenti rutrum fugit.' },
-        { isLarge: true, heading: 'Importing a document to a matter', subheading: 'Matter Management', text: 'Feugiat euismod. Rerum elementum eaque sequi earum, quas, dignissimos' },
-        { isLarge: true, heading: 'Calculation of VAT on Invoices - Rounding of Amounts', subheading: 'Accounting', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' },
-        { isLarge: true, heading: 'Troubleshooting printer problems', subheading: 'Technical', text: 'Adipiscing lobortis odio porro ullam incidunt potenti rutrum fugit.' }
-      ]
+      companions: companions
     }
   }
 }

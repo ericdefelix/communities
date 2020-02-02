@@ -11,12 +11,13 @@
     height: auto;
     min-height: $spotlight-card-thumbnail-width;
     background-size: cover;
-    background-position: center center;
+    background-position: left center;
     background-color: var(--brand-grey);
+    background-repeat: no-repeat;
   }
 
   .#{$namespace}article-heading {
-    // font-size: v('text-md') !important;
+    font-size: v('text-md') !important;
     color: v('brand-black');
     margin-bottom: v('space-md');
   }
