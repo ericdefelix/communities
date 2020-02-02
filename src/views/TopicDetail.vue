@@ -12,7 +12,7 @@
               <TopicList v-bind:topics="sidebar_topics.topics" v-bind:heading="sidebar_topics.heading"/>
             </div>
 
-            <SpotlightCard v-bind:content="spotlight[0]" />
+            <SpotlightCard v-bind:content="spotlight" />
           </div>
         </aside>
 
