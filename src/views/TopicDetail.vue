@@ -38,7 +38,7 @@ import SpotlightCard from '@/components/SpotlightCard'
 import TopicList from '@/components/TopicList'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
-import { topicArticles, sidebarTopicsSubtopic } from '@/dummy-data/dummyData'
+import { topicArticles, sidebarTopicsSubtopic, spotlights } from '@/dummy-data/dummyData'
 
 export default {
   name: 'topicDetailPage',
@@ -55,9 +55,7 @@ export default {
   },
   data: function () {
     return {
-      spotlight: [
-        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
-      ],
+      spotlight: spotlights[2],
       sidebar_topics: sidebarTopicsSubtopic,
       articles: topicArticles,
       trending: [

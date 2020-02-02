@@ -12,7 +12,7 @@
             <ArticleList v-bind:articles="articles"/>
           </div>
 
-          <SpotlightCard v-bind:content="spotlight[0]" />
+          <SpotlightCard v-bind:content="spotlight" />
         </aside>
         <div class="hc-main">
           <DiscussionQuestion/>
@@ -37,6 +37,8 @@ import DiscussionFollowup from '@/components/DiscussionFollowup'
 import DiscussionAnswerList from '@/components/DiscussionAnswerList'
 import Prefooter from '@/components/Prefooter'
 
+import { spotlights } from '@/dummy-data/dummyData'
+
 export default {
   name: 'discussionsPage',
   components: {
@@ -50,9 +52,7 @@ export default {
   },
   data: function () {
     return {
-      spotlight: [
-        { isLarge: true, heading: 'ByLawyers 2.0', subheading: 'Companion Apps', text: 'Ullam incidunt potenti rutrum', url: 'sample3.jpg' }
-      ],
+      spotlight: spotlights[2],
       articles: [
         { heading: 'Getting Started', subheading: 'Installing and Setup' },
         { heading: 'Importing a document to a matter', subheading: 'Matter Management' },

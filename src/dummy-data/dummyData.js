@@ -139,7 +139,7 @@ export const sidebarTopics = {
   heading: 'Main Topics',
   topics: [
     { text: 'What\'s New' },
-    { text: 'Installing & Setting Up Matters' },
+    { text: 'Installing & Setting Up' },
     { text: 'Cards' },
     { text: 'Calendar & Tasks' },
     { text: 'Time & Fee Recording' },
