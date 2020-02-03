@@ -48,6 +48,8 @@ import ArticleListAppend from '@/components/ArticleListAppend'
 
 import articleTextPlaceholder from '@/dummy-data/articleTextPlaceholder'
 
+import { relatedDiscussions } from '@/dummy-data/dummyData'
+
 export default {
   name: 'articleDetailPage',
   components: {
@@ -72,11 +74,7 @@ export default {
         { heading: 'Recording time in Microsoft Outlook', subheading: 'Accounting' },
         { heading: 'Troubleshooting printer problems', subheading: 'Technical' }
       ],
-      discussions: [
-        { heading: 'Should document register be listed under documents tab for client?', metadata: ['LEAP Desktop', 'Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?', metadata: ['LEAP Desktop', 'Richard Dart', 'May 2017 at 12:17 AM'] },
-        { heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual', metadata: ['LEAP Desktop', 'Richard Dart', 'May 2017 at 12:17 AM'] }
-      ]
+      discussions: relatedDiscussions
     }
   }
 }

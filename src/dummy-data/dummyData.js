@@ -318,3 +318,33 @@ export const sidebarTopicsSubtopic = {
     { text: 'Reports & Dashboards' }
   ]
 }
+
+export const relatedDiscussions = [
+  {
+    heading: 'Should document register be listed under documents tab for client?',
+    metadata: ['Nola Rocha', 'May 2017 at 12:17 AM'],
+    activity_count: {
+      views: randomViewAllText(500),
+      likes: randomViewAllText(100),
+      comments: randomViewAllText(15)
+    }
+  },
+  {
+    heading: 'Whether my precedent LEAP Invoice complies with ALL LPUL disclosure requirements?',
+    metadata: ['Walter Butler', 'May 2017 at 12:17 AM'],
+    activity_count: {
+      views: randomViewAllText(500),
+      likes: randomViewAllText(100),
+      comments: randomViewAllText(15)
+    }
+  },
+  {
+    heading: 'Clarification of Retail Lease Premises within your 1001Reference Manual',
+    metadata: ['Jesus Ortega', 'May 2017 at 12:17 AM'],
+    activity_count: {
+      views: randomViewAllText(500),
+      likes: randomViewAllText(100),
+      comments: randomViewAllText(15)
+    }
+  }
+]
